@@ -1,3 +1,0 @@
-# MyProjects
-Contains my recent coding endeavours in Python, C, and Java. 
-Well, there is really not much to say at this point...
