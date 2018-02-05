@@ -3,7 +3,7 @@
  *
  */
 
-#include "MyClass.h"
+//#include "MyClass.h"
 #include <iostream> 
 using namespace std;
 
