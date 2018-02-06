@@ -77,7 +77,9 @@ public class ZZZZZnake {
 			rich += 1;
 			gold2Position.setLocation( -1, -1 ); 
 		}
-			
+		if ( playermoves = 5 ) {
+			snakeStart = true;
+
 		// Konsoleneingabe und Spielerposition veraendern			
 
 //		Point up = Math.max( 0, playerPosition.y - 1 );
