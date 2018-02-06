@@ -31,7 +31,7 @@ public class ZZZZZnake {
 
 		Point snake1Position = new Point( (int)(Math.random() * 40), (int)(Math.random() * 10) );
 
-		Point snake2Position = new Point( (int)(Math.random() * 40), (int)(Math.random() * 10) );
+//		Point snake2Position = new Point( (int)(Math.random() * 40), (int)(Math.random() * 10) );
 
 		Point gold1Position = new Point(  (int)(Math.random() * 40), (int)(Math.random() * 10) );
 
@@ -63,9 +63,9 @@ public class ZZZZZnake {
 
 					System.out.print( 'S' );
 
-				else if ( snake2Position.equals( p ) )
+//				else if ( snake2Position.equals( p ) )
 
-					System.out.print( 'S' );
+//					System.out.print( 'S' );
 
 
 				else if ( gold1Position.equals( p ) )
@@ -111,14 +111,14 @@ public class ZZZZZnake {
 
 		}
 
-		if ( playerPosition.equals( snake2Position ) ) {
+//		if ( playerPosition.equals( snake2Position ) ) {
 
-			System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
+//			System.out.println( "ZZZZZZZ. Die Schlange hat dich!" );
 
-			return;
+//			return;
 
 
-		}
+//		}
 
 		if ( playerPosition.equals( gold1Position ) ) {
 
@@ -226,7 +226,7 @@ public class ZZZZZnake {
 
 		// Schlange2 bewegt sich in Richtung Spieler
 
-
+/*
 
 		if ( playerPosition.x < snake2Position.x )
 
@@ -244,18 +244,17 @@ public class ZZZZZnake {
 
 			snake2Position.y++;
 
+*/
 
 
-
-		} // end while
+	} // end while
 
 	}
 
-}
 
 
 
 
  
-
+}
 
