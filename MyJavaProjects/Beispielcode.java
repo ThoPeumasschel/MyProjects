@@ -15,6 +15,8 @@ class Beispielcode {
 
 		System.out.println( 1.2 + 1.0 );
 
+		System.out.println();
+
 		System.out.println("Jetzt wollen wir doch mal sehen, ob ich diesen Text gepuscht kriege");
 
 	}
