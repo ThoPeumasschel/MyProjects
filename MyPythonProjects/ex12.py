@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+name = input("Wie ist dein Vorname? ")
+age = input("Wie alt bist du? ")
+height = input("Wie groß bist du? ")
+weight = input("Wieviel wiegst du? ")
 
-name = raw_input("Wie ist dein Vorname? ")
-age = raw_input("Wie alt bist du? ")
-height = raw_input("Wie groß bist du? ")
-weight = raw_input("Wieviel wiegst du? ")
+print (f"Hallo {name}, du bist also {age} Jahre alt, {height} groß und {weight} kg schwer. \nDanke für die Information, {name}!")
 
-print "Hallo %r, du bist also %r Jahre alt, %r groß und %r kg schwer. \nDanke für die Information, %r!" % (name, age, height, weight, name)
+

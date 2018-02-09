@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-.
 
-print "Wie alt bist du?",
-Alter = raw_input()
-print "Wie groß bist du?",
-Groesse = raw_input()
-print "Wieviel wiegst du?", 
-Gewicht = raw_input()
+print ("Wie alt bist du?", end=' ')
+alter = input()
+print ("Wie groß bist du?", end=' ')
+groesse = input()
+print ("Wieviel wiegst du?", end=' ')
+gewicht = input()
 
-print "Also, du bist %s Jahre alt, %s groß und %s schwer." % (Alter, Groesse, Gewicht)
+print (f"Also, du bist {alter} Jahre alt, {groesse} cm groß und {gewicht} kg schwer.")
+
+
