@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
-
 from sys import argv
 
-script = argv
+script, user_name = argv
 prompt = '==> '
 
-user_name = raw_input("Wie heißt du denn? ") 
+user_name = raw_i:wqnput("Wie heißt du denn? ") 
 print "\nHallo %s, ich bin das %r-script." % (user_name, script)
 print "Ich würde dir gerne ein paar Fragen stellen."
 print "Magst du mich %s?" % user_name
