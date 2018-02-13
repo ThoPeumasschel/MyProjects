@@ -1,4 +1,3 @@
-
 # first variable initialized
 types_of_people = 10
 # Here comes a special type of string, the 'f-string'. 

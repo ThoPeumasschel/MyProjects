@@ -1,4 +1,4 @@
-# bubble sort in Python
+# bubble sort for python
 
 def bubble_sort(nlist):
 	for passnum in range(len(nlist)-1,0,-1):

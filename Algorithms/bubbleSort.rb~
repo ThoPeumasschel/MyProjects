@@ -1,4 +1,4 @@
-# bubble sort in Ruby. 
+# Here's the ruby version of a bubble sort. 
 
 def bubbleSort(arr)
 	swapped = true
