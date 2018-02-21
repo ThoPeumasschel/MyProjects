@@ -7,8 +7,7 @@
 
 public class Searchnumbers2 {
    public static boolean search(int[] arr, int item) {
-      for (int i : arr) { //this is called an enhanced for-loop. 
-						  //this is equal to (int i=0; i < arr.length; i++)
+      for (int i : arr) { //enhanced for-loop is equal to (int i=0; i < arr.length; i++)
          if (item == i) {
             return true;
          }

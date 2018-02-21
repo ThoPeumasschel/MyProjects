@@ -17,7 +17,7 @@ class Searchnumbers3 {
 		
 			else return false;
 		
-//		if (numbers[i] != 13) {
+//		if (numbers[i] != 13) 
 //			System.out.println("I couldn't find the number 13.");
 //		}
 	}
