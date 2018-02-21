@@ -5,7 +5,7 @@
 
 class ReadMultiNumbers {
 	public static void main(String... args) {
-	int[][] product = new int[5][5];
+	int[][] product = new int[5][2];
 	for (int i = 0; i < product.length; i++) {
 		for (int j = 0; j < product[i].length; j++) {
 			product[i][j] = (i + 1) * (j + 1); 

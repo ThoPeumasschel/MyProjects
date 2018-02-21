@@ -6,17 +6,23 @@
 class ReadMultiNumbers2 {
 	public static void main(String... args) {
 
+		int i, j, temp1, temp2, mult;
 		
-			int[][] product = {{2,4,6,8,10}, {3,5,7,9,11}};			
-			
-//			int[][] product = new int[5][5];
-			
-			for (int i : product) {
-				for (int j : product[i]) {
-					product[i][j] = (i + 1) * (j + 1); 
-					System.out.print("Index "+ i + "/" + j + ": ");
-					System.out.println("Produkt von " + (i+1) + " und "+(j+1)+" ist " + product[i][j]);
 
+		int[][] product = {{12, 18}, {9, 19}, {4, 3}, {5, 11}, {31, 21}};			
+			
+
+			
+			for (i = 0; i < product.length; i++) {
+				j = 0;
+				while (j < 1) {
+					temp1 = product[i][j];
+					j++;
+					temp2 = product[i][j];
+					mult = temp1 * temp2;
+					System.out.println("Produkt von " + temp1 + " und " + temp2 + " = " + mult);
+
+				
 			}
 		}
 	}
