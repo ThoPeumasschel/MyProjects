@@ -24,8 +24,8 @@ public class NumberReader {
 
 	public static void main(String[] args) {
 
-		String num = convertNum(4) + convertNum (2);
-		System.out.println("4 2 converts to " + num);
+		String num = convertNum(4) + convertNum(1) + convertNum(3);
+		System.out.println("413 converts to " + num);
 
 	}
 }
