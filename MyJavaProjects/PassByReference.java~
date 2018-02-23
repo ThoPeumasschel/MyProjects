@@ -26,7 +26,7 @@ public class PassByReference {
 		// Unterprogramm aufrufen.
 		// Call by Value: Unterprogramm arbeitet mit einer Kopie des Originalwertes, 
 		// der Originalwert kann nicht verändert werden.  
-		// Von Java werden automatich all unitären Datentypen by value übergeben, 
+		// Von Java werden automatich alle primitiven Datentypen by value übergeben, 
 		// damit kann das UP die Variable ändern. 
 		// Von Java werden automatisch alle Arrays, Strings und Objekte
 		// by reference übergeben. 
