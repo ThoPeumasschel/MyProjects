@@ -73,6 +73,21 @@ public class Suchen {
 			return -1;
 	}
 
+	static void insertionSort(int[] arr) {
+
+		int temp = 0, j = 0;
+		for(int i = 1; i < arr.length; i++) {
+
+			temp = arr[i];
+			j = i;
+			while(j > 0 && arr[j-1] > temp) {
+
+				arr[j] = arr[j-1];
+				j--;
+			}
+			arr[j] = temp;
+		}
+	}
 
 
 	public static void main(String...args) {
@@ -92,9 +107,18 @@ public class Suchen {
 			System.out.println("Die Zahl " + find + " wurde nicht im array gefunden.");
 		else 
 			System.out.println("Index des gesuchten Werts: " + erg + "\t gesuchter Wert im array: " + arg[erg] + "\n");
+	
+		//insertionSort
+		insertionSort(arg);
+		System.out.println("Nach insertionSort: ");
+		for(int i=0; i < arg.length; i++)
+			System.out.print(arg[i] + " ");
+		System.out.println("\n");
+
 
 		//bubbleSort
 		bubbleSort(arg);
+		System.out.println("Nach bubbleSort: ")
 		for(int i=0; i < arg.length; i++)
 			System.out.print(arg[i] + " ");
 		System.out.println("\n");
@@ -104,6 +128,8 @@ public class Suchen {
 			System.out.println("Die Zahl " + find + " wurde nicht im array gefunden.");
 		else 
 			System.out.println("Index des gesuchten Werts: " + erg + "\t gesuchter Wert im array: " + arg[erg] + "\n");
+
+		
 
 
 	}

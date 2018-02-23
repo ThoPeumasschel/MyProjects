@@ -1,0 +1,22 @@
+
+public class KingChess {
+
+	static double countWheat (double n) {
+		double x = 1;
+		if (x > 64) 
+			return (x * 2  countWheat(n - 1));
+		else
+			return 0;
+
+
+	}	
+
+public static void main(String...args) {
+	
+	double koerner = 1;
+	double felder = 64;
+	countWheat(n);
+
+
+
+
