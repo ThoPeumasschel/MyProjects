@@ -2,9 +2,6 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 
-// try-catch für unsinnige Eingaben einfügen
-// Abfragen mit boolean, ob eine Gewichtsberechnung stattfinden soll. 
-
 public class KingChess {
 	static int zaehler = 1;
 	static Scanner sc = new Scanner(System.in);
@@ -17,8 +14,10 @@ public class KingChess {
 			System.out.println("Feld " + zaehler + ": " + grains + " Koerner.");
 			return (grains + countRice(grains, fields-1));
 			}
-			else 
-				return 1;
+			else  
+
+			return -1;	
+				
 	}	
 
 	static int userInput1() { 
@@ -27,12 +26,17 @@ public class KingChess {
 			System.out.print("\nAuf wie vielen Feldern soll ich das Schachproblem berechnen? ");
 		try {
 			felder = sc.nextInt();
+			if (felder == 1) {
+				System.out.println("\n... moment mal! Schon mal ein Schachbrett mit nur einem einzigen Feld gesehen??");
+				break;
+			}
 			} catch (Exception e) {
 				System.out.println("\n\tUngueltige Eingabe! Bitte nur ganze Zahlen eingeben." 
 					+ "\n\t\tNeuer Versuch: ");
 				sc.next(); //unguültige Eingabe entfernen.
 			}
 		} while (felder == 0);
+
 		return felder;
 	}
 
@@ -101,7 +105,7 @@ public class KingChess {
 			System.out.println("\nGut, dann nicht. Auf Wiedersehen!\n");
 			nochmalabfragen = false;
 		} else {
-			System.out.println("Bitte nur die Zeichen 'j/J/y/Y' oder 'n/N' verwenden!");
+			System.out.println("Bitte nur die Zeichen 'j/J/y/Y' oder 'n/N' verwenden!\n");
 			nochmalabfragen = true;
 		}
 			return nochmalabfragen;

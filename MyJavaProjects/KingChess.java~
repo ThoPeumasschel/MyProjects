@@ -2,9 +2,6 @@ import java.text.DecimalFormat;
 import java.util.Scanner;
 
 
-// try-catch für unsinnige Eingaben einfügen
-// Abfragen mit boolean, ob eine Gewichtsberechnung stattfinden soll. 
-
 public class KingChess {
 	static int zaehler = 1;
 	static Scanner sc = new Scanner(System.in);
@@ -17,38 +14,45 @@ public class KingChess {
 			System.out.println("Feld " + zaehler + ": " + grains + " Koerner.");
 			return (grains + countRice(grains, fields-1));
 			}
-			else 
-				return 1;
+			else  
+
+			return -1;	
+				
 	}	
 
 	static int userInput1() { 
 		int felder = 0;
 		do {	
-		System.out.print("\nAuf wie vielen Feldern soll ich das Schachproblem berechnen? ");
-	try {
-		felder = sc.nextInt();
+			System.out.print("\nAuf wie vielen Feldern soll ich das Schachproblem berechnen? ");
+		try {
+			felder = sc.nextInt();
+			if (felder == 1) {
+				System.out.println("\n... moment mal! Schon mal ein Schachbrett mit nur einem einzigen Feld gesehen??");
+				break;
+			}
 			} catch (Exception e) {
 				System.out.println("\n\tUngueltige Eingabe! Bitte nur ganze Zahlen eingeben." 
 					+ "\n\t\tNeuer Versuch: ");
 				sc.next(); //unguültige Eingabe entfernen.
 			}
 		} while (felder == 0);
-	return felder;
+
+		return felder;
 	}
 
 	static double userInput2() {
 		double koerner = 0.0;
 		do {
-		System.out.print("\nMit wie vielen Koernern soll ich auf dem ersten Feld beginnen? ");
-	try {
-		koerner = sc.nextDouble();
+			System.out.print("\nMit wie vielen Koernern soll ich auf dem ersten Feld beginnen? ");
+		try {
+			koerner = sc.nextDouble();
 			} catch (Exception e) { 
 				System.out.println("\n\tUngueltige Eingabe! Bitte nur ganze Zahlen eingeben."
 					+ "\n\t\tNeuer Versuch: ");
 				sc.next();
 			}
 		} while (koerner == 0.0);
-	return koerner;	
+		return koerner;	
 	}
 
 	static char userInput3() {
@@ -56,7 +60,6 @@ public class KingChess {
 		System.out.println("Soll ich noch das Gewicht der Koerner berechnen? [j/n]." 
 		+ "\n(angenommen, ein Korn wiegt 0,002 gramm)");	
 		char antwort = sc.next().charAt(0);
-//		sc.next();
 		return antwort;
 	}
 
@@ -129,7 +132,9 @@ public static void main(String...args) {
 	do {
 		antwort = userInput3();
 		nochmal = abfragen(antwort, ergebnis);
-	}	while (nochmal == true);		
+		} while (nochmal == true);		
+	
+
 		}	
 	
 	}
