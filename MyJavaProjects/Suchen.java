@@ -65,7 +65,8 @@ public class Suchen {
 			}
 		}
 
-		System.out.println("Es wurde beim binarySearch " + zaehler + " mal zugegriffen.\n");
+		System.out.println("Es wurde beim binarySearch " 
+					+ zaehler + " mal zugegriffen.\n");
 
 		if (isFound)
 			return middle;
