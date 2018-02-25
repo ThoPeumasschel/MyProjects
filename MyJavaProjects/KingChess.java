@@ -9,7 +9,7 @@ public class KingChess {
 	static double countRice(double grains, int fields) {
 		
 		if (fields > 1) {
-			zaehler++;
+			zaehler++; //nicht nötig, nur um die Anzahl auf jedem Feld auszugeben. 
 			grains*=2;
 			System.out.println("Feld " + zaehler + ": " + grains + " Koerner.");
 			return (grains + countRice(grains, fields-1));
@@ -28,7 +28,7 @@ public class KingChess {
 			felder = sc.nextInt();
 			if (felder == 1) {
 				System.out.println("\n... moment mal! Schon mal ein Schachbrett mit nur einem einzigen Feld gesehen??");
-				break;
+				break; // An dieser Stelle soll das Programm abbrechen. Exit()??
 			}
 			} catch (Exception e) {
 				System.out.println("\n\tUngueltige Eingabe! Bitte nur ganze Zahlen eingeben." 

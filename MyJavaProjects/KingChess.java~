@@ -9,7 +9,7 @@ public class KingChess {
 	static double countRice(double grains, int fields) {
 		
 		if (fields > 1) {
-			zaehler++;
+			zaehler++; //nicht nötig, nur um die Anzahl auf jedem Feld auszugeben. 
 			grains*=2;
 			System.out.println("Feld " + zaehler + ": " + grains + " Koerner.");
 			return (grains + countRice(grains, fields-1));
@@ -105,7 +105,7 @@ public class KingChess {
 			System.out.println("\nGut, dann nicht. Auf Wiedersehen!\n");
 			nochmalabfragen = false;
 		} else {
-			System.out.println("Bitte nur die Zeichen 'j/J/y/Y' oder 'n/N' verwenden!");
+			System.out.println("Bitte nur die Zeichen 'j/J/y/Y' oder 'n/N' verwenden!\n");
 			nochmalabfragen = true;
 		}
 			return nochmalabfragen;

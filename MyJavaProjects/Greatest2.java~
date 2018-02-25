@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GreatestCommonDivisor {
+public class Greatest2 {
 
 		static int c = 0;
 		static int erg = 0;	
@@ -37,9 +37,26 @@ public class GreatestCommonDivisor {
 
 		System.out.print("\nIch kann dir den groessten gemeinsamen Teiler " + 
 			"von zwei beliebigen Zahlen berechnen. " + "\nLos geht's, gib die erste Zahl ein: ");
-		int x = sc.nextInt();
-		System.out.print("Ok, und jetzt die zweite Zahl: ");
-		int y = sc.nextInt();
+		int x = 0;
+		int y = 0;
+		do {
+			try {
+				x = sc.nextInt();
+			} catch (Exception e) {
+				System.out.println("\n\tBitte nur ZAHLEN eingeben, Danke.");
+				sc.next();
+			}
+		} while (x == 0);
+		do {
+			System.out.print("Ok, und jetzt die zweite Zahl: ");
+			try {
+				y = sc.nextInt();
+			} catch (Exception e) {
+				System.out.println("\n\tAuch hier bitte eine ZAHL eingeben!");
+				sc.next();
+			}
+		} while (y == 0);
+
 		System.out.println("\n\tDas kommt davon, wenn man eine 'while-Schleife' benutzt: "); 
 		
 		erg = doEuklid(x, y); // Der erste Methodenaufruf
