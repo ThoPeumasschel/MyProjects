@@ -13,7 +13,6 @@ public class Greatest2 {
 //		if (a < b)			// um sicherzustellen, dass immer die 
 							// größere Zahl durch die kleinere geteilt wird.  
 //		{	c = b;	b = a;	a = c;	} // Zum vertauschen wird a in b gespeichert und umgekehrt. 
-//	So wie es aussieht, braucht man das aber nicht zu tun!!
 			c = a % b;		// jetzt geht's eigentlich erst richtig los. Modulo! 
 		
 			while (c!=0) 	// läuft bis kein Rest mehr da ist. 
@@ -26,10 +25,11 @@ public class Greatest2 {
 			c = a % b;						  // im Prinzip das gleiche...
 		if (c != 0) {						  // nur jetzt nur 'if'. 
 			zaehler++;
+			System.out.printf("Iteration " + zaehler + " %d %% %d = %d", a, b,c);
 			a = b; b = c; 
-		//	System.out.printf("Iteration " + zaehler + " : %d = %d % %d ",  c, a, b);
-			System.out.printf("%d und hallo", c);
+			System.out.println();
 			return rekursivEuklid(a, b);	  // Funktion ruft sich selber auf...
+			
 		}									  // ... bis c=0...  
 		else { 
 			return b;						  // ... und gibt 'b' zurück. 
@@ -67,13 +67,13 @@ public class Greatest2 {
 		System.out.println("Der groesste gemeinsame Teiler von " + x + " und " + y +
 			" ist " + erg + ".");
 	
-		System.out.println("\n\tWie man gleich sieht, kommt bei der rekursiven Methode " 
-								+ "genau dasselbe heraus: "); 
+		System.out.println("\n\tJetzt folgt noch die rekursive Methode. "
+						+ "Erst die Einzelschritte: "); 
 		
 		erg = rekursivEuklid(x, y);	// Der zweite Methodenaufruf. 
 		
-		System.out.println("Der groesste gemeinsame Teiler von " + x + " und " + y +
-			" ist " + erg + ".");
+		System.out.println("\nUnd jetzt der groesste gemeinsame Teiler von " + x + " und " + y +
+			" : " + erg + ".");
 		System.out.println();
 	}
 }	
