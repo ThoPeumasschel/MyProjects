@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Greatest2 {
-
+		
+		static int zaehler = 0;
 		static int c = 0;
 		static int erg = 0;	
 		static Scanner sc = new Scanner(System.in); // Hier wird ein statisches Objekt der 
@@ -24,8 +25,10 @@ public class Greatest2 {
 											  // rekursiv zu machen ist. 
 			c = a % b;						  // im Prinzip das gleiche...
 		if (c != 0) {						  // nur jetzt nur 'if'. 
+			zaehler++;
 			a = b; b = c; 
-		
+		//	System.out.printf("Iteration " + zaehler + " : %d = %d % %d ",  c, a, b);
+			System.out.printf("%d und hallo", c);
 			return rekursivEuklid(a, b);	  // Funktion ruft sich selber auf...
 		}									  // ... bis c=0...  
 		else { 
@@ -73,4 +76,4 @@ public class Greatest2 {
 			" ist " + erg + ".");
 		System.out.println();
 	}
-}
+}	
