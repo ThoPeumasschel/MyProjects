@@ -1,17 +1,29 @@
-import static java.lang.System.out;
+public class ArrayTest {
 
-class ArrayTest {
-	
-	public static void main ( String[] args ) {
+	static String[] firstNames = {"Dennis", "Grace", "Bjarne", "James"};
+	static String[] lastNames = new String[firstNames.length];
 
-		System.out.println("Jetzt erzeugen wir mal einen Fehler zur Laufzeit.");
+	static void printNames () {
+		System.out.println("\n");	
 
-//		int() array = null;
-//		array[ 1 ] = 1;   // NullPointerException
-
-		int[] array = new int[ 100 ];
-//		array[ -10 ] = 1; // Fehler zur Laufzeit, nicht zur Compilezeit
-		array[ 100 ] = 1; // Fehler zur Laufzeit, nicht zur Compilezeit
-		
+		for(int i = 0; i < firstNames.length; i++) {
+			System.out.println(firstNames[i] + " " + lastNames[i]);
+		System.out.println("-------");
 	}
 }
+
+	public static void main(String... args) {
+
+		printNames();
+		lastNames[0] = "Ritchie";
+		lastNames[1] = "Hopper";
+		lastNames[2] = "Stroustrup";
+		lastNames[3] = "Gosling";
+		printNames();
+
+
+
+	}
+	
+}
+
