@@ -151,7 +151,8 @@ public class Search {
 		for(int i=0; i < arg.length; i++)
 			System.out.print(arg[i] + " ");
 		System.out.println("\n");
-
+		
+		//findElementBinary
 		erg = findElementbinary(arg, find);
 		if (erg == -1)
 			System.out.println("Die Zahl " + find + " wurde nicht im array gefunden.");

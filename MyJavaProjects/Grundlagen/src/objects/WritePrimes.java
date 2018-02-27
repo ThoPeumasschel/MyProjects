@@ -9,6 +9,7 @@ public class WritePrimes {
 		int[] primes = new int[600];
 		int numPrimes = 0;
 		int candidate = 2;
+		
 		while (numPrimes < primes.length) {
 			if (isPrime(candidate)) {
 				primes[numPrimes] = candidate;
