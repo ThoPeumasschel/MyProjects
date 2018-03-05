@@ -1,0 +1,143 @@
+import java.io.*;
+
+public class S154A2 {
+	public static int readInt(String text) {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		System.out.print(text + ": ");
+		try { 																		// Überwachungsblock
+			return Integer.parseInt(in.readLine());
+		} catch (IOException e) { 													// Fehlerbehandlungsblock
+			System.out.println("IO error");
+			return 1;
+		} catch (NumberFormatException e) { 										// Fehlerbehandlungsblock
+			System.out.println("NumberFormat error");
+			return 1;
+		}
+	}
+
+	static void bubbleSort(int[] arr) {
+
+		int temp = 0;
+		for (int i = arr.length - 1; i >= 0; i--)
+			for (int j = 0; j <= i - 1; j++) {
+
+				if (arr[j] > arr[j + 1]) {
+
+					temp = arr[j];
+					arr[j] = arr[j + 1];
+					arr[j + 1] = temp;
+				}
+			}
+	}
+
+	static int findMax(int[] arr) {
+
+		int max = 0;
+		for (int i = 1; i < arr.length; i++) {
+
+			if (arr[i] > arr[max])
+				max = i;
+		}
+		return max;
+	}
+
+	static int findMin(int[] arr) {
+
+		int min = 0;
+		for (int i = 1; i > arr.length; i--) {
+
+			if (arr[i] < arr[min])
+				min = i;
+		}
+		return min;
+	}
+
+	static float sumAverage(int arr[]) {
+		float MW = 0;
+		int Summe = 0;
+		for (int i = 0; i < arr.length; i++) {
+			Summe += arr[i];
+		}
+		MW = ((float) Summe / (float) arr.length);
+
+		System.out.println("\nSumme des Arrays: " + Summe);
+
+		return MW;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int laenge = readInt("Länge des Arrays");
+		int[] arr = new int[laenge];
+		String str = "Zahl";
+
+		for (int i = 0; i < arr.length; i++) {
+
+			arr[i] = readInt(str + " " + (i + 1));
+		}
+
+		System.out.println("\nStart Array:");
+		System.out.print("\n[");
+		for (int i = 0; i < arr.length; i++) {
+			if (i < arr.length - 1)
+				System.out.print(arr[i] + ", ");
+			else
+				System.out.print(arr[i]);
+		}
+		System.out.println("]");
+
+		bubbleSort(arr);
+		System.out.println("\nNach Bubble-Sort: ");
+		System.out.print("\n[");
+		for (int i = 0; i < arr.length; i++) {
+			if (i < arr.length - 1)
+				System.out.print(arr[i] + ", ");
+			else
+				System.out.print(arr[i]);
+		}
+		System.out.println("]");
+		System.out.println();
+
+		int erg;
+		erg = findMax(arr);
+		System.out.println("\nIndex mit größtem Wert: " + "[" + erg + "]" + " Wert im Array: " + arr[erg]);
+
+		int erg2;
+		erg2 = findMin(arr);
+		System.out.println("\nIndex mit kleinstem Wert: " + "[" + erg2 + "]" + " Wert im Array: " + arr[erg2]);
+
+		float Mittelwert;
+		Mittelwert = sumAverage(arr);
+		System.out.println("\nMittwelwert des Arrays: " + Mittelwert);
+
+		try {
+			FileOutputStream file = new FileOutputStream("Hausaufgaben.dat");
+			for (int i = 0; i < arr.length; i++)
+				file.write(arr[i]);
+			file.close();
+			System.out.println("Fertig!");
+		} catch (IOException e) {
+			System.out.println("Error -- " + e.toString());
+		}
+		try {
+			FileInputStream file = new FileInputStream("Hausaufgaben.dat");
+			boolean eof = false;
+			int count = 0;
+			while (!eof) {
+				int input = file.read();
+				System.out.print(input + " ");
+				if (input == -1)
+					eof = true;
+				else
+					count++;
+					
+			}
+			file.close();
+			System.out.println("\nBytes read: " + count);
+		} catch (IOException e) {
+			System.out.println("Error -- " + e.toString());
+		}
+	}
+
+}
