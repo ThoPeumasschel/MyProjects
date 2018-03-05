@@ -1,29 +1,31 @@
+
+
 import java.io.*;
 
 public class ReadBytes {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		try 
-		{
-			FileInputStream file = new FileInputStream("pic.dat");
+		
+		try {
+			FileInputStream file = new FileInputStream("pic.txt");
 			boolean eof = false;
 			int count = 0;
-			while (!eof)
-			{
+			while (!eof) {
 				int input = file.read();
 				System.out.print(input + " ");
 				if (input == -1)
 					eof = true;
 				else
 					count++;
-			}
-			file.close();
-			System.out.println("\nBytes read: " + count);
-		} catch (IOException e)
-		{
+			
+		}
+		file.close();
+		System.out.println("\nBytes read: " + count);
+		} catch (IOException e) {
 			System.out.println("Error -- " + e.toString());
 		}
+		
+
 	}
 
 }

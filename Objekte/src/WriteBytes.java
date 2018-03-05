@@ -1,20 +1,22 @@
+
+
 import java.io.*;
 
 public class WriteBytes {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[] data = { 71, 73, 70, 56, 57, 97, 15, 0, 15, 0, 128 };
-		try
-		{
-			FileOutputStream file = new FileOutputStream("pic.dat");
-			for (int i=0; i < data.length; i++)
+
+		int[] data = { 71, 45, 26, 93, 73, 45, 124, 147, 236, 234, 255, 0 };
+		try {
+			FileOutputStream file = new FileOutputStream("pic.txt");
+			for (int i = 0; i < data.length; i++)
 				file.write(data[i]);
 			file.close();
 			System.out.println("Fertig!");
-		} catch (IOException e)
-		{
+		} catch (IOException e) {
 			System.out.println("Error -- " + e.toString());
-		}				
+		}
+
 	}
+
 }

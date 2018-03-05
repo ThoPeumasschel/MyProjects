@@ -1,3 +1,5 @@
+
+
 import java.util.*;
 
 public class RandomNumbers {
@@ -13,7 +15,7 @@ public class RandomNumbers {
 		System.out.println("Random value 2: " + r2.nextDouble());
 		
 		r3 = new Random();
-		int number = (int) (r3.nextDouble() * 12);
+		int number = (int) (r3.nextDouble() * 100);
 		System.out.println("Random value 3: " + number);
 	}
 
