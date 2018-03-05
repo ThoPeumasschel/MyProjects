@@ -1,4 +1,4 @@
-package MyJavaProjects.Grundlagen.src.objects;
+package objects;
 
 import java.io.File;
 
