@@ -1,4 +1,4 @@
-import mammal.Animal;
+import MyJavaProjects.Animal.mammal.Animal;
 
 class Program {
 	public static void main(String args[]) {

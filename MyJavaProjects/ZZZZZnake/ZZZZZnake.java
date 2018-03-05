@@ -17,7 +17,6 @@
  */
 
 import java.awt.Point;
-import java.util.Arrays;
 
 
 public class ZZZZZnake {

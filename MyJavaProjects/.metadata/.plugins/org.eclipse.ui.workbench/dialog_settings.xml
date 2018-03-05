@@ -12,4 +12,19 @@
 		<list key="textArray">
 		</list>
 	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="FileSystemImportWizard">
+		<item value="true" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
+		<item value="true" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="F:\KURSE\15 Joachim Grünert - Programmierung\workspace"/>
+			<item value="C:\Users\thoma\OneDrive\CC-USB\KURSE\15 Joachim Grünert - Programmierung\ProzeduraleProgrammierung_Beispiele\PG_BU\Beispieldateien\Kap12"/>
+			<item value="C:\Users\thoma\eclipse-workspace\GrunglagenNeu"/>
+		</list>
+	</section>
 </section>

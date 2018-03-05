@@ -1,4 +1,5 @@
-import java.awt.*; 	//Klasse Point benötigt. 
+//Klasse Point benötigt. 
+import java.awt.Point;
 
 public class SetPoints {
 

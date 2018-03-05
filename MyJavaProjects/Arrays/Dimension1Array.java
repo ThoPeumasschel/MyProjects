@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Dimension1Array {
 
 	//static Scanner sc = new Scanner(System.in);

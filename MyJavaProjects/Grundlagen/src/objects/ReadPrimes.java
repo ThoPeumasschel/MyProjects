@@ -1,6 +1,10 @@
 package objects;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.DataInputStream;
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class ReadPrimes {
 

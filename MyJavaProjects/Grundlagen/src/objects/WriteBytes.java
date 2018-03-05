@@ -1,6 +1,7 @@
 package objects;
 
-import java.io.*;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class WriteBytes {
 
