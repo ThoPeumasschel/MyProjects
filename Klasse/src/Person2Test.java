@@ -2,7 +2,6 @@
 public class Person2Test {
 
 	public static void main(String[] args) {
-		System.out.println("Say Hello!");
 		Person2 pers1 = new Person2();
 		System.out.println("\nStandardkonstruktoraufruf, noch sind keine Werte gesetzt.\n");
 		pers1.zeigePerson();

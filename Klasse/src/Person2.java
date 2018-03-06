@@ -5,30 +5,24 @@ public class Person2 {
 	private String adresse;
 	private String telefonnummer;
 
+	// Standardkonstruktor
 	Person2() {
-		name = null;
-		vorname = null;
-		adresse = null;
-		telefonnummer = null;
+		name = null; vorname = null;
+		adresse = null; telefonnummer = null;
 
 	}
-
+	// Parametrisierter Konstruktor
 	Person2(String n, String v, String a, String t) {
-		name = n;
-		vorname = v;
-		adresse = a;
-		telefonnummer = t;
+		name = n; vorname = v;
+		adresse = a; telefonnummer = t;
 		
 	}
 
 	Person2(String x, String y) {
-		name = x;
-		vorname = y;
-		adresse = "Hamburg";
+		name = x; vorname = y; adresse = "Hamburg"; 
 		telefonnummer = "n/v";
 	}
-	
-	
+		
 	void setName(String value) {
 		name = value;
 	}
