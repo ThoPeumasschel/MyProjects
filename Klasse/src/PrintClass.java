@@ -25,3 +25,4 @@ public class PrintClass {
 		this.y = y;
 	}
 }
+

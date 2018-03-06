@@ -57,9 +57,9 @@ public class Person2 {
 
 	void zeigePerson() {
 
-		System.out.println("Der Name der Person lautet \n" + vorname + " " 
-		+ name + "\nAdresse: " + adresse + "\nTelefon: " + telefonnummer);
-		System.out.println("##################################");
+		System.out.println("Name: \t\t" + vorname + " " 
+		+ name + "\nAdresse: \t" + adresse + "\nTelefon: \t" + telefonnummer);
+		
 
 	}
 
