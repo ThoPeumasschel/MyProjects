@@ -88,7 +88,7 @@ public class Adressverwaltung {
 		ReadFromFile();
 
 		int cEingabe;
-		int iIndex = 0;
+//		int iIndex = 0;
 		do {
 			System.out.println("Satz eingeben...................1");
 			System.out.println("Satz anzeigen...................2");

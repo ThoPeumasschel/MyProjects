@@ -3,6 +3,7 @@ public class Angestellter extends Person2 {
 
 	private int monatsgehalt;
 
+	@Override
 	void zeigePerson() {
 		super.zeigePerson();
 		System.out.println("Monatsgehalt: \t" + monatsgehalt + " €");

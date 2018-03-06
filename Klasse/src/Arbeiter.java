@@ -4,6 +4,7 @@ public class Arbeiter extends Person2 {
 	private double stundenlohn;
 	private int anzahlStunden;
 	
+	@Override
 	void zeigePerson() {
 		super.zeigePerson();
 		double wochenlohn = stundenlohn * anzahlStunden;

@@ -1,6 +1,10 @@
 import java.awt.Point;
 
 public class NamedPoint extends Point {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name;
 
 	NamedPoint(int x, int y, String name) {
