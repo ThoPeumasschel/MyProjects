@@ -3,7 +3,7 @@ public class Vergleiche {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a, b, c;
+		int a, b;
 		a = 4; b = 4;
 		System.out.println("Gleichheit: " + (a == b));
 		System.out.println("Ungleichheit: " + (a != b));
