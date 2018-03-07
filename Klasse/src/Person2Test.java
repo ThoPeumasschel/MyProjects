@@ -29,8 +29,8 @@ public class Person2Test {
 		System.out.println("##################################");
 		
 		
-		Angestellter ang = new Angestellter("Meier", "Thorsten", "München", "09123/543");		
-		ang.setMonatsgehalt(3500);
+		Angestellter ang = new Angestellter("Meier", "Thorsten", "München", "09123/543", 3500);		
+		ang.setMonatsgehalt(3800);
 		System.out.println("Angestellter 1");
 		ang.zeigePerson();
 		
@@ -44,9 +44,9 @@ public class Person2Test {
 		ang2.zeigePerson();
 		
 		
-		Arbeiter arb = new Arbeiter("Rüll", "Hugo", "Limbach", "0534/1357");
-		arb.setStundenlohn(34.56);
-		arb.setAnzahlStunden(14);
+		Arbeiter arb = new Arbeiter("Rüll", "Hugo", "Limbach", "0534/1357", 34.56, 14);
+		arb.setStundenlohn(64.56);
+		arb.setAnzahlStunden(3);
 		System.out.println("Arbeiter 1");
 		arb.zeigePerson();
 		
