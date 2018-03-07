@@ -4,7 +4,7 @@ import java.awt.event.*;
 public class FensterTest {
 
 	public static void main(String[] args) {
-		Frame app = new Hamlet("Hi! I'm an application");
+		Frame app = new Buttons("Hi! I'm an application");
 
 		WindowListener l = new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {

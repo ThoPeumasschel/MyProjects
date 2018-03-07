@@ -7,22 +7,30 @@ public class Person2 {
 
 	// Standardkonstruktor
 	Person2() {
-		name = null; vorname = null;
-		adresse = null; telefonnummer = null;
+		name = null;
+		vorname = null;
+		adresse = null;
+		telefonnummer = null;
 
 	}
+
 	// Parametrisierter Konstruktor
 	Person2(String n, String v, String a, String t) {
-		name = n; vorname = v;
-		adresse = a; telefonnummer = t;
-		
+		name = n;
+		vorname = v;
+		adresse = a;
+		telefonnummer = t;
+
 	}
 
+	// Noch ein Konstruktor...
 	Person2(String x, String y) {
-		name = x; vorname = y; adresse = "Hamburg"; 
+		name = x;
+		vorname = y;
+		adresse = "Hamburg";
 		telefonnummer = "n/v";
 	}
-		
+
 	void setName(String value) {
 		name = value;
 	}
@@ -57,10 +65,19 @@ public class Person2 {
 
 	void zeigePerson() {
 
-		System.out.println("Name: \t\t" + vorname + " " 
-		+ name + "\nAdresse: \t" + adresse + "\nTelefon: \t" + telefonnummer);
-		
+		System.out.println(
+				"Name: \t\t" + vorname + " " + name + "\nAdresse: \t" + adresse + "\nTelefon: \t" + telefonnummer);
 
 	}
-
+	// neue Mitarbeiter einstellen, Mitarbeiter auflisten, 
+	// soll mit Menue beendet werden können
+	void menue() { 
+		
+		
+		
+	}
+	
+	
+	
+	
 }

@@ -2,6 +2,7 @@
 public class Angestellter extends Person2 {
 
 	private int monatsgehalt;
+	private Angestellter[] ang_daten = new Angestellter[30];
 
 	void zeigePerson() {
 		super.zeigePerson();
