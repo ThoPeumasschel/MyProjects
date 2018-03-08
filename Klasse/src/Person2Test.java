@@ -1,3 +1,4 @@
+import java.io.ObjectInputStream.GetField;
 
 public class Person2Test {
 
@@ -52,7 +53,7 @@ public class Person2Test {
 		System.out.println("Angestellte 2");
 		ang2.zeigePerson();
 */		
-		angarr[iangarr++] = new Angestellter("Meier", "Al", "Köln", );
+		angarr[iangarr++] = new Angestellter("Meier", "Al", "Köln", "934875", iangarr);
 		angarr[iangarr++] = new Angestellter();
 		angarr[iangarr++] = new Angestellter();
 		
@@ -62,7 +63,7 @@ public class Person2Test {
 		
 		for (int i = 0; i < iangarr; i++) {
 			
-			System.out.println("Angestellter 1: " + );
+			System.out.println("Angestellter 1: " );
 			
 			
 		}
