@@ -1,5 +1,5 @@
 
-public class Angestellter extends Person2 {
+public class Angestellter extends Person {
 
 	private int monatsgehalt;
 

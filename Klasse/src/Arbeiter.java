@@ -1,6 +1,6 @@
 import java.text.DecimalFormat;
 
-public class Arbeiter extends Person2 {
+public class Arbeiter extends Person {
 	private int stundenlohn;
 	private int anzahlStunden;
 
@@ -35,7 +35,7 @@ public class Arbeiter extends Person2 {
 		return stundenlohn;
 	}
 
-	public void setStundenlohn(double d) {
+	public void setStundenlohn(int d) {
 		this.stundenlohn = d;
 	}
 

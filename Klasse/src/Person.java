@@ -1,54 +1,83 @@
 
-public class Person {
-	// Eigenschaften, globale Variable
+public class Person extends Firma {
 	private String name;
-	private int age;
+	private String vorname;
+	private String adresse;
+	private String telefonnummer;
 
-	// Konstruktor
-	Person(String n, int a) {
-		name = n;
-		age = a;
-	}
-
-	Person(String n) {
-		name = n;
-		age = 0;
-	}
-
-	// Standard-Konstruktor wurde hier programmiert,
-	// weil der Compiler nach erzeugen des Konstruktors in Zeile 8
-	// keinen Standardkonstruktor mehr erzeugt.
-	public Person() {
+	// Standardkonstruktor
+	Person() {
 		name = null;
-		age = 0;
+		vorname = null;
+		adresse = null;
+		telefonnummer = null;
+
 	}
 
-	// get-/set-Methoden zum setzen oder lesen der gekapselten Eigenschaften
-	// Getter Methode für Variable age
-	int getAge() {
-		return age;
+	// Parametrisierter Konstruktor
+	Person(String n, String v, String a, String t) {
+		name = n;
+		vorname = v;
+		adresse = a;
+		telefonnummer = t;
+
 	}
 
-	void setAge(int value) {
-		age = value;
+	// Noch ein Konstruktor...
+	Person(String x, String y) {
+		name = x;
+		vorname = y;
+		adresse = "Hamburg";
+		telefonnummer = "n/v";
 	}
 
-	// Getter Methode für Variable Name
+	void setName(String value) {
+		name = value;
+	}
+
 	String getName() {
 		return name;
 	}
 
-	void setName(String value) { // Um die Eigenschaft Name read only zu machen, diese Funktion z. B.
-									// auskommentieren.
-		name = value;
+	void setVorname(String value) {
+		vorname = value;
 	}
 
-	// Methode, Funktion
-	void printPerson() {
-
-		System.out.println("Hi, my name is " + name + ". I am " + age + " years old");
-		System.out.println("----");
-
+	String getVorname() {
+		return vorname;
 	}
 
+	void setAdresse(String value) {
+		adresse = value;
+	}
+
+	String getAdresse() {
+		return adresse;
+	}
+
+	void setTelefonnummer(String value) {
+		telefonnummer = value;
+	}
+
+	String getTelefonnummer() {
+		return telefonnummer;
+	}
+
+	void zeigePerson() {
+
+		System.out.println(
+				"Name: \t\t" + vorname + " " + name + "\nAdresse: \t" + adresse + "\nTelefon: \t" + telefonnummer);
+
+	}
+	// neue Mitarbeiter einstellen, Mitarbeiter auflisten, 
+	// soll mit Menue beendet werden können
+	void menue() { 
+		
+		
+		
+	}
+	
+	
+	
+	
 }
