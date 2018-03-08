@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class BurmaShave extends Frame implements Runnable {
+public class BurmaShave1 extends java.applet.Applet implements Runnable {
 	CardLayout fl = new CardLayout();
 	Label[] lab = new Label[6];
 	int current = 0;
@@ -18,8 +18,7 @@ public class BurmaShave extends Frame implements Runnable {
 		runner = null;
 	}
 
-	BurmaShave(String title) {
-		super(title);
+public void init() {		// init() ist Einsprungspunkt für Applet
 		setLayout(fl);
 		lab[0] = new Label("Grandpa's beard");
 		lab[1] = new Label("Was stiff and coarse.");
@@ -28,7 +27,7 @@ public class BurmaShave extends Frame implements Runnable {
 		lab[4] = new Label("Divorce");
 		lab[5] = new Label("Burma Shave.");
 		for (int i = 0; i < lab.length; i++)
-			add("CArd " + i, lab[i]);
+			add("Card " + i, lab[i]);
 	}
 
 	@Override
@@ -41,7 +40,7 @@ public class BurmaShave extends Frame implements Runnable {
 				current = 0;
 			repaint();
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 
 			} catch (InterruptedException e) {}
 
