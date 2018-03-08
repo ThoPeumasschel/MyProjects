@@ -21,18 +21,112 @@ public class Person2Test {
 	void getData() {
 		
 		System.out.println("Bitte Daten eingeben: ");
-		name = sc.next();
-		vorname = sc.next();
-		adresse = sc.next();
-		telefonnummer = sc.next();
-		stundenlohn = sc.next();
-		anzahlStunden = sc.next();
-		monatsgehalt = sc.next();
+		name = sc.next("Name");
+		vorname = sc.next("Vorname");
+		adresse = sc.next("Adresse");
+		telefonnummer = sc.next("Telefon");
+		stundenlohn = sc.next("Stundenlohn");
+		anzahlStunden = sc.next("Stunden Anzahl");
+		monatsgehalt = sc.next("Monatsgehalt");
 		iIndex++;
 		
 	}
+		
+	void showData() {
+		
+		System.out.println();
+		System.out.println("Mitarbeiter Daten: ");
+		System.out.println("Name: " + name);
+		System.out.println("Vorname: " + vorname);
+		System.out.println("Adresse: " + adresse);
+		System.out.println("Telefon: " + telefonnummer);
+		System.out.println("Stundenlohn: " + stundenlohn);
+		System.out.println("Anzahl Stunden: " + anzahlStunden);
+		System.out.println("Monatsgehalt: " + monatsgehalt);
+		
+	}
+	
 	
 	public static void main(String[] args) {
+		
+		int cEingabe;
+		int iIndex = 0;
+		
+		Person2Test pt = new Person2Test();
+
+		do {
+			System.out.println("||||||||||||||||||||||||||||||||||||");
+			System.out.println("Daten eingeben......................1");
+			System.out.println("Daten anzeigen......................2");
+			System.out.println("Daten aendern.......................3");
+			System.out.println("Daten zeigen.......................4");
+//			System.out.println("Datensatz speichern................5");
+			System.out.println("Programmende.......................0");
+			System.out.println("||||||||||||||||||||||||||||||||||||");
+
+//			cEingabe = Integer.parseInt(readString("Auswahl "));
+			System.out.println("Eingabe: " + cEingabe);
+			switch (cEingabe) {
+
+			case 1: {
+
+				System.out.println("Satzeingabe-Funktion"); // Satzeingabe-Funktion
+				pt.getData();
+				break;
+			}
+
+			case 2: {
+
+				System.out.println("Satzzeigen-Funktion"); // Satzzeigen-Funktion
+				pt.showData();
+				break;
+			}
+
+			case 3: {
+
+				System.out.println("Daten zeigen"); 
+				pt.angarr[pt.iangarr++] = new Angestellter("Ehrlich", "Paul", "Augsburg", "0175/534231", 4300);
+				pt.angarr[pt.iangarr++] = new Angestellter("Ehrlich", "Rudolf", "Augsburg", "0175/511111", 2300);
+				pt.angarr[pt.iangarr++] = new Angestellter("Ehrlich", "Dieter", "Augsburg", "0175/522222", 4700);
+				
+				if (pt.iangarr > 29) {
+					System.out.println("Kein Platz mehr im Array!");
+				}
+				
+				for (int i = 0; i < pt.iangarr; i++) {
+					System.out.println("Angestellter " + (i+1) + " : " + pt.angarr[i].getName() + ", " +
+							pt.angarr[i].getVorname() + "Adresse: " + pt.angarr[i].getAdresse() + "Telefon: " + 
+							pt.angarr[i].getTelefonnummer() + " Monatsgehalt: " + pt.monatsgehalt);
+					
+					
+					
+					
+					
+				}
+				
+				break;
+			}
+
+			case 4: {
+
+				System.out.println("Liste zeigen-Funktion"); // Liste zeigen-Funktion
+				break;
+			}
+
+/*			case 5: {
+
+				handoutFile(); // Datensatz speichern-Funktion
+				break;
+
+			}
+	*/		}
+
+		} while (cEingabe != 0);
+		
+		
+	}
+		
+	
 /*		Person2 pers1 = new Person2();
 		System.out.println("Standardkonstruktoraufruf, noch sind keine Werte gesetzt.\n");
 		pers1.zeigePerson();
@@ -77,35 +171,17 @@ public class Person2Test {
 */		
 		
 		
-		
-		
-		
-		
-		angarr[iangarr++] = new Angestellter("Meier", "Al", "Köln", "934875", iangarr);
-		angarr[iangarr++] = new Angestellter();
-		angarr[iangarr++] = new Angestellter();
-		
-		if(iangarr > 29) {
-			System.out.println("Array Angestellte voll!");
-		}
-		
-		for (int i = 0; i < iangarr; i++) {
 			
-			System.out.println("Angestellter 1: " );
-			
-			
-		}
+	
 		
-		Arbeiter arb = new Arbeiter("Rüll", "Hugo", "Limbach", "0534/1357", 34.56, 14);
+//		Arbeiter arb = new Arbeiter("Rüll", "Hugo", "Limbach", "0534/1357", 34.56, 14);
 //		arb.setStundenlohn(64.56);
 //		arb.setAnzahlStunden(3);
 //		System.out.println("Arbeiter 1");
 //		arb.zeigePerson();
-		arb.arb_daten[0] = new Arbeiter();
-		System.out.println("Test: " + arb.arb_daten[0]);
-		arb.menue(arb);
+	
 		
-		Arbeiter[] arbeiterArray = new Arbeiter[7];
+
 		arbeiterArray[0] = new Arbeiter();
 		arbeiterArray[0].stundenlohn = 99;
 	    System.out.println(arbeiterArray[0].stundenlohn); // prints 99

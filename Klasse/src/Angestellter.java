@@ -17,9 +17,9 @@ public class Angestellter extends Person2 {
 	}
 
 	// Parametrisierter Konstruktor
-	public Angestellter(String n, String v, String a, String t, int m) {
+	public Angestellter(String n, String v, String a, String t, int monatsgehalt2) {
 		super(n, v, a, t);
-		monatsgehalt = m;
+		monatsgehalt = monatsgehalt2;
 
 	}
 

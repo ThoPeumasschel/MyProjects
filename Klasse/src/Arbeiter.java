@@ -1,7 +1,7 @@
 import java.text.DecimalFormat;
 
 public class Arbeiter extends Person2 {
-	double stundenlohn;
+	private int stundenlohn;
 	private int anzahlStunden;
 
 	void zeigePerson() {
@@ -18,13 +18,13 @@ public class Arbeiter extends Person2 {
 	// Default constructor
 	public Arbeiter() {
 		super();
-		stundenlohn = 0.0;
+		stundenlohn = 0; // Double wäre schöner
 		anzahlStunden = 0;
 
 	}
 
 	// parametrisized constructor
-	public Arbeiter(String n, String v, String a, String t, double std, int anz) {
+	public Arbeiter(String n, String v, String a, String t, int std, int anz) {
 		super(n, v, a, t);
 		stundenlohn = std;
 		anzahlStunden = anz;
