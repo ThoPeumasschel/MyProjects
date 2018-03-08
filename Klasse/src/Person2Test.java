@@ -1,6 +1,14 @@
 
 public class Person2Test {
 
+	static Angestellter[] angarr = new Angestellter[30];
+	static Arbeiter[] arbarr = new Arbeiter[30];
+	
+	static int iangarr = 0;
+	static int iarbarr = 0;
+	
+	
+	
 	public static void main(String[] args) {
 /*		Person2 pers1 = new Person2();
 		System.out.println("Standardkonstruktoraufruf, noch sind keine Werte gesetzt.\n");
@@ -44,7 +52,20 @@ public class Person2Test {
 		System.out.println("Angestellte 2");
 		ang2.zeigePerson();
 */		
+		angarr[iangarr++] = new Angestellter("Meier", "Al", "Köln", );
+		angarr[iangarr++] = new Angestellter();
+		angarr[iangarr++] = new Angestellter();
 		
+		if(iangarr > 29) {
+			System.out.println("Array Angestellte voll!");
+		}
+		
+		for (int i = 0; i < iangarr; i++) {
+			
+			System.out.println("Angestellter 1: " + );
+			
+			
+		}
 		
 		Arbeiter arb = new Arbeiter("Rüll", "Hugo", "Limbach", "0534/1357", 34.56, 14);
 //		arb.setStundenlohn(64.56);

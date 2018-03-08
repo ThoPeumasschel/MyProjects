@@ -16,7 +16,8 @@ public class Arbeiter extends Person2 {
 		System.out.println("##################################");
 	}
 	
-	
+	// neue Mitarbeiter einstellen, Mitarbeiter auflisten, 
+	// soll mit Menue beendet werden können
 	void menue(Arbeiter arg) 
 	{
 	//	super.menue();
