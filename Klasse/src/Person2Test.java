@@ -1,14 +1,36 @@
 import java.io.ObjectInputStream.GetField;
+import java.util.*;
 
 public class Person2Test {
-
-	static Angestellter[] angarr = new Angestellter[30];
-	static Arbeiter[] arbarr = new Arbeiter[30];
+	int iIndex;
+	String name, vorname, adresse, telefonnummer, stundenlohn, anzahlStunden, monatsgehalt;
 	
-	static int iangarr = 0;
-	static int iarbarr = 0;
+	Angestellter[] angarr = new Angestellter[30];
+	Arbeiter[] arbarr = new Arbeiter[30];
+	
+	int iangarr = 0;
+	int iarbarr = 0;
+	
+	Scanner sc = new Scanner(System.in);
 	
 	
+	
+	
+	
+	
+	void getData() {
+		
+		System.out.println("Bitte Daten eingeben: ");
+		name = sc.next();
+		vorname = sc.next();
+		adresse = sc.next();
+		telefonnummer = sc.next();
+		stundenlohn = sc.next();
+		anzahlStunden = sc.next();
+		monatsgehalt = sc.next();
+		iIndex++;
+		
+	}
 	
 	public static void main(String[] args) {
 /*		Person2 pers1 = new Person2();
@@ -53,6 +75,12 @@ public class Person2Test {
 		System.out.println("Angestellte 2");
 		ang2.zeigePerson();
 */		
+		
+		
+		
+		
+		
+		
 		angarr[iangarr++] = new Angestellter("Meier", "Al", "Köln", "934875", iangarr);
 		angarr[iangarr++] = new Angestellter();
 		angarr[iangarr++] = new Angestellter();

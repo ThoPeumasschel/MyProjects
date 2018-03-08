@@ -1,5 +1,5 @@
 
-public class Person2 {
+public class Person2 extends Firma {
 	private String name;
 	private String vorname;
 	private String adresse;

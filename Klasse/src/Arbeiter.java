@@ -3,29 +3,16 @@ import java.text.DecimalFormat;
 public class Arbeiter extends Person2 {
 	double stundenlohn;
 	private int anzahlStunden;
-	Arbeiter[] arb_daten = new Arbeiter[30];
-	
 
 	void zeigePerson() {
 		super.zeigePerson();
 		double wochenlohn = stundenlohn * anzahlStunden;
 		double monatslohn = wochenlohn * 4;
-		System.out.println("Stundenlohn: \t" + new DecimalFormat("0.00").format(stundenlohn) + "\t€" + "\nAnzahl Stunden: "
+		System.out.println(
+				"Stundenlohn: \t" + new DecimalFormat("0.00").format(stundenlohn) + "\t€" + "\nAnzahl Stunden: "
 						+ anzahlStunden + "\tstd" + "\nwöchentlich: \t" + new DecimalFormat("0.00").format(wochenlohn)
 						+ "\t€" + "\nmonatlich ca.:\t" + new DecimalFormat("0.00").format(monatslohn) + "\t€");
 		System.out.println("##################################");
-	}
-	
-	// neue Mitarbeiter einstellen, Mitarbeiter auflisten, 
-	// soll mit Menue beendet werden können
-	void menue(Arbeiter arg) 
-	{
-	//	super.menue();
-		stundenlohn = 50;
-		
-		System.out.println("Arbeiter 1: " + arg);
-		
-		
 	}
 
 	// Default constructor
@@ -35,6 +22,7 @@ public class Arbeiter extends Person2 {
 		anzahlStunden = 0;
 
 	}
+
 	// parametrisized constructor
 	public Arbeiter(String n, String v, String a, String t, double std, int anz) {
 		super(n, v, a, t);
@@ -43,7 +31,6 @@ public class Arbeiter extends Person2 {
 
 	}
 
-	
 	public double getStundenlohn() {
 		return stundenlohn;
 	}
