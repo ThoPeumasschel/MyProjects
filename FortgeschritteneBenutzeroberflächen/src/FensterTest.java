@@ -4,7 +4,7 @@ import java.awt.event.*;
 public class FensterTest {
 
 	public static void main(String[] args) {
-		Frame app = new Border("Test Layout-Container");
+		Frame app = new PopUpWindowDialog("Test Layout-Container");
 
 		WindowListener l = new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
@@ -13,7 +13,7 @@ public class FensterTest {
 		};
 		app.addWindowListener(l);
 
-		app.setSize(200, 300);
+		app.setSize(300, 300);
 		app.setVisible(true);
 
 	}

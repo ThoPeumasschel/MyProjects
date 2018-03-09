@@ -11,6 +11,8 @@ public class PersonTest {
 
 	public static void main(String[] args) {
 		Firma f = new Firma();
+		Angestellter ang1 = new Angestellter();
+		Arbeiter arb1 = new Arbeiter();
 		int cEingabe;
 
 		do {
@@ -30,17 +32,18 @@ public class PersonTest {
 			case 1: {
 
 				System.out.println("Neue Angestellte erfassen."); // Satzeingabe-Funktion
-				f.getDataAng();
-				Angestellter ang = new Angestellter(f.name, f.vorname, f.adresse, f.telefonnummer, f.monatsgehalt);
-				f.angarr[f.iangarr++] = ang;
-				if (f.iangarr > 2) {
+				ang1.getData();
+				Angestellter ang = new Angestellter(ang1.getName(), ang1.getVorname(), ang1.getAdresse(), ang1.getTelefonnummer(),
+						ang1.getMonatsgehalt());
+				ang1.angarr[ang1.iangarr++] = ang;
+				if (ang1.iangarr > 2) {
 					System.out
 							.println("\n\tEinstellungsstop!\nWir können keine weiteren Angestellten mehr einstellen!");
 				}
-				 f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Paul", "Augsburg",
-				 "0175/534231", 4300);
-				 f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Rudolf", "Augsburg",
-				 "0175/511111", 2300);
+				// f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Paul", "Augsburg",
+				// "0175/534231", 4300);
+				// f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Rudolf", "Augsburg",
+				// "0175/511111", 2300);
 				// f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Dieter", "Augsburg",
 				// "0175/522222", 4700);
 				break;
@@ -49,16 +52,17 @@ public class PersonTest {
 			case 2: {
 
 				System.out.println("Neue Arbeiter erfassen."); // Satzzeigen-Funktion
-				f.getDataArb();
-				Arbeiter arb = new Arbeiter(f.name, f.vorname, f.adresse, f.telefonnummer, f.stundenlohn,
-						f.anzahlStunden);
-				f.arbarr[f.iarbarr++] = arb;
-				if (f.iarbarr > 2) {
+				arb1.getData();
+				Arbeiter arb = new Arbeiter(arb1.getName(), arb1.getVorname(), arb1.getAdresse(), arb1.getTelefonnummer(), arb1.getStundenlohn(),
+						arb1.getAnzahlStunden());
+				arb1.arbarr[arb1.iarbarr++] = arb;
+				if (arb1.iarbarr > 2) {
 					System.out.println("\\n\\tEinstellungsstop!\\nWir können keine weiteren Arbeiter mehr einstellen!");
 				}
-				f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Paul", "Augsburg", "0175/534231", 34, 23);
-				 f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Rudolf", "Augsburg",
-				 "0175/511111", 43, 35);
+				// f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Paul", "Augsburg",
+				// "0175/534231", 34, 23);
+				// f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Rudolf", "Augsburg",
+				// "0175/511111", 43, 35);
 				// f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Dieter", "Augsburg",
 				// "0175/522222", 27, 17);
 

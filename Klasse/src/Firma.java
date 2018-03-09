@@ -41,7 +41,16 @@ public class Firma {
 		}
 	}
 
-	void getDataAng() {
+	void getData() {
+	System.out.println("Bitte Daten eingeben: ");
+	name = readString("Name");
+	vorname = readString("Vorname");
+	adresse = readString("Adresse");
+	telefonnummer = readString("Telefon");
+	iIndex++;
+	}	
+	
+/*	void getDataAng() {
 
 		System.out.println("Bitte Daten eingeben: ");
 		name = readString("Name");
@@ -65,7 +74,7 @@ public class Firma {
 		iIndex++;
 
 	}
-
+*/
 	void auflisten() { // iarb und iang hochzählen
 
 		System.out.println();

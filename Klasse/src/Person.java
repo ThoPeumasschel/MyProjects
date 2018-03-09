@@ -13,6 +13,11 @@ public class Person extends Firma {
 		telefonnummer = null;
 
 	}
+	
+	void getData() {
+		super.getData();
+		
+	}
 
 	// Parametrisierter Konstruktor
 	Person(String n, String v, String a, String t) {

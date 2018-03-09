@@ -6,13 +6,20 @@ public class Arbeiter extends Person {
 
 	void zeigePerson() {
 		super.zeigePerson();
-		double wochenlohn = stundenlohn * anzahlStunden;
-		double monatslohn = wochenlohn * 4;
+		int wochenlohn = stundenlohn * anzahlStunden;
+		int monatslohn = wochenlohn * 4;
 		System.out.println(
 				"Stundenlohn: \t" + new DecimalFormat("0.00").format(stundenlohn) + "\t€" + "\nAnzahl Stunden: "
 						+ anzahlStunden + "\tstd" + "\nwöchentlich: \t" + new DecimalFormat("0.00").format(wochenlohn)
 						+ "\t€" + "\nmonatlich ca.:\t" + new DecimalFormat("0.00").format(monatslohn) + "\t€");
 		System.out.println("##################################");
+	}
+	
+	void getData() {
+		super.getData();
+		stundenlohn = readInt("Stundenlohn");
+		anzahlStunden = readInt("Stunden Anzahl");
+		
 	}
 
 	// Default constructor
@@ -24,9 +31,9 @@ public class Arbeiter extends Person {
 	}
 
 	// parametrisized constructor
-	public Arbeiter(String n, String v, String a, String t, int std, int anz) {
+	public Arbeiter(String n, String v, String a, String t, int d, int anz) {
 		super(n, v, a, t);
-		stundenlohn = std;
+		stundenlohn = d;
 		anzahlStunden = anz;
 
 	}

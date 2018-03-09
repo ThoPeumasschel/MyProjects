@@ -8,6 +8,11 @@ public class Angestellter extends Person {
 		System.out.println("Monatsgehalt: \t" + monatsgehalt + " €");
 		System.out.println("##################################");
 	}
+	
+	void getData() {
+		super.getData();
+		monatsgehalt = readInt("Monatsgehalt");
+	}
 
 	// Standardkonstruktor
 	public Angestellter() {
