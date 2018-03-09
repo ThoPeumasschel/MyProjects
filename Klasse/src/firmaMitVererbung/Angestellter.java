@@ -1,17 +1,21 @@
 package firmaMitVererbung;
 
 public class Angestellter extends Person {
+	int iangarr = 0;
 
 	void zeigePerson() {
 		super.zeigePerson();
 		System.out.println("Monatsgehalt: \t" + monatsgehalt + " €");
 		System.out.println("##################################");
 	}
-	
+
 	void getData() {
 		super.getData();
 		monatsgehalt = readInt("Monatsgehalt");
+
 	}
+
+	
 
 	// Standardkonstruktor
 	public Angestellter() {

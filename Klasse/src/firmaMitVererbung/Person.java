@@ -1,5 +1,12 @@
 package firmaMitVererbung;
+
 public class Person extends Firma {
+
+	void getData() {
+		super.getData();
+
+	}
+
 
 	// Standardkonstruktor
 	Person() {
@@ -8,11 +15,6 @@ public class Person extends Firma {
 		adresse = null;
 		telefonnummer = null;
 
-	}
-	
-	void getData() {
-		super.getData();
-		
 	}
 
 	// Parametrisierter Konstruktor
@@ -70,15 +72,11 @@ public class Person extends Firma {
 				"Name: \t\t" + vorname + " " + name + "\nAdresse: \t" + adresse + "\nTelefon: \t" + telefonnummer);
 
 	}
-	// neue Mitarbeiter einstellen, Mitarbeiter auflisten, 
+
+	// neue Mitarbeiter einstellen, Mitarbeiter auflisten,
 	// soll mit Menue beendet werden können
-	void menue() { 
-		
-		
-		
+	void menue() {
+
 	}
-	
-	
-	
-	
+
 }

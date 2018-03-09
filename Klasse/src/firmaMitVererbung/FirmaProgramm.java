@@ -1,5 +1,6 @@
 package firmaMitVererbung;
 
+import java.util.*;
 // Folgende Probleme: 
 
 public class FirmaProgramm {
@@ -13,10 +14,18 @@ public class FirmaProgramm {
 
 	public static void main(String[] args) {
 		Firma f = new Firma();
-		Person p = new Person();
 		Angestellter ang1 = new Angestellter();
 		Arbeiter arb1 = new Arbeiter();
-		int cEingabe;
+		
+/*		for(int i = 0; i < ang1.angarr.length; i++) { // Array initialisieren, mit null überschreiben
+			ang1.angarr[i].name = null;
+			ang1.angarr[i].vorname = null;
+			ang1.angarr[i].adresse = null;
+			ang1.angarr[i].telefonnummer = null;
+			ang1.angarr[i].monatsgehalt = 0;
+		}
+		
+	*/	int cEingabe;
 
 		do {
 			System.out.println("||||||||||||||||||||||||||||||||||||");
@@ -104,11 +113,20 @@ public class FirmaProgramm {
 			}
 			case 5: {
 
-				System.out.println("\n\tAktuell sind " + f.countMembers() + " Mitarbeiter im Unternehmen beschäftigt.");
+				System.out.println("\n\tAktuell sind " + (arb1.iarbarr + ang1.iangarr) + " Mitarbeiter im Unternehmen beschäftigt.");
 
 			}
 
 				break;
+			
+			case 6: {
+				
+				System.out.println("Name Ang. Nr. 1: " );
+				Arrays.sort(ang1.angarr);
+	//			Arrays.sort(arbarr);
+				
+			}
+				
 
 			/*
 			 * case 5: {

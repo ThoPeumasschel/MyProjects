@@ -1,7 +1,10 @@
 package firmaMitVererbung;
+
 import java.text.DecimalFormat;
 
 public class Arbeiter extends Person {
+
+	int iarbarr = 0;
 
 	void zeigePerson() {
 		super.zeigePerson();
@@ -13,13 +16,16 @@ public class Arbeiter extends Person {
 						+ "\t€" + "\nmonatlich ca.:\t" + new DecimalFormat("0.00").format(monatslohn) + "\t€");
 		System.out.println("##################################");
 	}
-	
+
 	void getData() {
 		super.getData();
 		stundenlohn = readInt("Stundenlohn");
 		anzahlStunden = readInt("Stunden Anzahl");
-		
+
 	}
+
+	
+	
 
 	// Default constructor
 	public Arbeiter() {
