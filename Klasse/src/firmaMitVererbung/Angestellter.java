@@ -1,7 +1,6 @@
+package firmaMitVererbung;
 
 public class Angestellter extends Person {
-
-	private int monatsgehalt;
 
 	void zeigePerson() {
 		super.zeigePerson();

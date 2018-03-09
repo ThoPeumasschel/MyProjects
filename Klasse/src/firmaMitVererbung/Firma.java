@@ -1,3 +1,4 @@
+package firmaMitVererbung;
 import java.io.*;
 
 public class Firma {
@@ -5,7 +6,8 @@ public class Firma {
 	int anzahlMitarbeiter; // Addition der Indizes Arbeiter und Angestellter
 	int iIndex;
 	String name, vorname, adresse, telefonnummer;
-	int stundenlohn, anzahlStunden, monatsgehalt;
+	int anzahlStunden, monatsgehalt;
+	double stundenlohn;
 
 	Angestellter[] angarr = new Angestellter[30];
 	Arbeiter[] arbarr = new Arbeiter[30];
@@ -75,7 +77,7 @@ public class Firma {
 
 	}
 */
-	void auflisten() { // iarb und iang hochzählen
+/*	void auflisten() { // iarb und iang hochzählen
 
 		System.out.println();
 		System.out.println("Mitarbeiter Daten: ");
@@ -88,7 +90,7 @@ public class Firma {
 		System.out.println("Monatsgehalt: " + monatsgehalt);
 
 	}
-	 int countMembers() {
+*/	 int countMembers() {
 		 return iarbarr + iangarr;
 	 }
 

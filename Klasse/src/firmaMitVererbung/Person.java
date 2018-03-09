@@ -1,9 +1,5 @@
-
+package firmaMitVererbung;
 public class Person extends Firma {
-	private String name;
-	private String vorname;
-	private String adresse;
-	private String telefonnummer;
 
 	// Standardkonstruktor
 	Person() {

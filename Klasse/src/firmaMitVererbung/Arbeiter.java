@@ -1,13 +1,12 @@
+package firmaMitVererbung;
 import java.text.DecimalFormat;
 
 public class Arbeiter extends Person {
-	private int stundenlohn;
-	private int anzahlStunden;
 
 	void zeigePerson() {
 		super.zeigePerson();
-		int wochenlohn = stundenlohn * anzahlStunden;
-		int monatslohn = wochenlohn * 4;
+		double wochenlohn = stundenlohn * anzahlStunden;
+		double monatslohn = wochenlohn * 4;
 		System.out.println(
 				"Stundenlohn: \t" + new DecimalFormat("0.00").format(stundenlohn) + "\t€" + "\nAnzahl Stunden: "
 						+ anzahlStunden + "\tstd" + "\nwöchentlich: \t" + new DecimalFormat("0.00").format(wochenlohn)
@@ -31,7 +30,7 @@ public class Arbeiter extends Person {
 	}
 
 	// parametrisized constructor
-	public Arbeiter(String n, String v, String a, String t, int d, int anz) {
+	public Arbeiter(String n, String v, String a, String t, double d, int anz) {
 		super(n, v, a, t);
 		stundenlohn = d;
 		anzahlStunden = anz;

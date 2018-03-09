@@ -1,6 +1,8 @@
+package firmaMitVererbung;
+
 // Folgende Probleme: 
 
-public class PersonTest {
+public class FirmaProgramm {
 
 	int iIndex;
 	String name, vorname, adresse, telefonnummer;
@@ -11,6 +13,7 @@ public class PersonTest {
 
 	public static void main(String[] args) {
 		Firma f = new Firma();
+		Person p = new Person();
 		Angestellter ang1 = new Angestellter();
 		Arbeiter arb1 = new Arbeiter();
 		int cEingabe;
@@ -22,6 +25,8 @@ public class PersonTest {
 			System.out.println("Angestellten Daten anzeigen.........3");
 			System.out.println("Arbeiter Daten zeigen...............4");
 			System.out.println("Mitarbeiterzahl.....................5");
+			System.out.println("Angestellte sortieren...............6");
+			System.out.println("Arbeiter sortieren..................7");
 			System.out.println("Programmende........................0");
 			System.out.println("||||||||||||||||||||||||||||||||||||");
 
@@ -73,10 +78,10 @@ public class PersonTest {
 
 				System.out.println("Angestellten Daten zeigen");
 
-				for (int i = 0; i < f.iangarr; i++) {
-					System.out.println("Angestellter " + (i + 1) + " : " + f.angarr[i].getName() + ", "
-							+ f.angarr[i].getVorname() + "\nAdresse: " + f.angarr[i].getAdresse() + "\nTelefon: "
-							+ f.angarr[i].getTelefonnummer() + "\nMonatsgehalt: " + f.monatsgehalt);
+				for (int i = 0; i < ang1.iangarr; i++) {
+					System.out.println("Angestellter " + (i + 1) + " : " + ang1.angarr[i].getName() + ", "
+							+ ang1.angarr[i].getVorname() + "\nAdresse: " + ang1.angarr[i].getAdresse() + "\nTelefon: "
+							+ ang1.angarr[i].getTelefonnummer() + "\nMonatsgehalt: " + ang1.angarr[i].getMonatsgehalt());
 
 				}
 
@@ -87,11 +92,11 @@ public class PersonTest {
 
 				System.out.println("Arbeiter Daten zeigen");
 
-				for (int i = 0; i < f.iarbarr; i++) {
-					System.out.println("Angestellter " + (i + 1) + " : " + f.arbarr[i].getName() + ", "
-							+ f.arbarr[i].getVorname() + "\nAdresse: " + f.arbarr[i].getAdresse() + "\nTelefon: "
-							+ f.arbarr[i].getTelefonnummer() + "\nStundenlohn: " + f.stundenlohn + "\nStundenzahl: "
-							+ f.anzahlStunden);
+				for (int i = 0; i < arb1.iarbarr; i++) {
+					System.out.println("Angestellter " + (i + 1) + " : " + arb1.arbarr[i].getName() + ", "
+							+ arb1.arbarr[i].getVorname() + "\nAdresse: " + arb1.arbarr[i].getAdresse() + "\nTelefon: "
+							+ arb1.arbarr[i].getTelefonnummer() + "\nStundenlohn: " + arb1.arbarr[i].getStundenlohn() + "\nStundenzahl: "
+							+ arb1.arbarr[i].getAnzahlStunden());
 
 				}
 
