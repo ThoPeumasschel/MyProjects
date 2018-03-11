@@ -119,10 +119,10 @@ public class FirmaProgramm {
 
 				break;
 			
-			case 6: {
+	//		case 6: {
 				
-				System.out.println("Name Ang. Nr. 1: " );
-				Arrays.sort(ang1.angarr);
+	//			System.out.println("Name Ang. Nr. 1: " );
+	//			Collections.sort((List<Angestellter>) angarr);
 	//			Arrays.sort(arbarr);
 				
 			}
@@ -134,8 +134,8 @@ public class FirmaProgramm {
 			 * handoutFile(); // Datensatz speichern-Funktion break;
 			 * 
 			 * }
-			 */ }
-
+			  }
+*/
 		} while (cEingabe != 0);
 
 	}

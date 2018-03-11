@@ -1,8 +1,10 @@
 package firmaMitVererbung;
 
+import java.util.ArrayList;
+
 public class Angestellter extends Person {
 	int iangarr = 0;
-
+	
 	void zeigePerson() {
 		super.zeigePerson();
 		System.out.println("Monatsgehalt: \t" + monatsgehalt + " €");
@@ -14,8 +16,6 @@ public class Angestellter extends Person {
 		monatsgehalt = readInt("Monatsgehalt");
 
 	}
-
-	
 
 	// Standardkonstruktor
 	public Angestellter() {

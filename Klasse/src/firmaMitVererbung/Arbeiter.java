@@ -1,11 +1,12 @@
 package firmaMitVererbung;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class Arbeiter extends Person {
 
 	int iarbarr = 0;
-
+	
 	void zeigePerson() {
 		super.zeigePerson();
 		double wochenlohn = stundenlohn * anzahlStunden;
@@ -23,9 +24,6 @@ public class Arbeiter extends Person {
 		anzahlStunden = readInt("Stunden Anzahl");
 
 	}
-
-	
-	
 
 	// Default constructor
 	public Arbeiter() {
