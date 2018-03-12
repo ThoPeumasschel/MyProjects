@@ -32,6 +32,7 @@ public class FensterAufgabe extends Frame {
 				lab.setText("");
 			} else {
 				lab.setText(tf.getText());
+				tf.setText(" ");
 			}
 
 			return true;

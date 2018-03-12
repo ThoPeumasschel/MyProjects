@@ -3,17 +3,20 @@ package firmaNeu;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Angestellter extends Person {
+public class AngestellterNeu extends PersonNeu {
 
 	Scanner gd = new Scanner(System.in);
+	
+	public int iangarr = 0;
+	
 
-	void zeigePerson() {
+	public void zeigePerson() {
 		super.zeigePerson();
 		System.out.println("Monatsgehalt: \t" + monatsgehalt + " €");
 		System.out.println("##################################");
 	}
 
-	void getData() {
+	public void getData() {
 		super.getData();
 
 		System.out.println("Monatsgehalt");
@@ -23,20 +26,20 @@ public class Angestellter extends Person {
 
 	}
 
-	void writeToFile() {
+	public void writeToFile() {
 		super.writeToFile();
 
 	}
 
 	// Standardkonstruktor
-	public Angestellter() {
+	public AngestellterNeu() {
 
 		monatsgehalt = null;
 
 	}
 
 	// Parametrisierter Konstruktor
-	public Angestellter(String n, String v, String a, String t, String m) {
+	public AngestellterNeu(String n, String v, String a, String t, String m) {
 		super(n, v, a, t);
 		monatsgehalt = m;
 

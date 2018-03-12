@@ -3,20 +3,21 @@ package firmaNeu;
 import java.io.*;
 import java.util.*;
 
-public class Firma {
+public class FirmaNeu {
 	final int obergrenze = 100;
-	int anzahlMitarbeiter; // Addition der Indizes Arbeiter und Angestellter
+	int anzahlMitarbeiter; // Addition der Indizes ArbeiterNeu und AngestellterNeu
 	int iIndex;
 	String name, vorname, adresse, telefonnummer;
 	String anzahlStunden;
 	String monatsgehalt;
 	String stundenlohn;
 	
-	int iangarr = 0;
-	int iarbarr = 0;
 	
-	ArrayList<Angestellter> angarrL = new ArrayList<Angestellter>();
-	ArrayList<Arbeiter> arbarrL = new ArrayList<Arbeiter>();
+	
+	
+	
+	ArrayList<AngestellterNeu> angarrL = new ArrayList<AngestellterNeu>();
+	ArrayList<ArbeiterNeu> arbarrL = new ArrayList<ArbeiterNeu>();
 
 	void getData() {
 		Scanner gd = new Scanner(System.in);
@@ -34,7 +35,8 @@ public class Firma {
 	void writeToFile() {
 		
 		try {
-			Formatter f = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
+//			Formatter f = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
+			Formatter f = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
 			f.format("\r\n%s\r\n%s\r\n%s\r\n%s\r\n", name, vorname, adresse, telefonnummer);
 			
 			f.close();
@@ -47,7 +49,8 @@ public class Firma {
 	
 	void readFromFile() {
 		try {
-			File x = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
+//			File x = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
+			File x = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
 			Scanner rff = new Scanner(x);
 			while (rff.hasNext()) {
 				System.out.println(rff.next());

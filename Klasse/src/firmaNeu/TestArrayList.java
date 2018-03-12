@@ -6,7 +6,7 @@ public class TestArrayList {
 
 	void testing() {
 		
-		Angestellter ang = new Angestellter();
+		AngestellterNeu ang = new AngestellterNeu();
 
 		ArrayList<String> stuff = new ArrayList<String>();
 		stuff.add("Casimir");
@@ -18,16 +18,16 @@ public class TestArrayList {
 		Collections.sort(stuff);
 		System.out.println(stuff);
 		
-		ArrayList<Angestellter> angarr = new ArrayList<Angestellter>();
+		ArrayList<AngestellterNeu> angarr = new ArrayList<AngestellterNeu>();
 		
-		Angestellter angarr = new Angestellter("Ehrlich", "Paul", "Augsburg", "0175/534231", "4300");
+//		AngestellterNeu angarr = new AngestellterNeu("Ehrlich", "Paul", "Augsburg", "0175/534231", "4300");
 
-		Angestellter ang = new Angestellter(ang.setName("Chavez"), ang.setVorname("Hugo"), ang.setAdresse("Venezuela"), ang.setTelefonnummer("666/66666"),
-		ang.setMonatsgehalt(345));
+//		AngestellterNeu ang = new AngestellterNeu(ang.setName("Chavez"), ang.setVorname("Hugo"), ang.setAdresse("Venezuela"), ang.setTelefonnummer("666/66666"),
+//		ang.setMonatsgehalt(345));
 		
-	//	ang = new Angestellter("Ehrlich", "Paul", "Augsburg", "0175/534231", 4300);
-//		f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Rudolf", "Augsburg", "0175/511111", 2300);
-//		f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Dieter", "Augsburg", "0175/522222", 4700);
+	//	ang = new AngestellterNeu("Ehrlich", "Paul", "Augsburg", "0175/534231", 4300);
+//		f.angarr[f.iangarr++] = new AngestellterNeu("Ehrlich", "Rudolf", "Augsburg", "0175/511111", 2300);
+//		f.angarr[f.iangarr++] = new AngestellterNeu("Ehrlich", "Dieter", "Augsburg", "0175/522222", 4700);
 
 	}
 

@@ -30,12 +30,12 @@ public class FirmaProgramm {
 		do {
 			System.out.println("||||||||||||||||||||||||||||||||||||");
 			System.out.println("Angestellten Daten eingeben.........1");
-			System.out.println("Arbeiter Daten eingeben.............2");
+			System.out.println("ArbeiterNeu Daten eingeben.............2");
 			System.out.println("Angestellten Daten anzeigen.........3");
-			System.out.println("Arbeiter Daten zeigen...............4");
+			System.out.println("ArbeiterNeu Daten zeigen...............4");
 			System.out.println("Mitarbeiterzahl.....................5");
 			System.out.println("Angestellte sortieren...............6");
-			System.out.println("Arbeiter sortieren..................7");
+			System.out.println("ArbeiterNeu sortieren..................7");
 			System.out.println("Programmende........................0");
 			System.out.println("||||||||||||||||||||||||||||||||||||");
 
@@ -54,30 +54,30 @@ public class FirmaProgramm {
 					System.out
 							.println("\n\tEinstellungsstop!\nWir können keine weiteren Angestellten mehr einstellen!");
 				}
-				// f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Paul", "Augsburg",
+				// f.angarr[f.iangarr++] = new AngestellterNeu("Ehrlich", "Paul", "Augsburg",
 				// "0175/534231", 4300);
-				// f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Rudolf", "Augsburg",
+				// f.angarr[f.iangarr++] = new AngestellterNeu("Ehrlich", "Rudolf", "Augsburg",
 				// "0175/511111", 2300);
-				// f.angarr[f.iangarr++] = new Angestellter("Ehrlich", "Dieter", "Augsburg",
+				// f.angarr[f.iangarr++] = new AngestellterNeu("Ehrlich", "Dieter", "Augsburg",
 				// "0175/522222", 4700);
 				break;
 			}
 
 			case 2: {
 
-				System.out.println("Neue Arbeiter erfassen."); // Satzzeigen-Funktion
+				System.out.println("Neue ArbeiterNeu erfassen."); // Satzzeigen-Funktion
 				arb1.getData();
 				Arbeiter arb = new Arbeiter(arb1.getName(), arb1.getVorname(), arb1.getAdresse(), arb1.getTelefonnummer(), arb1.getStundenlohn(),
 						arb1.getAnzahlStunden());
 				arb1.arbarr[arb1.iarbarr++] = arb;
 				if (arb1.iarbarr > 2) {
-					System.out.println("\\n\\tEinstellungsstop!\\nWir können keine weiteren Arbeiter mehr einstellen!");
+					System.out.println("\\n\\tEinstellungsstop!\\nWir können keine weiteren ArbeiterNeu mehr einstellen!");
 				}
-				// f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Paul", "Augsburg",
+				// f.arbarr[f.iarbarr++] = new ArbeiterNeu("Dödel", "Paul", "Augsburg",
 				// "0175/534231", 34, 23);
-				// f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Rudolf", "Augsburg",
+				// f.arbarr[f.iarbarr++] = new ArbeiterNeu("Dödel", "Rudolf", "Augsburg",
 				// "0175/511111", 43, 35);
-				// f.arbarr[f.iarbarr++] = new Arbeiter("Dödel", "Dieter", "Augsburg",
+				// f.arbarr[f.iarbarr++] = new ArbeiterNeu("Dödel", "Dieter", "Augsburg",
 				// "0175/522222", 27, 17);
 
 				break;
@@ -88,7 +88,7 @@ public class FirmaProgramm {
 				System.out.println("Angestellten Daten zeigen");
 
 				for (int i = 0; i < ang1.iangarr; i++) {
-					System.out.println("Angestellter " + (i + 1) + " : " + ang1.angarr[i].getName() + ", "
+					System.out.println("AngestellterNeu " + (i + 1) + " : " + ang1.angarr[i].getName() + ", "
 							+ ang1.angarr[i].getVorname() + "\nAdresse: " + ang1.angarr[i].getAdresse() + "\nTelefon: "
 							+ ang1.angarr[i].getTelefonnummer() + "\nMonatsgehalt: " + ang1.angarr[i].getMonatsgehalt());
 
@@ -99,10 +99,10 @@ public class FirmaProgramm {
 
 			case 4: {
 
-				System.out.println("Arbeiter Daten zeigen");
+				System.out.println("ArbeiterNeu Daten zeigen");
 
 				for (int i = 0; i < arb1.iarbarr; i++) {
-					System.out.println("Angestellter " + (i + 1) + " : " + arb1.arbarr[i].getName() + ", "
+					System.out.println("AngestellterNeu " + (i + 1) + " : " + arb1.arbarr[i].getName() + ", "
 							+ arb1.arbarr[i].getVorname() + "\nAdresse: " + arb1.arbarr[i].getAdresse() + "\nTelefon: "
 							+ arb1.arbarr[i].getTelefonnummer() + "\nStundenlohn: " + arb1.arbarr[i].getStundenlohn() + "\nStundenzahl: "
 							+ arb1.arbarr[i].getAnzahlStunden());
@@ -122,7 +122,7 @@ public class FirmaProgramm {
 	//		case 6: {
 				
 	//			System.out.println("Name Ang. Nr. 1: " );
-	//			Collections.sort((List<Angestellter>) angarr);
+	//			Collections.sort((List<AngestellterNeu>) angarr);
 	//			Arrays.sort(arbarr);
 				
 			}

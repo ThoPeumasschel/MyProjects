@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Firma {
 	final int obergrenze = 100;
-	int anzahlMitarbeiter; // Addition der Indizes Arbeiter und Angestellter
+	int anzahlMitarbeiter; // Addition der Indizes ArbeiterNeu und AngestellterNeu
 	int iIndex;
 	String name, vorname, adresse, telefonnummer;
 	int anzahlStunden, monatsgehalt;

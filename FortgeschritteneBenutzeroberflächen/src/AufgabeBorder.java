@@ -4,7 +4,7 @@ public class AufgabeBorder extends Frame {
 	BorderLayout lm = new BorderLayout();
 	Label lab = new Label("Die Action-Events");
 	Button btnFs = new Button("Fenster schlieﬂen");
-	TextField tf = new TextField("Exit");
+	TextField tf = new TextField("Wenn Sie hier 'Exit' eingeben, wird das Fenster geschlossen.");
 
 	AufgabeBorder(String title) {
 		super(title);

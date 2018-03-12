@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Arbeiter extends Person {
 
-	int iarbarr = 0;
+	public int iarbarr = 0;
 	
 	void zeigePerson() {
 		super.zeigePerson();
@@ -18,7 +18,7 @@ public class Arbeiter extends Person {
 		System.out.println("##################################");
 	}
 
-	void getData() {
+	public void getData() {
 		super.getData();
 		stundenlohn = readInt("Stundenlohn");
 		anzahlStunden = readInt("Stunden Anzahl");

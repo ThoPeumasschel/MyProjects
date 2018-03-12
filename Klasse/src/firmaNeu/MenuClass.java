@@ -2,12 +2,18 @@ package firmaNeu;
 
 import java.util.*;
 
+import firmaMitVererbung.Angestellter;
+import firmaMitVererbung.Arbeiter;
+
 public class MenuClass {
 
-	Firma firma = new Firma();
+	FirmaNeu firma = new FirmaNeu();
 
-	Angestellter ang = new Angestellter();
-	Arbeiter arb = new Arbeiter();
+	AngestellterNeu ang = new AngestellterNeu();
+	ArbeiterNeu arb = new ArbeiterNeu();
+	
+	AngestellterNeu[] angarrL = new AngestellterNeu[30];
+	ArbeiterNeu[] arbarrL = new ArbeiterNeu[30];
 
 	public void menu() {
 		int cEingabe;
@@ -16,12 +22,12 @@ public class MenuClass {
 		do {
 			System.out.println("||||||||||||||||||||||||||||||||||||");
 			System.out.println("Angestellten Daten eingeben.........1");
-			System.out.println("Arbeiter Daten eingeben.............2");
+			System.out.println("ArbeiterNeu Daten eingeben.............2");
 			System.out.println("Angestellten Daten anzeigen.........3");
-			System.out.println("Arbeiter Daten zeigen...............4");
+			System.out.println("ArbeiterNeu Daten zeigen...............4");
 			System.out.println("Mitarbeiterzahl.....................5");
 			System.out.println("Angestellte sortieren...............6");
-			System.out.println("Arbeiter sortieren..................7");
+			System.out.println("ArbeiterNeu sortieren..................7");
 			System.out.println("Programmende........................0");
 			System.out.println("||||||||||||||||||||||||||||||||||||");
 
@@ -33,6 +39,7 @@ public class MenuClass {
 
 				System.out.println("Neue Angestellte erfassen."); // Satzeingabe-Funktion
 				ang.getData();
+				System.out.printf(ang.getName(), ang.getVorname(), ang.getAdresse(), ang.getTelefonnummer(), ang.getMonatsgehalt());
 				if (ang.iangarr > 2) {
 					System.out.println("\n\tEinstellungsstop!\nWir können keine "
 							+ "weiteren Angestellten mehr einstellen!");
@@ -43,13 +50,12 @@ public class MenuClass {
 
 			case 2: {
 
-				System.out.println("Neue Arbeiter erfassen."); // Satzzeigen-Funktion
+				System.out.println("Neue ArbeiterNeu erfassen."); // Satzzeigen-Funktion
 				arb.getData();
-				Arbeiter arb1 = new Arbeiter(arb.getName(), arb.getVorname(), arb.getAdresse(), arb.getTelefonnummer(),
-						arb.getStundenlohn(), arb.getAnzahlStunden());
+				
 				// arb.arbarr[arb.iarbarr++] = arb;
 				if (arb.iarbarr > 2) {
-					System.out.println("\\n\\tEinstellungsstop!\\nWir können keine weiteren Arbeiter mehr einstellen!");
+					System.out.println("\\n\\tEinstellungsstop!\\nWir können keine weiteren ArbeiterNeu mehr einstellen!");
 				}
 
 				break;
@@ -60,11 +66,11 @@ public class MenuClass {
 			  
 			  System.out.println("Angestellten Daten zeigen");
 			  
-			  for (int i = 0; i < ang.iangarr; i++) { System.out.println("Angestellter " +
-			  (i + 1) + " : " + ang.angarrL[i].getName() + ", " + ang.angarrL[i].getVorname()
-			  + "\nAdresse: " + ang.angarr[i].getAdresse() + "\nTelefon: " +
-			  ang.angarr[i].getTelefonnummer() + "\nMonatsgehalt: " +
-			  ang.angarr[i].getMonatsgehalt());
+			  for (int i = 0; i < ang.iangarr; i++) { System.out.println("AngestellterNeu " +
+			  (i + 1) + " : " + angarrL[i].getName() + ", " + angarrL[i].getVorname()
+			  + "\nAdresse: " + angarrL[i].getAdresse() + "\nTelefon: " +
+			  angarrL[i].getTelefonnummer() + "\nMonatsgehalt: " +
+			  angarrL[i].getMonatsgehalt());
 			  
 			  }
 			  
@@ -72,14 +78,14 @@ public class MenuClass {
 			  
 			  case 4: {
 			  
-			  System.out.println("Arbeiter Daten zeigen");
+			  System.out.println("ArbeiterNeu Daten zeigen");
 			  
-			  for (int i = 0; i < arb1.iarbarr; i++) { System.out.println("Angestellter " +
-			  (i + 1) + " : " + arb.arbarr[i].getName() + ", " + arb.arbarr[i].getVorname()
-			  + "\nAdresse: " + arb.arbarr[i].getAdresse() + "\nTelefon: " +
-			  arb.arbarr[i].getTelefonnummer() + "\nStundenlohn: " +
-			  arb.arbarr[i].getStundenlohn() + "\nStundenzahl: " +
-			  arb.arbarr[i].getAnzahlStunden());
+			  for (int i = 0; i < arb.iarbarr; i++) { System.out.println("AngestellterNeu " +
+			  (i + 1) + " : " + arbarrL[i].getName() + ", " + arbarrL[i].getVorname()
+			  + "\nAdresse: " + arbarrL[i].getAdresse() + "\nTelefon: " +
+			  arbarrL[i].getTelefonnummer() + "\nStundenlohn: " +
+			  arbarrL[i].getStundenlohn() + "\nStundenzahl: " +
+			  arbarrL[i].getAnzahlStunden());
 			  
 			  }
 			  
@@ -92,11 +98,11 @@ public class MenuClass {
 			  
 			  break;
 			  
-			  case 6: {
+/*			  case 6: {
 			  
 			  System.out.println("Name Ang. Nr. 1: " ); //
 			  Collections.sort(firma.name); // Arrays.sort(arbarr);
-			  
+		*/	  
 			  }
 
 		} while (cEingabe != 0);

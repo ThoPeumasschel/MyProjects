@@ -4,9 +4,11 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Arbeiter extends Person {
+public class ArbeiterNeu extends PersonNeu {
 
 	Scanner gd = new Scanner(System.in);
+	
+	public int iarbarr = 0;
 
 	void zeigePerson() {
 		super.zeigePerson();
@@ -30,7 +32,7 @@ public class Arbeiter extends Person {
 	}
 
 	// Default constructor
-	public Arbeiter() {
+	public ArbeiterNeu() {
 		super();
 		stundenlohn = null; // Double wäre schöner
 		anzahlStunden = null;
@@ -38,7 +40,7 @@ public class Arbeiter extends Person {
 	}
 
 	// parametrisized constructor
-	public Arbeiter(String n, String v, String a, String t, String d, String anz) {
+	public ArbeiterNeu(String n, String v, String a, String t, String d, String anz) {
 		super(n, v, a, t);
 		stundenlohn = d;
 		anzahlStunden = anz;

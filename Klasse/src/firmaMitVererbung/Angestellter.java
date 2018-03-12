@@ -3,7 +3,7 @@ package firmaMitVererbung;
 import java.util.ArrayList;
 
 public class Angestellter extends Person {
-	int iangarr = 0;
+	public int iangarr = 0;
 	
 	void zeigePerson() {
 		super.zeigePerson();
@@ -11,7 +11,7 @@ public class Angestellter extends Person {
 		System.out.println("##################################");
 	}
 
-	void getData() {
+	public void getData() {
 		super.getData();
 		monatsgehalt = readInt("Monatsgehalt");
 

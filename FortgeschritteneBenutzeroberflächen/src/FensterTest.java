@@ -4,7 +4,7 @@ import java.awt.event.*;
 public class FensterTest {
 
 	public static void main(String[] args) {
-		Frame app = new AufgabeBorder("Aufgabe zu Fenstern");
+		Frame app = new SchriftartHeld("Aufgabe zu Fenstern");
 
 		WindowListener l = new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
