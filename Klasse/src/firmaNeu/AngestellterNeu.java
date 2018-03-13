@@ -24,6 +24,7 @@ public class AngestellterNeu extends PersonNeu implements Serializable {
 		try {
 			Scanner gd = new Scanner(System.in);
 			monatsgehalt = gd.next();
+			
 //			gd.close();
 			iangarr++;
 		} catch (Exception e) {
@@ -35,9 +36,9 @@ public class AngestellterNeu extends PersonNeu implements Serializable {
 	}
 	
 	public String toString() {
-		return "\nAngestellter: " + vorname + " " + name + "\nAdresse: " 
-				+  adresse + "\nTelefon: " + telefonnummer 
-				+ "\nMonatsgehalt: " + monatsgehalt;
+		return "\nAngestellter:\t" + vorname + " " + name + "\nAdresse:\t" 
+				+  adresse + "\nTelefon:\t" + telefonnummer 
+				+ "\nMonatsgehalt:\t" + monatsgehalt;
 	}
 
 

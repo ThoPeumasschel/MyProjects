@@ -75,6 +75,9 @@ public class PersonTest {
 
 				System.out.println("Dateneingabe-Funktion"); // Dateneingabe-Funktion
 				pt.getDaten();
+	//			pt.angarr[pt.iangarr] = 
+				
+				
 				break;
 			}
 

@@ -5,8 +5,8 @@ import java.util.*;
 
 public class FirmaNeu implements Serializable {
 	final int obergrenze = 100;
-	int anzahlMitarbeiter; // Addition der Indizes ArbeiterNeu und AngestellterNeu
-	static int iIndex;
+	
+	static int iIndex; //zählt jeden Aufruf der getData() Funktion. Angestellter oder Arbeiter. 
 	String vorname, name, adresse, telefonnummer;
 	String anzahlStunden;
 	String monatsgehalt;
