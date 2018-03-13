@@ -6,12 +6,13 @@ public class PersonNeu extends FirmaNeu {
 		super.getData();
 
 	}
-	
-	void writeToFile() {
-		super.writeToFile();
-		
-	}
 
+	void zeigePerson() {
+
+		System.out.println(
+				"Name: \t\t" + vorname + " " + name + "\nAdresse: \t" + adresse + "\nTelefon: \t" + telefonnummer);
+
+	}
 
 	// Standardkonstruktor
 	PersonNeu() {
@@ -71,17 +72,7 @@ public class PersonNeu extends FirmaNeu {
 		return telefonnummer;
 	}
 
-	void zeigePerson() {
-
-		System.out.println(
-				"Name: \t\t" + vorname + " " + name + "\nAdresse: \t" + adresse + "\nTelefon: \t" + telefonnummer);
-
-	}
-
 	// neue Mitarbeiter einstellen, Mitarbeiter auflisten,
 	// soll mit Menue beendet werden können
-	void menue() {
-
-	}
 
 }

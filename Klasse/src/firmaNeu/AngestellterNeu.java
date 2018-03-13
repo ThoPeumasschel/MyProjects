@@ -1,13 +1,14 @@
 package firmaNeu;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.Serializable;
+import java.util.*;
 
-public class AngestellterNeu extends PersonNeu {
+public class AngestellterNeu extends PersonNeu implements Serializable {
 
-	Scanner gd = new Scanner(System.in);
 	
-	public int iangarr = 0;
+	
+	AngestellterNeu[] angarr = new AngestellterNeu[30];
+	int iangarr = 0;
 	
 
 	public void zeigePerson() {
@@ -20,16 +21,25 @@ public class AngestellterNeu extends PersonNeu {
 		super.getData();
 
 		System.out.println("Monatsgehalt");
-		monatsgehalt = gd.next();
+		try {
+			Scanner gd = new Scanner(System.in);
+			monatsgehalt = gd.next();
+//			gd.close();
+			iangarr++;
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
 
-	//	gd.close();
+		
 
 	}
-
-	public void writeToFile() {
-		super.writeToFile();
-
+	
+	public String toString() {
+		return "\nAngestellter: " + vorname + " " + name + "\nAdresse: " 
+				+  adresse + "\nTelefon: " + telefonnummer 
+				+ "\nMonatsgehalt: " + monatsgehalt;
 	}
+
 
 	// Standardkonstruktor
 	public AngestellterNeu() {

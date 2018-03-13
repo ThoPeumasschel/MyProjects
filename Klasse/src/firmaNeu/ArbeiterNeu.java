@@ -1,13 +1,13 @@
 package firmaNeu;
 
+import java.io.Serializable;
 import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
-public class ArbeiterNeu extends PersonNeu {
+public class ArbeiterNeu extends PersonNeu implements Serializable  {
 
 	Scanner gd = new Scanner(System.in);
-	
+	ArbeiterNeu[] arbarr = new ArbeiterNeu[30];
 	public int iarbarr = 0;
 
 	void zeigePerson() {
