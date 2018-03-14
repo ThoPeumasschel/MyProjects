@@ -3,15 +3,10 @@ package firmaNeu;
 import java.io.Serializable;
 import java.util.*;
 
+@SuppressWarnings("serial")
 public class AngestellterNeu extends PersonNeu implements Serializable {
 
-	
-	
-	AngestellterNeu[] angarr = new AngestellterNeu[30];
-	int iangarr = 0;
-	
-
-	public void zeigePerson() {
+	void zeigePerson() {
 		super.zeigePerson();
 		System.out.println("Monatsgehalt: \t" + monatsgehalt + " €");
 		System.out.println("##################################");
@@ -24,23 +19,19 @@ public class AngestellterNeu extends PersonNeu implements Serializable {
 		try {
 			Scanner gd = new Scanner(System.in);
 			monatsgehalt = gd.next();
-			
-//			gd.close();
-			iangarr++;
+
+			// gd.close();
+
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
 
-		
-
 	}
-	
+
 	public String toString() {
-		return "\nAngestellter:\t" + vorname + " " + name + "\nAdresse:\t" 
-				+  adresse + "\nTelefon:\t" + telefonnummer 
+		return "\nAngestellter:\t" + vorname + " " + name + "\nAdresse:\t" + adresse + "\nTelefon:\t" + telefonnummer
 				+ "\nMonatsgehalt:\t" + monatsgehalt;
 	}
-
 
 	// Standardkonstruktor
 	public AngestellterNeu() {

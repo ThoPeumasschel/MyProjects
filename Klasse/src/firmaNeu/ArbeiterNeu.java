@@ -4,11 +4,7 @@ import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.*;
 
-public class ArbeiterNeu extends PersonNeu implements Serializable  {
-
-	Scanner gd = new Scanner(System.in);
-	ArbeiterNeu[] arbarr = new ArbeiterNeu[30];
-	public int iarbarr = 0;
+public class ArbeiterNeu extends PersonNeu implements Serializable {
 
 	void zeigePerson() {
 		super.zeigePerson();
@@ -21,16 +17,24 @@ public class ArbeiterNeu extends PersonNeu implements Serializable  {
 
 	void getData() {
 		super.getData();
+		try {
+			Scanner gd = new Scanner(System.in);
+			System.out.println("Stundenlohn");
+			stundenlohn = gd.next();
+			System.out.println("Stunden Anzahl");
+			anzahlStunden = gd.next();
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
 
-		System.out.println("Stundenlohn");
-		stundenlohn = gd.next();
-		System.out.println("Stunden Anzahl");
-		anzahlStunden = gd.next();
-
-		gd.close();
+		// gd.close();
 
 	}
-
+	
+	public String toString() {
+		return "\nAngestellter:\t" + vorname + " " + name + "\nAdresse:\t" + adresse + "\nTelefon:\t" + telefonnummer
+				+ "\nStundenlohn:\t" + stundenlohn + "\nStunden Anzahl:\t" + anzahlStunden;
+	}
 	// Default constructor
 	public ArbeiterNeu() {
 		super();

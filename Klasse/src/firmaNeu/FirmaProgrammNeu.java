@@ -5,25 +5,27 @@ import java.util.*;
 
 public class FirmaProgrammNeu {
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 
-		FirmaNeu f = new FirmaNeu();
-
+		ArrayList<AngestellterNeu> angarr = new ArrayList<AngestellterNeu>(30);
 		AngestellterNeu ang = new AngestellterNeu();
+
+		ArrayList<ArbeiterNeu> arbarr = new ArrayList<ArbeiterNeu>(30);
 		ArbeiterNeu arb = new ArbeiterNeu();
-		
+
 		int cEingabe;
 		Scanner sc = new Scanner(System.in);
 
 		do {
 			System.out.println("||||||||||||||||||||||||||||||||||||");
 			System.out.println("Angestellten Daten eingeben.........1");
-			System.out.println("Angestellten Array anzeigen.........2");
+			System.out.println("Arbeiter Daten eingeben.............2");
 			System.out.println("Angestellten Daten anzeigen.........3");
-			System.out.println("ArbeiterNeu Daten zeigen............4");
-			System.out.println("Mitarbeiterzahl.....................5");
-			System.out.println("Angestellte in Datei schreiben......6");
-			System.out.println("Angestellte aus Datei lesen.........7");
+			System.out.println("Arbeiter Daten anzeigen.............4");
+			System.out.println("Mitarbeiterzahl gesamt..............5");
+			System.out.println("Mitarbeiter in Dateien schreiben....6");
+			System.out.println("Mitarbeiter aus Dateien lesen.......7");
 			System.out.println("Zeige Person aufrufen...............8");
 			System.out.println("Programmende........................0");
 			System.out.println("||||||||||||||||||||||||||||||||||||");
@@ -36,34 +38,48 @@ public class FirmaProgrammNeu {
 
 				System.out.println("Neue Angestellte erfassen."); // Satzeingabe-Funktion
 				ang.getData();
-				AngestellterNeu ang1 = new AngestellterNeu(ang.vorname, ang.name, ang.adresse, ang.telefonnummer, ang.monatsgehalt);
-				ang.angarr[ang.iangarr++] = ang1;
-				
+				AngestellterNeu ang1 = new AngestellterNeu(ang.vorname, ang.name, ang.adresse, ang.telefonnummer,
+						ang.monatsgehalt);
+				angarr.add(ang1);
+
 				try {
-					ang.angarr[ang.iangarr] = ang;
 					FileOutputStream fs = new FileOutputStream("Angestellte.ser");
 					ObjectOutputStream os = new ObjectOutputStream(fs);
-					os.writeObject(ang.angarr);
+					os.writeObject(angarr);
 					os.close();
-					System.out.println("Objekt ang wurde serialisiert");
-					System.out.println("Objekt ang: " + ang.toString());
+
 				} catch (IOException e) {
 					System.out.println(e.toString());
 				}
 
-				if (ang.iangarr > 2) {
+				if (angarr.size() > 3) {
 					System.out.println(
 							"\n\tEinstellungsstop!\nWir können keine " + "weiteren Angestellten mehr einstellen!");
 				}
-
 				break;
 			}
 
 			case 2: {
 
-				System.out.println("Angestellten Array anzeigen: \n"); // Satzzeigen-Funktion
-				for (int i = 0; i < ang.iangarr; i++) {
-					System.out.println(ang.angarr[i]);
+				System.out.println("Neue Arbeiter erfassen."); // Satzeingabe-Funktion
+				arb.getData();
+				ArbeiterNeu arb1 = new ArbeiterNeu(arb.vorname, arb.name, arb.adresse, arb.telefonnummer,
+						arb.stundenlohn, arb.anzahlStunden);
+				arbarr.add(arb1);
+
+				try {
+					FileOutputStream fs = new FileOutputStream("Arbeiter.ser");
+					ObjectOutputStream os = new ObjectOutputStream(fs);
+					os.writeObject(arbarr);
+					os.close();
+
+				} catch (IOException e) {
+					System.out.println(e.toString());
+				}
+
+				if (arbarr.size() > 3) {
+					System.out.println(
+							"\n\tEinstellungsstop!\nWir können keine " + "weiteren Angestellten mehr einstellen!");
 				}
 
 				break;
@@ -73,72 +89,52 @@ public class FirmaProgrammNeu {
 
 				System.out.println("Angestellten Daten zeigen");
 				try {
+
 					FileInputStream fs = new FileInputStream("Angestellte.ser");
 					ObjectInputStream os = new ObjectInputStream(fs);
-					AngestellterNeu ang2 = new AngestellterNeu();
-					ang2.angarr = (AngestellterNeu[]) os.readObject(); // Einlesen von serialisierten Objekten erfordert
-					// Deserialisation.
-					// for (int i = 0; i < ang.iangarr; i++) {
-					// System.out.println(ang.angarr[i].toString());
-					// }
-					for(int i = 0; i < ang2.angarr.length; i++) { // Array initialisieren, mit null überschreiben
-						ang2.angarr[i].name = null;
-						ang2.angarr[i].vorname = null;
-						ang2.angarr[i].adresse = null;
-						ang2.angarr[i].telefonnummer = null;
-						ang2.angarr[i].monatsgehalt = null;
-					}
-					try {
-						System.out.println(ang2.angarr[0].toString());
-					} catch (Exception e) {
-						System.out.println(e.toString());
-					}
-		//			System.out.println(ang.toString());
+					angarr = (ArrayList<AngestellterNeu>) os.readObject();
+
+					System.out.println(angarr);
+
 					os.close();
 				} catch (IOException e) {
 					System.out.println(e.toString());
 				} catch (ClassNotFoundException e) {
 					System.out.println(e.toString());
 				}
-				// for (int i = 0; i < ang.iangarr; i++) { System.out.println("AngestellterNeu "
-				// +
-				// (i + 1) + " : " + ang.angarr[i].getName() + ", " + ang.angarr[i].getVorname()
-				// + "\nAdresse: " + ang.angarr[i].getAdresse() + "\nTelefon: " +
-				// ang.angarr[i].getTelefonnummer() + "\nMonatsgehalt: " +
-				// ang.angarr[i].getMonatsgehalt());
 
 				break;
 			}
 
-			/*
-			  case 4: {
-			  
-			  System.out.println("ArbeiterNeu Daten zeigen");
-			  
-			  for (int i = 0; i < arb.iarbarr; i++) { System.out.println("AngestellterNeu "
-			  + (i + 1) + " : " + arbarrL[i].getName() + ", " + arbarrL[i].getVorname() +
-			  "\nAdresse: " + arbarrL[i].getAdresse() + "\nTelefon: " +
-			  arbarrL[i].getTelefonnummer() + "\nStundenlohn: " +
-			  arbarrL[i].getStundenlohn() + "\nStundenzahl: " +
-			  arbarrL[i].getAnzahlStunden());
-			  
-			  }
-			  
-			  break; } 
-			 */ 
-			  case 5: {
-			  
-			  System.out.println("\n\tAktuell sind " + FirmaNeu.iIndex +
-			  " Mitarbeiter im Unternehmen beschäftigt.");
-			  break;
-			  }
-			  
-			
-			 
+			case 4: {
+
+				System.out.println("Arbeiter Daten zeigen");
+				try {
+
+					FileInputStream fs = new FileInputStream("Arbeiter.ser");
+					ObjectInputStream os = new ObjectInputStream(fs);
+					arbarr = (ArrayList<ArbeiterNeu>) os.readObject();
+
+					System.out.println(arbarr);
+
+					os.close();
+				} catch (IOException e) {
+					System.out.println(e.toString());
+				} catch (ClassNotFoundException e) {
+					System.out.println(e.toString());
+				}
+				break;
+			}
+
+			case 5: {
+
+				System.out.println("\n\tAktuell sind " + angarr.size() + " Angestellte und " + arbarr.size() + " Arbeiter im Unternehmen beschäftigt.");
+				break;
+			}
 
 			case 6: {
-				
-				writeToFile(ang.iangarr, ang.angarr);
+
+				writeToFile(angarr, arbarr);
 				break;
 			}
 
@@ -149,6 +145,7 @@ public class FirmaProgrammNeu {
 			}
 			case 8: {
 				ang.zeigePerson();
+				arb.zeigePerson();
 			}
 			}
 
@@ -170,19 +167,18 @@ public class FirmaProgrammNeu {
 	 * ArbeiterNeu arb = new ArbeiterNeu(); FirmaNeu firmaNeu = new FirmaNeu(); //
 	 * firmaNeu.writeToFile(); // firmaNeu.readFromFile();
 	 */
-	
-	static void writeToFile(int iangarr, AngestellterNeu[] angarr) {
-		
+
+	static void writeToFile(ArrayList<AngestellterNeu> angarr, ArrayList<ArbeiterNeu> arbarr) {
+
 		try {
 			Formatter f = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
-			//Formatter f = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
-			f.format("\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n", angarr[0].getVorname(), angarr[0].getName(),
-					angarr[0].getAdresse(), angarr[0].getTelefonnummer(), angarr[0].getMonatsgehalt());
-//			for (int i = 0; i < iangarr; i++) {
-//				f.format("\r\n%s\r\n%s\r\n%s\r\n%s\r\n%s\r\n", angarr[i].vorname, angarr[i].name,
-//						angarr[i].adresse, angarr[i].telefonnummer, angarr[i].monatsgehalt);
-	//		}
+//			Formatter f = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
+			f.format("%s\r\n", angarr);
 			f.close();
+			Formatter g = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Arbeiter.txt");
+//			Formatter g = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Arbeiter.txt");
+			g.format("%s\r\n", arbarr);
+			g.close();
 
 		} catch (FileNotFoundException e) {
 
@@ -192,13 +188,22 @@ public class FirmaProgrammNeu {
 
 	static void readFromFile() {
 		try {
+			System.out.println("Die Angestellten: \n");
 			File x = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
-			//File x = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
+//			File x = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
 			Scanner rff = new Scanner(x);
 			while (rff.hasNext()) {
 				System.out.println(rff.next());
+				}
+			System.out.println("Die Arbeiter: \n");
+			File y = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Arbeiter.txt");
+//			File y = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Arbeiter.txt");
+			Scanner rgg = new Scanner(y);
+			while (rgg.hasNext()) {
+				System.out.println(rgg.next());
 			}
 			rff.close();
+			rgg.close();
 		} catch (FileNotFoundException e) {
 
 			System.out.println("Error!");
@@ -206,7 +211,4 @@ public class FirmaProgrammNeu {
 
 	}
 
-	}
-
-
-
+}

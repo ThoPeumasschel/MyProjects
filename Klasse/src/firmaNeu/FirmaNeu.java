@@ -3,6 +3,7 @@ package firmaNeu;
 import java.io.*;
 import java.util.*;
 
+@SuppressWarnings("serial")
 public class FirmaNeu implements Serializable {
 	final int obergrenze = 100;
 	

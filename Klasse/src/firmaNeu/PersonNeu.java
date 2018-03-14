@@ -1,5 +1,6 @@
 package firmaNeu;
 
+@SuppressWarnings("serial")
 public class PersonNeu extends FirmaNeu {
 
 	void getData() {
