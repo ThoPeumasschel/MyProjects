@@ -5,7 +5,7 @@ import java.util.*;
 
 @SuppressWarnings("serial")
 public class Angestellter extends Person implements Serializable {
-
+	int an = 0;
 	void zeigePerson() {
 		super.zeigePerson();
 		System.out.println("Monatsgehalt: \t" + monatsgehalt + " €");
@@ -29,8 +29,11 @@ public class Angestellter extends Person implements Serializable {
 	}
 
 	public String toString() {
+		
+		
 		return "\nAngestellter:\t" + vorname + " " + name + "\nAdresse:\t" + adresse + "\nTelefon:\t" + telefonnummer
 				+ "\nMonatsgehalt:\t" + monatsgehalt;
+		
 	}
 
 	// Standardkonstruktor
