@@ -1,7 +1,7 @@
-package firmaNeu;
+package firmaMitarbeiter;
 
 @SuppressWarnings("serial")
-public class PersonNeu extends FirmaNeu {
+public class Person extends Firma {
 
 	void getData() {
 		super.getData();
@@ -16,7 +16,7 @@ public class PersonNeu extends FirmaNeu {
 	}
 
 	// Standardkonstruktor
-	PersonNeu() {
+	Person() {
 		name = null;
 		vorname = null;
 		adresse = null;
@@ -25,7 +25,7 @@ public class PersonNeu extends FirmaNeu {
 	}
 
 	// Parametrisierter Konstruktor
-	PersonNeu(String n, String v, String a, String t) {
+	Person(String n, String v, String a, String t) {
 		name = n;
 		vorname = v;
 		adresse = a;
@@ -34,7 +34,7 @@ public class PersonNeu extends FirmaNeu {
 	}
 
 	// Noch ein Konstruktor...
-	PersonNeu(String x, String y) {
+	Person(String x, String y) {
 		name = x;
 		vorname = y;
 		adresse = "Hamburg";

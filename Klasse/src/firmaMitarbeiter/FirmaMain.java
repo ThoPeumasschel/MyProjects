@@ -1,33 +1,33 @@
-package firmaNeu;
+package firmaMitarbeiter;
 
 import java.io.*;
 import java.util.*;
 
-public class FirmaProgrammNeu {
+public class FirmaMain {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 
-		ArrayList<AngestellterNeu> angarr = new ArrayList<AngestellterNeu>(30);
-		AngestellterNeu ang = new AngestellterNeu();
+		ArrayList<Angestellter> angarr = new ArrayList<Angestellter>(30);
+		Angestellter ang = new Angestellter();
 
-		ArrayList<ArbeiterNeu> arbarr = new ArrayList<ArbeiterNeu>(30);
-		ArbeiterNeu arb = new ArbeiterNeu();
+		ArrayList<Arbeiter> arbarr = new ArrayList<Arbeiter>(30);
+		Arbeiter arb = new Arbeiter();
 
 		int cEingabe;
 		Scanner sc = new Scanner(System.in);
 
 		do {
 			System.out.println("||||||||||||||||||||||||||||||||||||");
-			System.out.println("Angestellten Daten eingeben.........1");
-			System.out.println("Arbeiter Daten eingeben.............2");
-			System.out.println("Angestellten Daten anzeigen.........3");
-			System.out.println("Arbeiter Daten anzeigen.............4");
-			System.out.println("Mitarbeiterzahl gesamt..............5");
-			System.out.println("Mitarbeiter in Dateien schreiben....6");
-			System.out.println("Mitarbeiter aus Dateien lesen.......7");
-			System.out.println("Zeige Person aufrufen...............8");
-			System.out.println("Programmende........................0");
+			System.out.println("Angestellten Daten eingeben............1");
+			System.out.println("Arbeiter Daten eingeben................2");
+			System.out.println("Angestellten Daten anzeigen............3");
+			System.out.println("Arbeiter Daten anzeigen................4");
+			System.out.println("Mitarbeiterzahl gesamt.................5");
+			System.out.println("Mitarbeiter in Text-Dateien schreiben..6");
+			System.out.println("Mitarbeiter aus Text-Dateien lesen.....7");
+			System.out.println("Zeige Person aufrufen..................8");
+			System.out.println("Programmende...........................0");
 			System.out.println("||||||||||||||||||||||||||||||||||||");
 
 			cEingabe = sc.nextInt();
@@ -38,7 +38,7 @@ public class FirmaProgrammNeu {
 
 				System.out.println("Neue Angestellte erfassen."); // Satzeingabe-Funktion
 				ang.getData();
-				AngestellterNeu ang1 = new AngestellterNeu(ang.vorname, ang.name, ang.adresse, ang.telefonnummer,
+				Angestellter ang1 = new Angestellter(ang.vorname, ang.name, ang.adresse, ang.telefonnummer,
 						ang.monatsgehalt);
 				angarr.add(ang1);
 
@@ -63,7 +63,7 @@ public class FirmaProgrammNeu {
 
 				System.out.println("Neue Arbeiter erfassen."); // Satzeingabe-Funktion
 				arb.getData();
-				ArbeiterNeu arb1 = new ArbeiterNeu(arb.vorname, arb.name, arb.adresse, arb.telefonnummer,
+				Arbeiter arb1 = new Arbeiter(arb.vorname, arb.name, arb.adresse, arb.telefonnummer,
 						arb.stundenlohn, arb.anzahlStunden);
 				arbarr.add(arb1);
 
@@ -92,7 +92,7 @@ public class FirmaProgrammNeu {
 
 					FileInputStream fs = new FileInputStream("Angestellte.ser");
 					ObjectInputStream os = new ObjectInputStream(fs);
-					angarr = (ArrayList<AngestellterNeu>) os.readObject();
+					angarr = (ArrayList<Angestellter>) os.readObject();
 
 					System.out.println(angarr);
 
@@ -113,7 +113,7 @@ public class FirmaProgrammNeu {
 
 					FileInputStream fs = new FileInputStream("Arbeiter.ser");
 					ObjectInputStream os = new ObjectInputStream(fs);
-					arbarr = (ArrayList<ArbeiterNeu>) os.readObject();
+					arbarr = (ArrayList<Arbeiter>) os.readObject();
 
 					System.out.println(arbarr);
 
@@ -133,7 +133,7 @@ public class FirmaProgrammNeu {
 			}
 
 			case 6: {
-
+				System.out.println("\n\tZwei Text-Dateien wurden beschrieben.");
 				writeToFile(angarr, arbarr);
 				break;
 			}
@@ -154,30 +154,30 @@ public class FirmaProgrammNeu {
 	}
 
 	/*
-	 * AngestellterNeu[] angarr1 = new AngestellterNeu[30]; ArbeiterNeu[] arbarr1 =
-	 * new ArbeiterNeu[30];
+	 * Angestellter[] angarr1 = new Angestellter[30]; Arbeiter[] arbarr1 =
+	 * new Arbeiter[30];
 	 * 
-	 * AngestellterNeu ang1 = new AngestellterNeu("Balder", "Hugo", "Hamburg",
-	 * "0178/34 56 426", "3500"); AngestellterNeu ang2 = new AngestellterNeu("CCCC",
-	 * "DD", "HHHH", "3456378", "4564"); AngestellterNeu ang3 = new
-	 * AngestellterNeu("EEEE", "UU", "FGHJ", "111111", "22222");
+	 * Angestellter ang1 = new Angestellter("Balder", "Hugo", "Hamburg",
+	 * "0178/34 56 426", "3500"); Angestellter ang2 = new Angestellter("CCCC",
+	 * "DD", "HHHH", "3456378", "4564"); Angestellter ang3 = new
+	 * Angestellter("EEEE", "UU", "FGHJ", "111111", "22222");
 	 * 
 	 * angarr1[0] = ang1; angarr1[1] = ang1; angarr1[2] = ang1;
 	 * 
-	 * ArbeiterNeu arb = new ArbeiterNeu(); FirmaNeu firmaNeu = new FirmaNeu(); //
-	 * firmaNeu.writeToFile(); // firmaNeu.readFromFile();
+	 * Arbeiter arb = new Arbeiter(); Firma firmaMitarbeiter = new Firma(); //
+	 * firmaMitarbeiter.writeToFile(); // firmaMitarbeiter.readFromFile();
 	 */
 
-	static void writeToFile(ArrayList<AngestellterNeu> angarr, ArrayList<ArbeiterNeu> arbarr) {
+	static void writeToFile(ArrayList<Angestellter> angarr, ArrayList<Arbeiter> arbarr) {
 
 		try {
 			Formatter f = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
 //			Formatter f = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
-			f.format("%s\r\n", angarr);
+			f.format("\r\n%s\r\n", angarr);
 			f.close();
 			Formatter g = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Arbeiter.txt");
 //			Formatter g = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Arbeiter.txt");
-			g.format("%s\r\n", arbarr);
+			g.format("\r\n%s\r\n", arbarr);
 			g.close();
 
 		} catch (FileNotFoundException e) {

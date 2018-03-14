@@ -1,10 +1,10 @@
-package firmaNeu;
+package firmaMitarbeiter;
 
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import java.util.*;
 
-public class ArbeiterNeu extends PersonNeu implements Serializable {
+public class Arbeiter extends Person implements Serializable {
 
 	void zeigePerson() {
 		super.zeigePerson();
@@ -36,7 +36,7 @@ public class ArbeiterNeu extends PersonNeu implements Serializable {
 				+ "\nStundenlohn:\t" + stundenlohn + "\nStunden Anzahl:\t" + anzahlStunden;
 	}
 	// Default constructor
-	public ArbeiterNeu() {
+	public Arbeiter() {
 		super();
 		stundenlohn = null; // Double wäre schöner
 		anzahlStunden = null;
@@ -44,7 +44,7 @@ public class ArbeiterNeu extends PersonNeu implements Serializable {
 	}
 
 	// parametrisized constructor
-	public ArbeiterNeu(String n, String v, String a, String t, String d, String anz) {
+	public Arbeiter(String n, String v, String a, String t, String d, String anz) {
 		super(n, v, a, t);
 		stundenlohn = d;
 		anzahlStunden = anz;

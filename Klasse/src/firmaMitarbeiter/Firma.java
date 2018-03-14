@@ -1,10 +1,10 @@
-package firmaNeu;
+package firmaMitarbeiter;
 
 import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("serial")
-public class FirmaNeu implements Serializable {
+public class Firma implements Serializable {
 	final int obergrenze = 100;
 	
 	static int iIndex; //zählt jeden Aufruf der getData() Funktion. Angestellter oder Arbeiter. 
@@ -13,8 +13,8 @@ public class FirmaNeu implements Serializable {
 	String monatsgehalt;
 	String stundenlohn;
 
-	ArrayList<AngestellterNeu> angarrL = new ArrayList<AngestellterNeu>();
-	ArrayList<ArbeiterNeu> arbarrL = new ArrayList<ArbeiterNeu>();
+	ArrayList<Angestellter> angarrL = new ArrayList<Angestellter>();
+	ArrayList<Arbeiter> arbarrL = new ArrayList<Arbeiter>();
 
 	void getData() {
 		try {

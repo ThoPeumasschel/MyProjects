@@ -1,10 +1,10 @@
-package firmaNeu;
+package firmaMitarbeiter;
 
 import java.io.Serializable;
 import java.util.*;
 
 @SuppressWarnings("serial")
-public class AngestellterNeu extends PersonNeu implements Serializable {
+public class Angestellter extends Person implements Serializable {
 
 	void zeigePerson() {
 		super.zeigePerson();
@@ -34,14 +34,14 @@ public class AngestellterNeu extends PersonNeu implements Serializable {
 	}
 
 	// Standardkonstruktor
-	public AngestellterNeu() {
+	public Angestellter() {
 
 		monatsgehalt = null;
 
 	}
 
 	// Parametrisierter Konstruktor
-	public AngestellterNeu(String n, String v, String a, String t, String m) {
+	public Angestellter(String n, String v, String a, String t, String m) {
 		super(n, v, a, t);
 		monatsgehalt = m;
 
