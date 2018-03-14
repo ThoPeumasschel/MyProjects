@@ -1,10 +1,18 @@
 
 [
-Angestellterm 3:	aaa aaa
+Angestellter:	aaa aaa
 Adresse:	aaa
 Telefon:	aaa
 Monatsgehalt:	aaa, 
-Angestellterm 3:	bb b
+Angestellter:	bbb bbb
 Adresse:	bbb
 Telefon:	bbb
-Monatsgehalt:	bbb]
+Monatsgehalt:	bbb, 
+Angestellter:	zzz zzz
+Adresse:	zzz
+Telefon:	zzz
+Monatsgehalt:	zzz, 
+Angestellter:	fff fff
+Adresse:	fff
+Telefon:	fff
+Monatsgehalt:	fff]

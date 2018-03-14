@@ -171,12 +171,12 @@ public class FirmaMain {
 	static void writeToFile(ArrayList<Angestellter> angarr, ArrayList<Arbeiter> arbarr) {
 
 		try {
-			Formatter f = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
-//			Formatter f = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
+//			Formatter f = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
+			Formatter f = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
 			f.format("\r\n%s\r\n", angarr);
 			f.close();
-			Formatter g = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Arbeiter.txt");
-//			Formatter g = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Arbeiter.txt");
+//			Formatter g = new Formatter("C:\\Users\\thoma\\MyProjects\\Klasse\\Arbeiter.txt");
+			Formatter g = new Formatter("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Arbeiter.txt");
 			g.format("\r\n%s\r\n", arbarr);
 			g.close();
 
@@ -189,15 +189,15 @@ public class FirmaMain {
 	static void readFromFile() {
 		try {
 			System.out.println("Die Angestellten: \n");
-			File x = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
-//			File x = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
+//			File x = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Angestellte.txt");
+			File x = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Angestellte.txt");
 			Scanner rff = new Scanner(x);
 			while (rff.hasNext()) {
 				System.out.println(rff.next());
 				}
 			System.out.println("Die Arbeiter: \n");
-			File y = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Arbeiter.txt");
-//			File y = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Arbeiter.txt");
+//			File y = new File("C:\\Users\\thoma\\MyProjects\\Klasse\\Arbeiter.txt");
+			File y = new File("C:\\Users\\tpeuschel\\My_Projects\\Klasse\\Arbeiter.txt");
 			Scanner rgg = new Scanner(y);
 			while (rgg.hasNext()) {
 				System.out.println(rgg.next());
