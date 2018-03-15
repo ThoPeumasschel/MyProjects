@@ -1,6 +1,6 @@
 
 public abstract class Firma {
-	final int MAXMITARB	 = 100;
+	final int MAXMITARB	 = 5;
 	static int anzMitarb = 0;
 	
 	void getMitarb() {

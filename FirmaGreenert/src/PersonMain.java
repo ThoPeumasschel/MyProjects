@@ -5,7 +5,7 @@ public class PersonMain {
 		Person p1 = new Person();
 		p1.menue();
 	//	Angestellter ang1 = new Angestellter();
-	//	ang1.menue();
+	//	ang1.menue(); // geht lustigerweise auch!
 		
 	}
 

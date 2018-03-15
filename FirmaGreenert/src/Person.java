@@ -1,9 +1,8 @@
 import java.io.*;
-import java.util.ArrayList;
 
 public class Person extends Firma implements Serializable {
 	private String name, vorname, adresse, telefonnr;
-	public final int ANZPERSONEN = 30;
+	public final int ANZPERSONEN = 3;
 	public int iang = 0, iarb = 0;
 	Person[] ang = new Angestellter[ANZPERSONEN]; // !!!
 	Person[] arb = new Arbeiter[ANZPERSONEN]; // !!!
@@ -82,7 +81,7 @@ public class Person extends Firma implements Serializable {
 			System.out.println(e.toString());
 		}
 	}
-	
+
 	void menue() {
 		int cEingabe;
 
@@ -132,13 +131,13 @@ public class Person extends Firma implements Serializable {
 
 			}
 		} while (cEingabe != 0);
-		
+
 		try {
 			FileOutputStream fs = new FileOutputStream("Angestellte.ser");
 			ObjectOutputStream os = new ObjectOutputStream(fs);
 			os.writeObject(ang);
 			os.close();
-			
+
 			FileOutputStream fs1 = new FileOutputStream("Arbeiter.ser");
 			ObjectOutputStream os1 = new ObjectOutputStream(fs1);
 			os1.writeObject(arb);
@@ -148,25 +147,24 @@ public class Person extends Firma implements Serializable {
 			System.out.println(e.toString());
 		}
 
-		
-		
 	}
 
 	void getAngestellte() {
 		Angestellter ang1 = new Angestellter();
-		ang1.setName(readString("Name"));
-		ang1.setVorname(readString("Vorname"));
-		ang1.setAdresse(readString("Adresse"));
-		ang1.setTelefonnr(readString("Telefon"));
-		ang1.setMonatsgehalt(Integer.parseInt(readString("Monatsgehalt")));
+		
 
 		if (iang < ANZPERSONEN) {
 			ang[iang++] = ang1;
 			anzMitarb++;
+			ang1.setName(readString("Name"));
+			ang1.setVorname(readString("Vorname"));
+			ang1.setAdresse(readString("Adresse"));
+			ang1.setTelefonnr(readString("Telefon"));
+			ang1.setMonatsgehalt(Integer.parseInt(readString("Monatsgehalt")));
 		} else
 			System.err.println("Array für Angestellte ist voll!");
-		if (anzMitarb >= MAXMITARB)
-			System.err.println("Maximale Mitarbeiterzahl ist erreicht");
+//		if (anzMitarb >= MAXMITARB)
+//			System.err.println("Maximale Mitarbeiterzahl ist erreicht");
 
 	}
 
@@ -175,26 +173,28 @@ public class Person extends Firma implements Serializable {
 		if (iarb < ANZPERSONEN) {
 			arb[iarb++] = arb1;
 			anzMitarb++;
-		} else
+			arb1.setName(readString("Name"));
+			arb1.setVorname(readString("Vorname"));
+			arb1.setAdresse(readString("Adresse"));
+			arb1.setTelefonnr(readString("Telefon"));
+			arb1.setStundenlohn(Integer.parseInt(readString("Stundenlohn")));
+			arb1.setAnzahlstd(Integer.parseInt(readString("Anzahl Stunden")));
+		} else {
 			System.err.println("Array für Angestellte ist voll!");
-		if (anzMitarb >= MAXMITARB)
-			;
-		System.out.println("Maximale Mitarbeiterzahl ist erreicht");
+			// hier EXIT einbauen
+		}
+//		if (anzMitarb >= MAXMITARB)
+//			System.out.println("Maximale Mitarbeiterzahl ist erreicht");
 
-		arb1.setName(readString("Name"));
-		arb1.setVorname(readString("Vorname"));
-		arb1.setAdresse(readString("Adresse"));
-		arb1.setTelefonnr(readString("Telefon"));
-		arb1.setStundenlohn(Integer.parseInt(readString("Stundenlohn")));
-		arb1.setAnzahlstd(Integer.parseInt(readString("Anzahl Stunden")));
+		
 
 	}
 
 	void angAuflisten() {
-		
+
 		for (int i = 0; ang[i] != null; ++i) {
 			System.out.println(ang[i].zeigePerson());
-		
+
 		}
 
 	}
