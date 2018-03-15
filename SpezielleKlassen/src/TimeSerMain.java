@@ -1,7 +1,7 @@
 
 import java.io.*;
 
-public class TimeSer {
+public class TimeSerMain {
 
 	public static void main(String[] args) {
 		try {
