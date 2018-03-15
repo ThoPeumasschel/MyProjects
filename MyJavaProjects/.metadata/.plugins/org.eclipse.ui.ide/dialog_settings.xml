@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\thoma\MyProjects\SpezielleKlassen"/>
+		<item value="C:\Users\thoma\MyProjects\Firma2"/>
+		<item value="C:\Users\thoma\MyProjects\FirmaGreenert"/>
 		<item value="C:\Users\thoma\MyProjects\HA 05Mar2018"/>
 		<item value="F:\KURSE\15 Joachim Grünert - Programmierung\01 Aufgaben\HA 05Mar2018"/>
 		<item value="C:\Users\thoma\MyProjects\Objekte"/>

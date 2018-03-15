@@ -14,7 +14,7 @@ public class Firma_Main implements ActionListener {
 	JButton btnAngestelltenEingeben = new JButton("Neue eingeben");
 	private final JPanel panel = new JPanel();
 	private final JLabel lblFirmaXyz = new JLabel("Personalarchiv - Firma XYZ");
-	JLabel lblNewLabel = new JLabel("© Patrick Kleinschmidt, 2018");
+	JLabel lblNewLabel = new JLabel("Patrick Kleinschmidt, 2018");
 	JPanel panel_1 = new JPanel();
 	
 	//STARTPOINT
