@@ -3872,3 +3872,29 @@ Contains: The project description file (.project) for 'FensterFirma' is missing.
 !MESSAGE Problems occurred while trying to save the state of the workbench.
 !SUBENTRY 1 org.eclipse.core.resources 2 234 2018-03-15 15:12:56.499
 !MESSAGE The project description file (.project) for 'FensterFirma' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SESSION 2018-03-15 21:22:30.997 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=9.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-03-15 21:23:18.285
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\thoma'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-15 21:25:29.893
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-15 21:25:29.910
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-15 21:31:26.498
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-03-15 21:31:26.517
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
