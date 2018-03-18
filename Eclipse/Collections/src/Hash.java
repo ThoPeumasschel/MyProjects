@@ -4,7 +4,7 @@ public class Hash {
 
 	public static void main(String[] args) {
 		// hashtable verwaltet key - value Paare
-		Hashtable births = new Hashtable();
+		Hashtable<String, String> births = new Hashtable<String, String>();
 		births.put("Katie", "040585");
 		births.put("Bob", "310183");
 		births.put("Bill", "051179");

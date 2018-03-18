@@ -35,7 +35,7 @@ public class FirmaFenster extends Frame {
 	public boolean action(Event evt, Object arg) {
 		if (evt.target instanceof Button) {
 			auswahl((Button) evt.target);
-			dl.setVisible(true);
+//			dl.setVisible(true);
 			return true;
 		} else 
 			return false;
