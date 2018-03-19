@@ -6,7 +6,7 @@ public class VideoTest {
 
 	public static void main(String[] args) {
 
-		Video v = new Video("007G5", "Hannibal", 90, 'i', 't');
+		Video v = new Video("007Z5", "Hannibal", 90, 'i', 't');
 		System.out.println(v.getVideonummer());
 		System.out.println(v.getTitel());
 		System.out.println(v.getLaufzeit());
@@ -24,11 +24,16 @@ public class VideoTest {
 		v2.ausleihen("Paul Meier");
 		
 		Video[] videoarr = new Video[200];
+		for (int i = 0; i< videoarr.length;i++)
+			videoarr[i] =   new Video();
 		videoarr[5] = new Video("007G5", "Hannibal", 90, 'i', 't');
 		videoarr[5].setGenre('a');
 		System.out.println("Video Array am index 5: " + videoarr[5].videotoString());
 		
-		v.istVideoda("234", videoarr[5]);
+		
+//		int z = v.istVideoda("007G5", videoarr);
+		v.istVideoda("234", videoarr);
+		System.out.println("Gefunden am Index: " + v.istVideoda("007G5", videoarr));
 		
 	}
 

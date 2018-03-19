@@ -27,7 +27,7 @@ public class Video {
 		videonummer = null;
 		titel = null;
 		laufzeit = 0;		
-		sprache = ' ';
+		sprache = 'd';
 		genre = ' ';
 		
 	}
@@ -38,16 +38,17 @@ public class Video {
 		
 	}
 
-	int istVideoda(String i, Video videoarr) {
-		videonummer = i;
-		Video arr = videoarr;
-		
-		if (arr != null) {
+	int istVideoda(String nr,  Video[] v) {
+		int index = -1;
+			
+			for (int i = 0; i<v.length ; i++) {
+				if (v[i].getVideonummer() == nr) {
+					index = i;
+					break;
+				}
+			}
 
-		return Position des Videos im Array;
-		
-		} else 
-			return -1;
+		return index;
 		
 	}
 
