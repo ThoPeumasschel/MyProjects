@@ -13,7 +13,7 @@ public class CKopieren {
 			boolean ende = false;
 			FileReader ein = new FileReader("CKopieren.java");
 			FileWriter aus = new FileWriter("CKopieren.bak");
-			while (!ende)
+			while (!ende)  
 				if ((zeichen = ein.read()) == -1)
 					ende = true;
 				else

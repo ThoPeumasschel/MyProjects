@@ -22,9 +22,33 @@ public class Video {
 		titel = t;
 		genre = gen;
 	}
-
+	
 	Video() {
+		videonummer = null;
+		titel = null;
+		laufzeit = 0;		
+		sprache = ' ';
+		genre = ' ';
+		
+	}
+	
+	void ausleihen(String a) {
+		ausleihername = a;
+		ausleihdatum = new Date();
+		
+	}
 
+	int istVideoda(String i, Video videoarr) {
+		videonummer = i;
+		Video arr = videoarr;
+		
+		if (arr != null) {
+
+		return Position des Videos im Array;
+		
+		} else 
+			return -1;
+		
 	}
 
 	public static int getAnzahlvideos() {
@@ -90,6 +114,34 @@ public class Video {
 	public void setAusleihername(String ausleihername) {
 		this.ausleihername = ausleihername;
 	}
+	
+	String videotoString() {
+		String str = "Anzahl Videos: " + anzahlvideos;
+		if (videonummer != null)
+			str += " Videonummer: " + videonummer;
+		else
+			str += " Videonummer nicht vorhanden. ";
+		str += " Sprache: " + sprache;
+		if (titel != null)
+			str += " Titel: " + titel;
+		else
+			str += " Titel nicht vorhanden. ";
+		str += " Laufzeit: " + laufzeit + " min";
+		if (genre == 'k')
+			str += " Krimi";
+		else if (genre == 't')
+			str += " Thriller";
+		else if (genre == 'a')
+			str += " Action";
+		else if (genre == 'd')
+			str += " Drama";
+		if (ausleihdatum == null)
+			str += " nicht ausgeliehen";
+		else
+			str += " ausgeliehen";
+		return str;
+	}
+	
 	
 }
 	
