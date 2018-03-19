@@ -1,5 +1,5 @@
 import java.awt.*;
-
+// Hallo!
 public class TextDialog extends Dialog {
 	BorderLayout fl = new BorderLayout(01, 10);
 	TextField tf;
