@@ -94,14 +94,14 @@ public class FirstWBGui extends JFrame {
 	 */
 	public FirstWBGui() {
 
-		intiComponents();
+		initComponents();
 		createEvents();
 
 	}
 
 	// This method contains all of the code for creating and initializing
 	// components.
-	private void intiComponents() {
+	private void initComponents() {
 		setIconImage(Toolkit.getDefaultToolkit()
 				.getImage(FirstWBGui.class.getResource("/windowBuilder/resources/monkey.png")));
 		setTitle("Thomas Window");
@@ -279,7 +279,7 @@ public class FirstWBGui extends JFrame {
 		btnmonkey.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				// JOptionPane.showMessageDialog(null, txtFirstName.getText());
-				// txtFirstName.setText("blabla");
+				 txtFirstName.setText(txtFirstName.getText());
 				//
 				// if (rdbtnChili.isSelected())
 				// JOptionPane.showMessageDialog(null, "Chili!!");
