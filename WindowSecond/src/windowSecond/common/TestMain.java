@@ -1,6 +1,8 @@
-package windowSecond.views;
+package windowSecond.common;
 
 import java.awt.EventQueue;
+
+import windowSecond.views.SecondWBGui;
 
 public abstract class TestMain {
 
@@ -18,6 +20,7 @@ public abstract class TestMain {
 				}
 			}
 		});
+	
 	}
 
 }
