@@ -51,7 +51,7 @@ public class SecondWBGui extends JFrame {
 	private static JTextArea textArea;
 	private JScrollPane scrollPane;
 	private JButton btnSpeichern;
-	private static String[] arr = new String[10];
+	private static String[] arr = new String[100];
 	public static int iIndex;
 	public Person g;
 	private JButton btnEinlesen;
