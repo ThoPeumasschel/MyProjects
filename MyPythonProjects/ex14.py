@@ -1,12 +1,14 @@
 from sys import argv
 
 script, user_name = argv
+
 prompt = '==> '
+
 
 print(f"\nHallo {user_name}, ich bin das {script}-script.")
 print("Ich würde dir gerne ein paar Fragen stellen.")
 print(f"Magst du mich {user_name}?")
-likes = input(prompt)
+likes = input('> ')
 
 print(f"Wo wohnst du denn, {user_name}?")
 lives = input(prompt)

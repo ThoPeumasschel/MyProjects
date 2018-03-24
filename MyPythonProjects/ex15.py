@@ -7,7 +7,7 @@ txt = open(filename)
 print(f"\nHere's your file {filename}:")
 print(txt.read())
 
-print("Type the filenam again:")
+print("Type the filename again:")
 file_again = input("==>> ")
 
 txt_again = open(file_again)
