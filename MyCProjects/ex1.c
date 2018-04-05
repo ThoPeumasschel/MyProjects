@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 
 	// this is also a comment
 	printf("You are %d miles away.\n", distance);
-	printf("Uebrigens hallo Welt!\n");
+	printf("Übrigens hallo Welt!\n");
 	printf ("Ich habe %d RasPis hier rumliegen!\n", Pies);
 
 	return 0;
