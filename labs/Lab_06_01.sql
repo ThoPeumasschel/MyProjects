@@ -6,4 +6,4 @@ SELECT
     country_name
 FROM
     locations
-    NATURAL JOIN countries
+    NATURAL JOIN countries;
