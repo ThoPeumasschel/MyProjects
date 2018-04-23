@@ -5,5 +5,7 @@ SELECT
     manager.employee_id "Mgr#"
 FROM
     employees worker
-    JOIN employees manager ON ( worker.manager_id = manager.employee_id )
-;
+LEFT OUTER JOIN employees manager 
+ON ( worker.manager_id = manager.employee_id )
+ORDER BY
+    2;

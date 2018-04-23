@@ -7,4 +7,4 @@ FROM
     employees worker
     JOIN employees manager ON ( worker.manager_id = manager.employee_id )
 ORDER BY
-    manager.employee_id;
+    2;
