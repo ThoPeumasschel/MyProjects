@@ -10,7 +10,8 @@ WHERE
         FROM
             employees
         WHERE
-            (last_name LIKE '%u%') or (last_name LIKE '%U%') 
+            ( last_name LIKE '%z%' )
+            OR   ( last_name LIKE '%Z%' )
     )
 ORDER BY
     last_name;

@@ -2,7 +2,8 @@ UNDEFINE enter_name
 
 SELECT
     last_name,
-    hire_date
+    hire_date,
+    '&&Enter_name' "Eingabe Arb"
 FROM
     employees
 WHERE

@@ -4,12 +4,12 @@ SELECT
 FROM
     employees
 WHERE
-    manager_id (
+    manager_id = (
         SELECT
             employee_id
         FROM
             employees
         WHERE
             last_name = 'King'
-            manager_id IS NULL -- ist nicht!! gleichbedeutend mit 'any' oder 'in'
+          and manager_id IS NULL -- ist nicht!! gleichbedeutend mit 'any' oder 'in'
     );
