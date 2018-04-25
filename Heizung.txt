@@ -10,9 +10,9 @@ Annahme 2.500 Heizung + 2.500 WW
 Pelletverbrauch
 
 50 Säcke
-08.04.2018 2 Sack?? 
-04.04.2018 2 Sack??
-31.03.2018 2 Sack??
+08.07.2018 2 Sack?? 
+04.06.2018 2 Sack??
+20.04.2018 2 Sack
 27.03.2018 2 Sack
 21.03.2018 2 Sack
 40 Säcke
