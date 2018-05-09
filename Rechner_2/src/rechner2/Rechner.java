@@ -253,18 +253,17 @@ public class Rechner {
 					//answer = String.format("%.2f", result);
 					answer = String.valueOf(result);
 					txtDisplay.setText(answer);
-					// txtDisplay.setText(result);
 				} else if (operations == "-") {
 					result = x - y;
-					answer = String.format("%.2f", result);
+					answer = String.valueOf(result);
 					txtDisplay.setText(answer);
 				} else if (operations == "*") {
 					result = x * y;
-					answer = String.format("%.2f", result);
+					answer = String.valueOf(result);
 					txtDisplay.setText(answer);
 				} else if (operations == "/") {
 					result = x / y;
-					answer = String.format("%.2f", result);
+					answer = String.valueOf(result);
 					txtDisplay.setText(answer);
 				}
 
