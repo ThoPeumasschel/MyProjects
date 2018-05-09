@@ -14,7 +14,7 @@ public class FirstNetBeansProject {
     /**
      * @param args the command line arguments
      */
-    public static void main(String...quark) {
+    public static void main(String...erdbeeren) {
         System.out.println("Hallo NetBeans!");
     }
     
