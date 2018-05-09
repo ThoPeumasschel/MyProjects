@@ -1,4 +1,4 @@
-package rechner;
+package rechner2;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -232,31 +232,28 @@ public class Rechner {
 		btnErg = new JButton("=");
 		btnErg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				String answer;
 				y = Double.parseDouble(txtDisplay.getText());
 				if (operations == "+") {
 					result = x + y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
-					//txtDisplay.setText(result);
-				}
-				else if (operations == "-") {
+					// txtDisplay.setText(result);
+				} else if (operations == "-") {
 					result = x - y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
-				}
-				else if (operations == "*") {
+				} else if (operations == "*") {
 					result = x * y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
-				}
-				else if (operations == "/") {
+				} else if (operations == "/") {
 					result = x / y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
 				}
-				
+
 			}
 		});
 		btnErg.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -319,13 +316,13 @@ public class Rechner {
 		btnDiv_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String backspace = null;
-				
-				if(txtDisplay.getText().length() > 0) {
-				StringBuilder strB = new StringBuilder(txtDisplay.getText());
-				strB.deleteCharAt(txtDisplay.getText().length() - 1);
-				backspace = strB.toString();
-				txtDisplay.setText(backspace);
-				
+
+				if (txtDisplay.getText().length() > 0) {
+					StringBuilder strB = new StringBuilder(txtDisplay.getText());
+					strB.deleteCharAt(txtDisplay.getText().length() - 1);
+					backspace = strB.toString();
+					txtDisplay.setText(backspace);
+
 				}
 			}
 		});

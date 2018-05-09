@@ -1,4 +1,4 @@
-package rechner;
+package rechner2;
 
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -9,6 +9,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class Rechner {
 
@@ -30,7 +32,7 @@ public class Rechner {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(String...apfelkuchen) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -60,6 +62,11 @@ public class Rechner {
 		frame.getContentPane().setLayout(null);
 
 		txtDisplay = new JTextField();
+		txtDisplay.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		txtDisplay.setHorizontalAlignment(SwingConstants.RIGHT);
 		txtDisplay.setBounds(10, 11, 310, 27);
 		frame.getContentPane().add(txtDisplay);
@@ -230,33 +237,56 @@ public class Rechner {
 
 		JButton btnErg;
 		btnErg = new JButton("=");
+		btnErg.addKeyListener(new KeyAdapter() {
+			
+			public void keyPressed(KeyEvent evt) {
+				String answer;
+				y = Double.parseDouble(txtDisplay.getText());
+				if (evt.getKeyCode() == KeyEvent.VK_ENTER);
+				if (operations == "+") {
+					result = x + y;
+					answer = String.format("%.2f", result);
+					txtDisplay.setText(answer);
+					// txtDisplay.setText(result);
+				} else if (operations == "-") {
+					result = x - y;
+					answer = String.format("%.2f", result);
+					txtDisplay.setText(answer);
+				} else if (operations == "*") {
+					result = x * y;
+					answer = String.format("%.2f", result);
+					txtDisplay.setText(answer);
+				} else if (operations == "/") {
+					result = x / y;
+					answer = String.format("%.2f", result);
+					txtDisplay.setText(answer);
+				}
+			}
+		});
 		btnErg.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				String answer;
 				y = Double.parseDouble(txtDisplay.getText());
 				if (operations == "+") {
 					result = x + y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
-					//txtDisplay.setText(result);
-				}
-				else if (operations == "-") {
+					// txtDisplay.setText(result);
+				} else if (operations == "-") {
 					result = x - y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
-				}
-				else if (operations == "*") {
+				} else if (operations == "*") {
 					result = x * y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
-				}
-				else if (operations == "/") {
+				} else if (operations == "/") {
 					result = x / y;
 					answer = String.format("%.2f", result);
 					txtDisplay.setText(answer);
 				}
-				
+
 			}
 		});
 		btnErg.setFont(new Font("Tahoma", Font.BOLD, 18));
@@ -319,13 +349,13 @@ public class Rechner {
 		btnDiv_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String backspace = null;
-				
-				if(txtDisplay.getText().length() > 0) {
-				StringBuilder strB = new StringBuilder(txtDisplay.getText());
-				strB.deleteCharAt(txtDisplay.getText().length() - 1);
-				backspace = strB.toString();
-				txtDisplay.setText(backspace);
-				
+
+				if (txtDisplay.getText().length() > 0) {
+					StringBuilder strB = new StringBuilder(txtDisplay.getText());
+					strB.deleteCharAt(txtDisplay.getText().length() - 1);
+					backspace = strB.toString();
+					txtDisplay.setText(backspace);
+
 				}
 			}
 		});
