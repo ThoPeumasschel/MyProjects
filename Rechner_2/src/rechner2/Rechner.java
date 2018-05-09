@@ -240,27 +240,7 @@ public class Rechner {
 		btnErg.addKeyListener(new KeyAdapter() {
 			
 			public void keyPressed(KeyEvent evt) {
-				String answer;
-				y = Double.parseDouble(txtDisplay.getText());
-				if (evt.getKeyCode() == KeyEvent.VK_ENTER);
-				if (operations == "+") {
-					result = x + y;
-					answer = String.format("%.2f", result);
-					txtDisplay.setText(answer);
-					// txtDisplay.setText(result);
-				} else if (operations == "-") {
-					result = x - y;
-					answer = String.format("%.2f", result);
-					txtDisplay.setText(answer);
-				} else if (operations == "*") {
-					result = x * y;
-					answer = String.format("%.2f", result);
-					txtDisplay.setText(answer);
-				} else if (operations == "/") {
-					result = x / y;
-					answer = String.format("%.2f", result);
-					txtDisplay.setText(answer);
-				}
+				
 			}
 		});
 		btnErg.addActionListener(new ActionListener() {
@@ -270,7 +250,8 @@ public class Rechner {
 				y = Double.parseDouble(txtDisplay.getText());
 				if (operations == "+") {
 					result = x + y;
-					answer = String.format("%.2f", result);
+					//answer = String.format("%.2f", result);
+					answer = String.valueOf(result);
 					txtDisplay.setText(answer);
 					// txtDisplay.setText(result);
 				} else if (operations == "-") {

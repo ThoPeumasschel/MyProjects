@@ -1,0 +1,35 @@
+Folgender Radius war gegeben: 	23.0cm
+
+		Kreisumfang: 	144,51cm
+		Kreisfläche: 	1661,90cm²
+
+Folgender Radius war gegeben: 	23.43598723423cm
+
+		Kreisumfang: 	147,25cm
+		Kreisfläche: 	1725,51cm²
+
+Folgender Radius war gegeben: 	24,46cm
+
+		Kreisumfang: 	153,66cm
+		Kreisfläche: 	1879,04cm²
+
+Folgender Radius war gegeben: 	5,00cm
+
+		Kreisumfang: 	31,42cm
+		Kreisfläche: 	78,54cm²
+
+Folgender Radius war gegeben: 	67,00cm
+
+		Kreisumfang: 	420,97cm
+		Kreisfläche: 	14102,61cm²
+
+Folgender Radius war gegeben: 	4,00cm
+
+		Kreisumfang: 	25,13cm
+		Kreisfläche: 	50,27cm²
+
+Folgender Radius war gegeben: 	8,00cm
+
+		Kreisumfang: 	50,27cm
+		Kreisfläche: 	201,06cm²
+
