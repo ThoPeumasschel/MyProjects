@@ -22,6 +22,7 @@ public class Buttons extends Frame {
 		add(ff);
 		add(stop);
 		add(eat);
+	System.out.println();
 		
 	}
 }
