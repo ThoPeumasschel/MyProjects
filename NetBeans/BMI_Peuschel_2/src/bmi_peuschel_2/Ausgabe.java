@@ -1,14 +1,11 @@
-package bmi_rechner;
+package bmi_peuschel_2;
 
 import java.awt.HeadlessException;
 import java.io.*;
 import javax.swing.JOptionPane;
 
 public class Ausgabe {
-
-    // Hier werden die Daten in einer Datei gespeichert. 
-   
-   
+    
 
     void speichern(String BMI) {
         
@@ -25,10 +22,11 @@ public class Ausgabe {
             // In einem neuen try-catch-block wird eine Instanz der FileWriter-Klasse
             // gebildet, mit der sichergestellt wird, dass die neuen Daten angehängt werden. 
             try (FileWriter w = new FileWriter(f, true)) {
-                w.write("Name: " + name + "\nAlter: " + alter + "\nBMI = " + BMI + "\n");
+                w.write("Name: " + name + "\nGeschlecht: " + Eingabe.sex + "\nAlter: " + 
+                    alter + "\nBMI = " + BMI + "\n");
             }
             /*try (FileWriter v = new FileWriter(g, true)) {
-                v.write("Name: " + name + "\nAlter: " + alter + "\nBMI = " + BMI + "\n");
+                v.write("Name: " + name + "\nGeschlecht: " + geschlecht + "\nAlter: " + alter + "\nBMI = " + BMI + "\n");
             }*/
 
         } catch (@SuppressWarnings("LocalVariableHidesMemberVariable") HeadlessException | IOException e) {
