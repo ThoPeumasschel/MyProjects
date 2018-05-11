@@ -1,0 +1,37 @@
+BMI Ergebnis für Thomas
+Geschlecht: weiblich
+Größe: 186.0cm, 
+Gewicht: 45.0Kg, 
+BMI = 0 bedeutet nullBMI Ergebnis für rt
+Geschlecht: g
+Größe: 45.0cm, 
+Gewicht: 46.0Kg, 
+BMI = 0 bedeutet nullBMI Ergebnis für wert
+Geschlecht: m
+Größe: 345.0cm, 
+Gewicht: 45.0Kg, 
+BMI = 0 bedeutet nullBMI Ergebnis für rtzu
+Geschlecht: j
+Größe: 456.0cm, 
+Gewicht: 67.0Kg, 
+BMI = 0 bedeutet null
+BMI Ergebnis für Thomas
+Geschlecht: m
+Größe: 190.0cm, 
+Gewicht: 70.0Kg, 
+BMI = 19.390581717451525 bedeutet null
+BMI Ergebnis für Thomas
+Geschlecht: w
+Größe: 170.0cm, 
+Gewicht: 50.0Kg, 
+BMI = 17.301038062283737 bedeutet null
+BMI Ergebnis für sdfg
+Geschlecht: r
+Größe: 34.0cm, 
+Gewicht: 45.0Kg, 
+BMI = 389.27335640138404 bedeutet null
+BMI Ergebnis für Thomas
+Geschlecht: m
+Größe: 190.0cm, 
+Gewicht: 70.0Kg, 
+BMI = 19.390581717451525 bedeutet null
