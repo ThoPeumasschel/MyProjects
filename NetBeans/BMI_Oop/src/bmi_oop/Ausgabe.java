@@ -14,17 +14,17 @@ import javax.swing.JOptionPane;
  */
 public class Ausgabe {
 
-    void ausgeben(Eingabe e, Klassifikation k) {
+    void ausgeben(Eingabe e, String k) {
 
         Berechnung b = new Berechnung();
         DecimalFormat df = new DecimalFormat("0");
         double BMI = (b.berechne(e.gewicht, e.groesse));
-        System.out.println("Ergebnis für BMI in der Ausgabe");
+        
 
         //Eingabe e = new Eingabe();
-        JOptionPane.showMessageDialog(null, "BMI Ergebnis für " + e.name + ", \nGeschlecht : "
-            + e.geschlecht + ", " + e.groesse + "cm, " + e.gewicht + "Kg, \nBMI = "
-            + df.format(BMI) + " bedeutet " + k.klassifikation);
+        JOptionPane.showMessageDialog(null, "BMI Ergebnis für " + e.name + "\nGeschlecht : "
+            + e.geschlecht + ", " + e.groesse + " cm, " + e.gewicht + " Kg\nBMI = "
+            + df.format(BMI) + " bedeutet " + k);
     }
 
 }

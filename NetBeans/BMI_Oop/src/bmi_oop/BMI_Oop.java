@@ -16,19 +16,23 @@ public class BMI_Oop {
    
    
     public static void main(String[] args) {
+        DecimalFormat df = new DecimalFormat("0");
+        
         Eingabe e = new Eingabe();
         Ausgabe a = new Ausgabe();
         Speichern s = new Speichern();
         Berechnung b = new Berechnung();
         Klassifikation k = new Klassifikation();
+        
         e.eingeben();
-        System.out.println(e.name + e.geschlecht + "Gewicht: " + e.gewicht + "Größe: " + e.groesse);
+        //System.out.println(e.name + ", " + e.geschlecht + " Gewicht: " + e.gewicht + "Größe: " + e.groesse);
         double BMI = (b.berechne(e.gewicht, e.groesse));
-        DecimalFormat df = new DecimalFormat("0");
-        //String BMIString = df.format(BMI);
-        System.out.println("Hallo: " + df.format(BMI));
-        a.ausgeben(e, k);
-        s.speichern(e, b, k);
+        
+        //System.out.println("BMI: " + df.format(BMI));
+        String klass = k.klassifizieren(e, BMI);
+        //System.out.println("Klassifizierung: " + klass);
+        a.ausgeben(e, klass);
+        s.speichern(e, BMI, klass);
         
     }
     
