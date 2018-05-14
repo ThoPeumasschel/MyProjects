@@ -13,7 +13,7 @@ public class Speichern {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter dateform;
         dateform = DateTimeFormatter.ofPattern("dd.MM.yyyy kk:mm");
-       
+
         try {
             // Datei wird erstellt oder vorhandene Datei zum schreiben geöffnet. 
             File f = new File("BMI-Daten.txt");
@@ -22,13 +22,15 @@ public class Speichern {
             try (FileWriter w = new FileWriter(f, true)) {
                 w.write("BMI Ergebnis für " + e.name + "\r\nGeschlecht: " + e.geschlecht
                     + "\r\nGröße: " + e.groesse + "cm\r\nGewicht: " + e.gewicht
-                    + "Kg\r\nBMI = " + df.format(BMI) + " bedeutet " + k + "\r\n" 
+                    + "Kg\r\nBMI = " + df.format(BMI) + " bedeutet " + k + "\r\n"
                     + "Zeit + Datum: " + now.format(dateform) + "\r\n     ---------------     \r\n");
+                w.close();
             }
 
-        } catch (@SuppressWarnings("LocalVariableHidesMemberVariable") 
-                HeadlessException | IOException I) {
+        } catch (@SuppressWarnings("LocalVariableHidesMemberVariable") HeadlessException | IOException I) {
+
         }
 
     }
+
 }
