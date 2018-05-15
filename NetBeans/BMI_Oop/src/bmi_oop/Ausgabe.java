@@ -14,14 +14,10 @@ import javax.swing.JOptionPane;
  */
 public class Ausgabe {
 
-    void ausgeben(Eingabe e, String k) {
+    void ausgeben(Eingabe e, String k, double BMI) {
 
-        Berechnung b = new Berechnung();
-        DecimalFormat df = new DecimalFormat("0");
-        double BMI = (b.berechne(e.gewicht, e.groesse));
-        
+        DecimalFormat df = new DecimalFormat("0");       
 
-        //Eingabe e = new Eingabe();
         JOptionPane.showMessageDialog(null, "BMI Ergebnis für " + e.name + "\nGeschlecht : "
             + e.geschlecht + ", " + e.groesse + " cm, " + e.gewicht + " Kg\nBMI = "
             + df.format(BMI) + " bedeutet " + k);
