@@ -7,7 +7,6 @@ public class BMI_Oop {
    
    
     public static void main(String[] args) {
-        DecimalFormat df = new DecimalFormat("0");
         // Es werden Instanzen der Klassen erzeugt
         Eingabe e = new Eingabe(); // Der User gibt Name, Geschlecht, Größe und Gewicht ein. 
         Ausgabe a = new Ausgabe(); // MessageBox mit Eingaben, Berechnung und Klassifikation

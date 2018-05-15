@@ -9,11 +9,14 @@ import java.time.format.*;
 public class Speichern {
 
     void speichern(Eingabe e, double BMI, String k) {
+        // Ausgabe soll ohne Nachkommastellen erfolgen
         DecimalFormat df = new DecimalFormat("0");
+        // Diee aktuelle Lokalzeit wird n 'now' gespechert
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter dateform;
-        dateform = DateTimeFormatter.ofPattern("dd.MM.yyyy kk:mm");
-
+        // Es wird eine Formatierung definiert, die dann unten als Argument der 
+        // 'format()'-Funktion übergeben wird. 
+        DateTimeFormatter dateform = DateTimeFormatter.ofPattern("dd.MM.yyyy kk:mm");
+        
         try {
             // Datei wird erstellt oder vorhandene Datei zum schreiben geöffnet. 
             File f = new File("BMI-Daten.txt");
@@ -23,11 +26,13 @@ public class Speichern {
                 w.write("BMI Ergebnis für " + e.name + "\r\nGeschlecht: " + e.geschlecht
                     + "\r\nGröße: " + e.groesse + "cm\r\nGewicht: " + e.gewicht
                     + "Kg\r\nBMI = " + df.format(BMI) + " bedeutet " + k + "\r\n"
-                    + "Zeit + Datum: " + now.format(dateform) + "\r\n     ---------------     \r\n");
+                    + "Zeit + Datum: " + now.format(dateform) + 
+                        "\r\n     ---------------     \r\n");
                 w.close();
             }
 
-        } catch (@SuppressWarnings("LocalVariableHidesMemberVariable") HeadlessException | IOException I) {
+        } catch (@SuppressWarnings("LocalVariableHidesMemberVariable") 
+                HeadlessException | IOException I) {
 
         }
 
