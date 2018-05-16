@@ -13,8 +13,10 @@ public class TutorialDB {
 
         //erstelleVerbindung();
         //erstelleDatensatz();
+        //zeigeDatensatz();
+        //aendereDatensatz();
         zeigeDatensatz();
-        aendereDatensatz();
+        entferneDatensatz();
         zeigeDatensatz();
     }
 
@@ -80,6 +82,24 @@ public class TutorialDB {
                 + "imperiummitglied set name = ('" + name_neu + "') where name = ('" + name_alt + "')");
                          
             aendereEintrag.executeUpdate();
+
+        } catch (Exception abbruch) {
+            System.out.println(abbruch.getMessage());
+        }
+    }
+    
+    public static void entferneDatensatz() throws Exception {
+        
+        JOptionPane.showMessageDialog(null, "");
+        
+        String ID = JOptionPane.showInputDialog("ID löschen: ");
+        //String name = JOptionPane.showInputDialog("Name löschen: ");
+
+        try {
+            Connection verbindung = erstelleVerbindung();
+            PreparedStatement entferneEintrag = verbindung.prepareStatement
+            ("DELETE FROM imperiummitglied where MitgliedID = ('" + ID + "')");            
+            entferneEintrag.executeUpdate();
 
         } catch (Exception abbruch) {
             System.out.println(abbruch.getMessage());
