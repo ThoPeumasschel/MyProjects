@@ -1,0 +1,21 @@
+BMI Ergebnis für Test Person1
+Geschlecht: m
+Größe: 189.0cm
+Gewicht: 80.0Kg
+BMI = 22 bedeutet Normalgewicht
+Zeit + Datum: 15.05.2018 08:29
+     ---------------     
+BMI Ergebnis für Test Person2
+Geschlecht: w
+Größe: 168.0cm
+Gewicht: 52.0Kg
+BMI = 18 bedeutet Normalgewicht
+Zeit + Datum: 15.05.2018 08:29
+     ---------------     
+BMI Ergebnis für Thomas
+Geschlecht: männlich
+Größe: 189.0cm
+Gewicht: 97.0Kg
+BMI = 27 bedeutet Übergewicht
+Zeit + Datum: 15.05.2018 09:05
+     ---------------     
