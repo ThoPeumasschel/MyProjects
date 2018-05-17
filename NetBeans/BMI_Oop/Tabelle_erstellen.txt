@@ -1,0 +1,27 @@
+CREATE TABLE rebels(
+    rebel_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    NAME VARCHAR(50),
+    sex VARCHAR(10),
+    height DOUBLE(5, 2),
+    weight DOUBLE(5, 2),
+    bmi DOUBLE(2, 0),
+    classification VARCHAR(50)
+);
+
+
+INSERT INTO rebels(
+    NAME,
+    sex,
+    height,
+    weight,
+    bmi,
+    classification
+)
+VALUES(
+    'Test Person',
+    'männlich',
+    190,
+    76,
+    22,
+    'unbekannt'
+);

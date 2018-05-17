@@ -35,7 +35,7 @@ public class Speichern {
                 HeadlessException | IOException I) {
 
         }
-
+        System.out.println("Die Daten wurden in der Datei BMI-Daten.txt gespeichert.");
     }
 
 }

@@ -1,0 +1,13 @@
+// Der String der vom Scanner geliefert wird muss anders geprüft werden als mit den Vergleichsoperatoren
+// Siehe SchleifenFuss
+String menu;	
+do{	
+	System.out.println("A - Addition");
+	System.out.println("S - Subtraktion");
+	System.out.println("M - Multiplikation");
+	System.out.println("D - Division");
+	System.out.println("P - Print / Auflistung aller bisherigen Berechnungen");
+	System.out.println("E - Ende / Programm verlassen");
+	
+	menu = new Scanner(System.in).next();
+}while(!menu.equals("E")); // hier keine Vergleichsoperatoren

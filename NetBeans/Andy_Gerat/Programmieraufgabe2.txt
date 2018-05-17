@@ -1,0 +1,10 @@
+Programmieraufgabe Kontrollstrukturen:
+
+Erstellen Sie eine Anwendung in der ein Einkaufsbetrag einzugeben ist.
+Vom Einkaufsbetrag ist folgender Rabatt abzuziehen:
+ab 50,- Euro	3% Rabatt
+ab 100,- Euro	5% Rabatt
+ab 200,- Euro	7% Rabatt
+
+Geben Sie den Rabatt und die im Endpreis enthaltene MwSt von 19% in Euro aus.
+

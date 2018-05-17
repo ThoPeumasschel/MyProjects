@@ -1,0 +1,18 @@
+Programmieraufgabe 3:
+
+Erstellen Sie eine Konsolenanwendung die folgendes Auswahl Menü anbietet:
+
+A - Addition
+S - Subtraktion
+M - Multiplikation
+D - Division
+P - Print / Auflistung aller bisherigen Berechnungen
+E - Ende / Programm verlassen
+
+Zur Auswahl gibt der Anwender den entsprechenden Buchstaben ein.
+Bei jeder gewünschten Berechnung sind vom Anwender zwei Werte einzugeben (Eingabe mit oder ohne Nachkommastellen soll möglich sein).
+Das Ergebnis (ohne Rechenweg) der Berechnung wird auf der Konsole ausgegeben.
+Zusätzlich werden alle Berechnungen in einem Array gespeichert.
+(Nicht nur das Ergebnis, sondern die komplette Berechnung inkl. der eingegebenen Werte und der Rechenoperation. z.B.: 20 * 3 = 60)
+
+Solange der Anwender nicht den Kennbuchstaben E für Ende wählt ist das Auswahl-Menü erneut auszugeben und die Auswahl wieder abzufragen.

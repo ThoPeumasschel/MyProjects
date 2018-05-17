@@ -19,3 +19,59 @@ Gewicht: 97.0Kg
 BMI = 27 bedeutet Übergewicht
 Zeit + Datum: 15.05.2018 09:05
      ---------------     
+BMI Ergebnis für Horst Horstmann
+Geschlecht: männlich
+Größe: 195.0cm
+Gewicht: 215.0Kg
+BMI = 57 bedeutet Adipositas Grad III
+Zeit + Datum: 17.05.2018 09:14
+     ---------------     
+BMI Ergebnis für Horst Horstmann
+Geschlecht: männlich
+Größe: 190.0cm
+Gewicht: 125.0Kg
+BMI = 35 bedeutet Adipositas Grad I
+Zeit + Datum: 17.05.2018 09:19
+     ---------------     
+BMI Ergebnis für sdf
+Geschlecht: w
+Größe: 134.0cm
+Gewicht: 34.0Kg
+BMI = 19 bedeutet Normalgewicht
+Zeit + Datum: 17.05.2018 09:46
+     ---------------     
+BMI Ergebnis für Thomas Jackisch
+Geschlecht: m
+Größe: 123.0cm
+Gewicht: 321.0Kg
+BMI = 212 bedeutet Adipositas Grad III
+Zeit + Datum: 17.05.2018 11:44
+     ---------------     
+BMI Ergebnis für Thomas Jackisch
+Geschlecht: m
+Größe: 123.0cm
+Gewicht: 321.0Kg
+BMI = 212 bedeutet Adipositas Grad III
+Zeit + Datum: 17.05.2018 11:47
+     ---------------     
+BMI Ergebnis für Thomas Jackisch
+Geschlecht: M
+Größe: 123.0cm
+Gewicht: 321.0Kg
+BMI = 212 bedeutet Adipositas Grad III
+Zeit + Datum: 17.05.2018 11:48
+     ---------------     
+BMI Ergebnis für Heidi Klamm
+Geschlecht: weiblich
+Größe: 178.0cm
+Gewicht: 49.0Kg
+BMI = 15 bedeutet Mäßiges Untergewicht
+Zeit + Datum: 17.05.2018 11:53
+     ---------------     
+BMI Ergebnis für Lisa Simpson
+Geschlecht: weiblich
+Größe: 134.0cm
+Gewicht: 38.0Kg
+BMI = 21 bedeutet Normalgewicht
+Zeit + Datum: 17.05.2018 12:19
+     ---------------     

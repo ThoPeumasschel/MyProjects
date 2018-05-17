@@ -1,0 +1,5 @@
+Programmieraufgabe:
+
+1. Erstellen Sie eine Anwendung die von einer einzugebenen natürlichen Zahl N die Quersumme berechnet und ausgibt.
+
+2. Erstellen Sie eine Anwendung die für eine einzugebenen natürliche Zahl N das nächste Vielfache von 10 berechnet und ausgibt.

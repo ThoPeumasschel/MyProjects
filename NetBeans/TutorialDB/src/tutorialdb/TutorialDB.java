@@ -78,8 +78,8 @@ public class TutorialDB {
 
         try {
             Connection verbindung = erstelleVerbindung();
-            PreparedStatement aendereEintrag = verbindung.prepareStatement("UPDATE "
-                + "imperiummitglied set name = ('" + name_neu + "') where name = ('" + name_alt + "')");
+            PreparedStatement aendereEintrag = verbindung.prepareStatement
+        ("UPDATE imperiummitglied set name = ('" + name_neu + "') where name = ('" + name_alt + "')");
                          
             aendereEintrag.executeUpdate();
 
