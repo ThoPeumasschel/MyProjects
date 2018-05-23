@@ -8,7 +8,7 @@ public class Klassifikation {
 
     String klassifizieren(Eingabe e, double BMIein) {
         double BMI = BMIein;
-        if (e.geschlecht.equals("w") || e.geschlecht.equals("W") || e.geschlecht.equals("weiblich")) {
+        if (e.getGeschlecht().equals("w") || e.getGeschlecht().equals("W") || e.getGeschlecht().equals("weiblich")) {
             BMI++;
         }
 

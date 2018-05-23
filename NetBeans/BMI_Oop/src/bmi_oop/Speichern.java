@@ -23,8 +23,8 @@ public class Speichern {
             // In einem neuen try-catch-block wird eine Instanz der FileWriter-Klasse
             // gebildet, mit der sichergestellt wird, dass die neuen Daten angehängt werden. 
             try (FileWriter w = new FileWriter(f, true)) {
-                w.write("BMI Ergebnis für " + e.name + "\r\nGeschlecht: " + e.geschlecht
-                    + "\r\nGröße: " + e.groesse + "cm\r\nGewicht: " + e.gewicht
+                w.write("BMI Ergebnis für " + e.getName() + "\r\nGeschlecht: " + e.getGeschlecht()
+                    + "\r\nGröße: " + e.getGroesse() + "cm\r\nGewicht: " + e.getGewicht()
                     + "Kg\r\nBMI = " + df.format(BMI) + " bedeutet " + k + "\r\n"
                     + "Zeit + Datum: " + now.format(dateform) + 
                         "\r\n     ---------------     \r\n");

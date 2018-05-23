@@ -75,3 +75,10 @@ Gewicht: 38.0Kg
 BMI = 21 bedeutet Normalgewicht
 Zeit + Datum: 17.05.2018 12:19
      ---------------     
+BMI Ergebnis für Hallodri
+Geschlecht: männlich
+Größe: 198.0cm
+Gewicht: 108.0Kg
+BMI = 28 bedeutet Übergewicht
+Zeit + Datum: 23.05.2018 09:35
+     ---------------     

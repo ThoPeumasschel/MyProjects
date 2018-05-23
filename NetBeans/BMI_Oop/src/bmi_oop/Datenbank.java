@@ -1,99 +1,18 @@
 package bmi_oop;
 
+
 import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 
-public class BMI_Oop {
-
+public class Datenbank {
+    
     static Connection verbindung = null;
     static Statement befehl = null;
     static ResultSet ausgabe = null;
-
-    public static void main(String[] args) throws Exception {
-
-        double BMI = 0;
-        String klass = null;
-        // Es werden Instanzen der Klassen erzeugt
-        Eingabe e = new Eingabe(); // Der User gibt Name, Geschlecht, Größe und Gewicht ein. 
-        Ausgabe a = new Ausgabe(); // MessageBox mit Eingaben, Berechnung und Klassifikation
-        Speichern s = new Speichern(); // Daten werden mit Zeit und Datum gespeichert. 
-        Berechnung b = new Berechnung();
-        Klassifikation k = new Klassifikation();
-
-        boolean run = true;
-        while (run) {
-            int auswahl = Integer.parseInt(JOptionPane.showInputDialog("Datensatz eingeben:"
-                + "   1\nErgebnis anzeigen:   2\nErgebnis in Datei speichern:"
-                + "   3\nErgebnis in Datenbank speichern:   4\nDatenbank anzeigen:   5\n"
-                + "Datensatz an Index löschen:   6\nDatensatz ändern:   7\nProgramm beenden:   0"));
-
-            switch (auswahl) {
-                case 1: {
-                    e.eingeben();
-                    BMI = (b.berechne(e.gewicht, e.groesse));
-                    klass = k.klassifizieren(e, BMI);
-                    break;
-                }
-                case 2: {
-                    a.ausgeben(e, klass, BMI);
-                    break;
-                }
-                case 3: {
-                    s.speichern(e, BMI, klass);
-                    break;
-                }
-                case 4: {
-                    erstelleDatensatz(e, BMI, klass);
-                    System.out.println("Datensatz wurde erstellt!");
-                    break;
-
-                }
-                case 5: {
-                    zeigeDatensatz();
-                    break;
-                }
-                case 6: {
-                    entferneDatensatz();
-                    
-                    break;
-                }
-                case 7: {
-                    aendereDatensatz();
-                    System.out.println("Datensatz wurde geändert!");
-                    break;
-                }
-                case 0: {
-                    run = false;
-                    System.out.println("Das Programm wurde erfolgreich beendet!");
-                    break;
-                }
-                default:
-                    JOptionPane.showMessageDialog(null, "Sie müssen hier eine Zahl von 1 bis 8 eingeben!");
-
-            }
-        }
-
-        // Der BMI wird durch den Aufruf der Methode 'berechne()' der Instanz b 
-        // aus den in 'e' gespeicherten Werten errechnet und in 'BMI' gespeichert
-        // Von Objekt 'k' wird die Methode 'klassifizieren()' mit den Parametern 
-        // 'e' und 'BMI' aufgerufen. Aus den Angaben Geschlecht und BMI wird nach der
-        // Tabelle klassifiziert und das Ergebnis hier in 'klass' gespeichert. 
-        // Die Benutzereingaben werden zusammen mit BMI und Klassifikation durch 
-        // den Aufruf der Methode 'ausgeben()' von 'a' mit den Argumenten 'e' 
-        // und 'klass' ausgegeben. 
-        // Die Eingaben werden mit den Ergebnissen und der aktuellen Zeit in einer 
-        // Datei gespeichert. Man beachte, dass einigen Funktionen Instanzen von 
-        // anderen Klassen als Argumente übergeben werden. 
-        //erstelleVerbindung();
-        //aendereDatensatz();
-        //zeigeDatensatz();
-        //
-        //zeigeDatensatz();
-    }
-
-    public static Connection erstelleVerbindung() throws Exception {
+    
+     public static Connection erstelleVerbindung() throws Exception {
         try {
 
             String treiber = "com.mysql.cj.jdbc.Driver";
@@ -139,8 +58,8 @@ public class BMI_Oop {
             Connection verbindung = erstelleVerbindung();
             PreparedStatement erstelleEintrag = verbindung.prepareStatement("INSERT INTO rebels"
                 + "(Name, sex, height, weight, bmi, classification, date_time) "
-                + "VALUES('" + e.name + "', '" + e.geschlecht + "', '" + e.groesse + "',  "
-                + "" + e.gewicht + ", " + bmi + ", '" + classifi + "', '" + now.format(dateform) + "' )");
+                + "VALUES('" + e.getName() + "', '" + e.getGeschlecht() + "', '" + e.getGroesse() + "',  "
+                + "" + e.getGewicht() + ", " + bmi + ", '" + classifi + "', '" + now.format(dateform) + "' )");
             erstelleEintrag.executeUpdate();
 
         } catch (Exception abbruch) {
@@ -227,4 +146,7 @@ public class BMI_Oop {
             System.out.println(abbruch.getMessage());
         }
     }
+    
+    
+    
 }
