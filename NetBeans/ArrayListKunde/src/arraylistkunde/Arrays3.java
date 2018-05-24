@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Arrays3 {
 
     static ArrayList<Kunde> kundenListe = new ArrayList<Kunde>();
+    
 
     public static void main(String[] args) {
         byte menu = 0;
@@ -19,6 +20,7 @@ public class Arrays3 {
             switch (menu) {
                 case 1:
                     kundenAnlegen();
+                    
                     break;
 
                 case 2:
@@ -43,16 +45,10 @@ public class Arrays3 {
         String nachname = new Scanner(System.in).next();
         System.out.println("Vorname: ");
         String vorname = new Scanner(System.in).next();
-
-        Kunde kunde = new Kunde();
-        kunde.setNr(nr);
-        kunde.setNachname(nachname);
-        kunde.setVorname(vorname);
         
-        kundenListe.add(kunde);
-        /*
-        kundenListe.add(new String[3]);
-        kundenListe.get(0)[0] = "Test";*/
+        kundenListe.add(new Kunde(nr, nachname, vorname));
+        
+        
     }
 
     private static void kundenAusgeben() {
@@ -61,15 +57,7 @@ public class Arrays3 {
             System.out.println(s.getNr() + " - " + s.getNachname() + " - " + s.getVorname());
         }
 
-        /*
-        for (int i = 0; i < z; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.println(kundenArray[i][j]);
-            }
-            System.out.println();
-
-        }
-         */ //   String[] strings = kundenArray[i];
+        
         {
 
         }

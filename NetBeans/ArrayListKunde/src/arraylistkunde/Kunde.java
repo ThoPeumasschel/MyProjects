@@ -5,11 +5,16 @@
  */
 package arraylistkunde;
 
-
- 
 public class Kunde {
-    
-    private String nr, nachname, vorname;
+
+    private static String nr, nachname, vorname;
+
+    public Kunde(String nr, String nachname, String vorname) {
+        this.nr = nr;
+        this.nachname = nachname;
+        this.vorname = vorname;
+
+    }
 
     public String getNr() {
         return nr;
@@ -34,6 +39,5 @@ public class Kunde {
     public void setVorname(String vorname) {
         this.vorname = vorname;
     }
-    
-    
+
 }

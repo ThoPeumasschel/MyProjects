@@ -82,3 +82,10 @@ Gewicht: 108.0Kg
 BMI = 28 bedeutet Übergewicht
 Zeit + Datum: 23.05.2018 09:35
      ---------------     
+BMI Ergebnis für Wurstbrot
+Geschlecht: weiblich
+Größe: 23.0cm
+Gewicht: 0.344Kg
+BMI = 7 bedeutet Starkes Untergewicht
+Zeit + Datum: 24.05.2018 10:14
+     ---------------     
