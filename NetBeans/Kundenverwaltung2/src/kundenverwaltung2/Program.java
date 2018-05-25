@@ -18,7 +18,7 @@ public class Program {
             e.printStackTrace();
             kundenListe = new ArrayList<Kunde>();
         }
-        
+
         //kundenListe.size();
         byte menu = 0;
         do {
@@ -57,7 +57,6 @@ public class Program {
         String vorname = new Scanner(System.in).next();
 
         kundenListe.add(new Kunde(nr, nachname, vorname));
-        Kunde.anzahl++;
 
         try {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("kundenListe.save"));

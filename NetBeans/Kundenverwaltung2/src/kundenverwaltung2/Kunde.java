@@ -3,10 +3,9 @@ package kundenverwaltung2;
 import java.io.Serializable;
 
 public class Kunde implements Serializable {
+
     private String nr, nachname, vorname;
-    
-    static int anzahl;
-    
+
     public Kunde(String nr, String nachname, String vorname) {
         this.nr = nr;
         this.nachname = nachname;
@@ -37,13 +36,4 @@ public class Kunde implements Serializable {
         this.vorname = vorname;
     }
 
-    public static int getAnzahl() {
-        return anzahl;
-    }
-
-    public static void setAnzahl(int anzahl) {
-        Kunde.anzahl = anzahl;
-    }
-    
-    
 }
