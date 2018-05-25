@@ -2,20 +2,10 @@ package bmi_oop;
 
 import java.awt.HeadlessException;
 import java.io.*;
-import java.text.DecimalFormat;
-import java.time.*;
-import java.time.format.*;
 
-public class Speichern {
+public class Speichern extends Output {
 
     void speichern(Eingabe e, double BMI, String k) {
-        // Ausgabe soll ohne Nachkommastellen erfolgen
-        DecimalFormat df = new DecimalFormat("0");
-        // Diee aktuelle Lokalzeit wird n 'now' gespechert
-        LocalDateTime now = LocalDateTime.now();
-        // Es wird eine Formatierung definiert, die dann unten als Argument der 
-        // 'format()'-Funktion übergeben wird. 
-        DateTimeFormatter dateform = DateTimeFormatter.ofPattern("dd.MM.yyyy kk:mm");
         
         try {
             // Datei wird erstellt oder vorhandene Datei zum schreiben geöffnet. 

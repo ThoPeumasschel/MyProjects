@@ -6,11 +6,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import javax.swing.JOptionPane;
 
-public class Datenbank {
+public class Datenbank extends Output {
     
     static Connection verbindung = null;
-    static Statement befehl = null;
-    static ResultSet ausgabe = null;
+    private static Statement befehl = null;
+    private static ResultSet ausgabe = null;
     
      public static Connection erstelleVerbindung() throws Exception {
         try {
@@ -24,8 +24,8 @@ public class Datenbank {
             System.out.println("Verbindung erstellt");
 
             return Verbindung;
-        } catch (Exception abbruch) {
-            abbruch.printStackTrace();
+        } catch (ClassNotFoundException | SQLException abbruch) {
+            System.out.println(abbruch);
         }
         return null;
     }
