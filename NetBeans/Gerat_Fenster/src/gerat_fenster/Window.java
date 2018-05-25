@@ -39,18 +39,8 @@ public class Window extends JFrame {
         add(btnBerechnen);
         add(lblAusgabe);
         
-        /*
-        btnBerechnen.addActionListener(new ActionListener() {
-            
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                System.out.println("test");
-           
-            }
-        });
-        */
         
-        btnBerechnen.addActionListener(new ButtonClick());
+        btnBerechnen.addActionListener(new ButtonClick(this));
         
         setVisible(true);
     }
