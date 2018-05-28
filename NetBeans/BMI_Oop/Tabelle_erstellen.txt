@@ -5,7 +5,11 @@ CREATE TABLE rebels(
     height DOUBLE(5, 2),
     weight DOUBLE(5, 2),
     bmi DOUBLE(2, 0),
+<<<<<<< HEAD
     classification VARCHAR(50),
+=======
+    classification VARCHAR(50), 
+>>>>>>> d5c51ecf7629dcf246a13c81a9485d9598bbcda8
     date_time varchar(50)
 );
 
