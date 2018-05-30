@@ -12,8 +12,8 @@ public class GUI_Tutorial3 {
         jfr.setSize(300, 300);
         //jfr.add(new FlowLayoutClass());
         //jfr.add(new BorderLayoutClass());
-        jfr.add(new GridLayoutClass());
-        //jfr.add(new BoxLayoutClass());
+        //jfr.add(new GridLayoutClass());
+        jfr.add(new BoxLayoutClass());
         
         //jfr.pack();
         jfr.setVisible(true);

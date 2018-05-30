@@ -9,8 +9,8 @@ public class BoxLayoutClass extends JPanel {
         this(BoxLayout.Y_AXIS);
     }
 
-    public BoxLayoutClass(int direction) {
-        setLayout(new BoxLayout(this, direction));
+    public BoxLayoutClass(int ausrichtung) {
+        setLayout(new BoxLayout(this, ausrichtung));
         for (int i = 1; i <= 5; i++) {
             add(new JButton(new Integer(i).toString()));
         }
