@@ -1,0 +1,8 @@
+package javabasics;
+
+public class HausGrundriss {
+	String wandmaterial;
+	int wandanzahl;
+	int fensterzahl;
+	int tueranzahl;
+}

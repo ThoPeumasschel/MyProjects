@@ -1,0 +1,62 @@
+/.metadata/
+<<<<<<< HEAD
+/bin/
+=======
+/.recommenders/
+>>>>>>> 6a9f231e5804488cb18fe88cafd3c1e4ef7d79d0
+/NetBeans/FirstNetBeansProject/nbproject/private/
+/NetBeans/FirstNetBeansProject/build/
+/NetBeans/JavaInputOutput/nbproject/private/
+/NetBeans/Taschenrechner/nbproject/private/
+/NetBeans/Taschenrechner/build/
+/NetBeans/Kreisrechner/nbproject/private/
+/NetBeans/Kreisrechner/build/
+/NetBeans/Taschenrechner/dist/
+/NetBeans/BMI_Rechner/nbproject/private/
+/NetBeans/BMI_Rechner/build/
+/NetBeans/BMI_Rechner/dist/
+/NetBeans/BMI_Peuschel_2/nbproject/private/
+/NetBeans/BMI_Peuschel_2/build/
+/NetBeans/BMI_Oop/nbproject/private/
+/NetBeans/BMI_Oop/build/
+/NetBeans/TutorialDB/nbproject/private/
+/NetBeans/TutorialDB/build/
+/NetBeans/Andy_Gerat/Kundenverwaltung/Kundenverwaltung/nbproject/private/
+/NetBeans/Andy_Gerat/Kundenverwaltung/Kundenverwaltung/build/
+/NetBeans/Andy_Gerat/TicTacToe BitOperatoren/nbproject/private/
+/NetBeans/Andy_Gerat/TicTacToe BitOperatoren/build/
+/NetBeans/DatenContainer/nbproject/private/
+/NetBeans/DatenContainer/build/
+/NetBeans/ArrayBeispiel/nbproject/private/
+/NetBeans/ArrayBeispiel/build/
+/NetBeans/KundenverwaltungArray/nbproject/private/
+/NetBeans/ArrayListKunde/nbproject/private/
+/NetBeans/ArrayListKunde/build/
+/NetBeans/Overriding/nbproject/private/
+/NetBeans/Overriding/build/
+/NetBeans/OOP-Gerat/nbproject/private/
+/NetBeans/OOP-Gerat/build/
+/NetBeans/Kundenverwaltung2/nbproject/private/
+/NetBeans/Kundenverwaltung2/build/
+/NetBeans/Gerat_Fenster/nbproject/private/
+/NetBeans/Gerat_Fenster/build/
+/NetBeans/TutorialVererbung/nbproject/private/
+/NetBeans/TutorialVererbung/build/
+/NetBeans/Aufgabe_Vererbung/nbproject/private/
+<<<<<<< HEAD
+/NetBeans/GUI_Tutorial/nbproject/private/
+/NetBeans/GUI_Tutorial/build/
+/NetBeans/GUI_Tutorial/dist/
+=======
+/NetBeans/GUI_Tutorial2/nbproject/private/
+/NetBeans/GUI_Tutorial2/build/
+/NetBeans/GUI_Tutorial3/nbproject/private/
+/NetBeans/GUI_Tutorial3/build/
+/NetBeans/GUI_Tutorial3/dist/
+/NetBeans/ArrayTest/nbproject/private/
+/NetBeans/ArrayTest/build/
+/NetBeans/GUI_Tutorial_Events/nbproject/private/
+/NetBeans/GUI_Tutorial_Events/build/
+/NetBeans/GUI_Aufgabe_Button/nbproject/private/
+/NetBeans/GUI_Aufgabe_Button/build/
+>>>>>>> a2e65e57bc8d5e2d641c0ecfaf8b9a3a05d20208
