@@ -1,9 +1,0 @@
-package javabasics;
-
-public class JavaBasics {
-
-	public static void main(String[] args) {
-		HausGrundriss haus1 = new HausGrundriss();
-	}
-
-}
