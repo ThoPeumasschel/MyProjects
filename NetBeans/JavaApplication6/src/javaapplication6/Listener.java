@@ -1,23 +1,45 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package javaapplication6;
 
+import java.awt.event.*;
 
-/**
- *
- * @author thomas
- */
 public class Listener implements ActionListener {
-    
-    f = fenster;
-    
-    @override
-    public void actionPerformed(ActionEvent e) {
-        if(e.getSource().equals(f.cbxBankdaten))
+
+    Fenster f;
+
+    public Listener(Fenster fenster) {
+        f = fenster;
     }
-    
-    {
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource().equals(f.cbxBankdaten)) {
+            panelBankdatenVisibility();
+        } else if (ae.getSource().equals(f.btnSpeichern)) {
+            speichern();
+        }
+    }
+
+    private void panelBankdatenVisibility() {
+        if (f.cbxBankdaten.isSelected()) {
+            f.plBankdaten.setVisible(true);
+        } else {
+            f.plBankdaten.setVerifyInputWhenFocusTarget(false);
+        }
+    }
+
+    private void speichern() {
+        System.out.println(f.cbAnrede.getSelectedItem());
+
+        String verhaeltnis = "";
+        if (f.rb1.isSelected()) {
+            verhaeltnis = f.rb1.getText();
+        } else if (f.rb2.isSelected()) {
+            verhaeltnis = f.rb2.getText();
+        } else if (f.rb3.isSelected()) {
+            verhaeltnis = f.rb3.getText();
+        }
+
+        System.out.println(verhaeltnis);
+    }
+
 }
