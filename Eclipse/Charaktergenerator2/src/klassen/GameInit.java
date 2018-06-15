@@ -2,11 +2,90 @@ package klassen;
 
 import java.util.Random;
 
-import klassen.Charakter.*;
-
 public class GameInit {
 
 	Stadt s = new Stadt();
+
+	public void zeigeSpielerAufsteigend() {
+
+		for (int i = 0; i < 99; i++) {
+			if (s.getPlanquadrat()[i].getC() != null)
+				System.out.println("PlanquadratID: " + s.planquadrat[i].getC().getSpielerPosition()
+						+ "\nSpielerposition: " + s.planquadrat[i].getC().getSpielerPosition() + "\nSpielerID: "
+						+ s.planquadrat[i].getC().getSpielerID() + "\nName: \t" + s.planquadrat[i].getC().getName()
+						+ "\nSex: \t" + s.planquadrat[i].getC().getGeschlecht() + "\nGabe: \t"
+						+ s.planquadrat[i].getC().getSpezielleGabe() + "\nWaffe: \t"
+						+ s.planquadrat[i].getC().getWaffe() + "\n");
+
+		}
+
+	}
+
+	public void zeigeSpielerAbsteigend() {
+
+		for (int i = 99; i > 0; i--) {
+			if (s.getPlanquadrat()[i].getC() != null)
+				System.out.println("PlanquadratID: " + s.planquadrat[i].getC().getSpielerPosition()
+						+ "\nSpielerposition: " + s.planquadrat[i].getC().getSpielerPosition() + "\nSpielerID: "
+						+ s.planquadrat[i].getC().getSpielerID() + "\nName: \t" + s.planquadrat[i].getC().getName()
+						+ "\nSex: \t" + s.planquadrat[i].getC().getGeschlecht() + "\nGabe: \t"
+						+ s.planquadrat[i].getC().getSpezielleGabe() + "\nWaffe: \t"
+						+ s.planquadrat[i].getC().getWaffe() + "\n");
+
+		}
+
+	}
+	
+	public void searchByID (int id) {
+		
+		for (int i = 0; i < 99; i++) {
+			if (s.getPlanquadrat()[i].getC() != null && s.planquadrat[i].getC().getSpielerID() == id)
+				System.out.println("PlanquadratID: " + s.planquadrat[i].getC().getSpielerPosition()
+						+ "\nSpielerposition: " + s.planquadrat[i].getC().getSpielerPosition() + "\nSpielerID: "
+						+ s.planquadrat[i].getC().getSpielerID() + "\nName: \t" + s.planquadrat[i].getC().getName()
+						+ "\nSex: \t" + s.planquadrat[i].getC().getGeschlecht() + "\nGabe: \t"
+						+ s.planquadrat[i].getC().getSpezielleGabe() + "\nWaffe: \t"
+						+ s.planquadrat[i].getC().getWaffe() + "\n");
+
+		}
+		
+		
+	}
+
+	// public void bewegeSpieler(String richtung) {
+	//
+	// System.out.println("Alte Spielerposition: " + s.getPlanquadrat());
+	// int[] badpositions = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 19, 20, 29, 30, 39,
+	// 40, 49, 50, 59, 60, 69, 70, 79, 80,
+	// 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99 };
+	//
+	// if (false) {
+	// System.out.println("Spielfeldrand erreicht!");
+	//
+	// }
+	//
+	// else {
+	// switch (richtung) {
+	// case "rechts":
+	// spielerPosition += 1;
+	// break;
+	// case "links":
+	// spielerPosition -= 1;
+	// break;
+	// case "hoch":
+	// spielerPosition -= 10;
+	// break;
+	// case "tief":
+	// spielerPosition += 10;
+	// break;
+	// default:
+	// break;
+	//
+	// }
+	// }
+	//
+	// System.out.println("Neue Spielerposition: " + spielerPosition);
+	// }
 
 	public void planquadrateErzeugen() {
 
@@ -16,52 +95,22 @@ public class GameInit {
 
 	}
 
-	public void doIT(Stadt stadt) {
-
-		this.planquadrateErzeugen();
-		this.charakterAufPlanquadratZuweisen();
-
-	}
-
 	public void charakterAufPlanquadratZuweisen() {
 
-		/*
-		 * 
-		 * Die Charaktere sollen also mit einer von Ihnen zu entwickelnden Methoden
-		 * zufällig über diese Planquadrate verteilt werden. Beim Übergeben eines neu
-		 * erzeugten Charakters an diese Methode, sollen alle oben genannten Werte per
-		 * zufall gesetzt werden.
-		 * 
-		 * -> Übergeben Sie bei der Erzeugung jeden Charakter in Form einer anonymen
-		 * Klasse!(Nur für Fortgeschrittene)
-		 * 
-		 * 
-		 */
-
 		for (int i = 0; i < 12; i++) {
-			int k = new Random().nextInt(99);
-			s.planquadrat[k].setC(new Charakter() {
+			int planquadratID = new Random().nextInt(99);
+			s.planquadrat[planquadratID].setC(new Charakter(planquadratID));
+			s.getPlanquadrat()[i].getPlanquadratID();
 
-				public void initialisiereCharakter() {
-					this.setName(Name.values()[new Random().nextInt(Name.values().length)]);
-					this.setGeschlecht(Geschlecht.values()[new Random().nextInt(Geschlecht.values().length)]);
-					this.setSpezielleGabe(SpezielleGabe.values()[new Random().nextInt(SpezielleGabe.values().length)]);
-					this.setWaffe(Waffe.values()[new Random().nextInt(Waffe.values().length)]);
-					this.setIDplanquadrat(getIDplanquadrat());
-					
-
-				}
-			});
-
-		}
-
-		for (int i = 0;  s.planquadrat[i] != null && i < 99; i++) {
-			if (s.getPlanquadrat()[i].getC()!=null) 
-				System.out.println("Name: \t"+s.planquadrat[i].getC().getName()+"\nGeschl.: "+s.planquadrat[i].getC().getGeschlecht()+
-			"\nGabe: \t"+s.planquadrat[i].getC().getSpezielleGabe()+"\nWaffe: \t"+s.planquadrat[i].getC().getWaffe()+"\n");
-		
 		}
 
 	}
+
+	// public void starten(Stadt stadt) {
+	//
+	// this.planquadrateErzeugen();
+	// this.charakterAufPlanquadratZuweisen();
+	//
+	// }
 
 }

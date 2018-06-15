@@ -13,8 +13,14 @@ public class Main {
 		GameInit game = new GameInit();
 		game.planquadrateErzeugen();
 		game.charakterAufPlanquadratZuweisen();
-		
-		
+		System.out.println("---------------------");
+		System.out.println("Spieler nach Planquadraten aufsteigend");
+		game.zeigeSpielerAufsteigend();
+		System.out.println("---------------------");
+		System.out.println("Spieler nach Planquadraten absteigend");
+		game.zeigeSpielerAbsteigend();
+		System.out.println("---------------------");
+		game.searchByID(9);
 		
 //		Main m=new Main();
 //
