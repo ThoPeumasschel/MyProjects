@@ -2,96 +2,120 @@ package klassen;
 
 import java.util.*;
 
-public class Charakter {
+public class Charakter
+{
 
-	private int spielerID;
-	static int index = 1;
-	private int spielerPosition;
-	private Name name;
-	private Geschlecht geschlecht;
-	private SpezielleGabe spezielleGabe;
-	private Waffe waffe;
+    private int spielerID;
+    static int index = 1;
+    private int spielerPosition;
+    private Name name;
+    private Geschlecht geschlecht;
+    private SpezielleGabe spezielleGabe;
+    private Waffe waffe;
 
-	public Charakter(int planquadratID) {
-		this.setSpielerPosition(planquadratID);
-		this.setName(Name.values()[new Random().nextInt(Name.values().length)]);
-		this.setGeschlecht(Geschlecht.values()[new Random().nextInt(Geschlecht.values().length)]);
-		this.setSpezielleGabe(SpezielleGabe.values()[new Random().nextInt(SpezielleGabe.values().length)]);
-		this.setWaffe(Waffe.values()[new Random().nextInt(Waffe.values().length)]);
-		this.setSpielerPosition(getSpielerPosition());
-		this.setSpielerID(index);
+    public Charakter(int planquadratID) {
+	this.setSpielerPosition(planquadratID);
+	this.setName(Name.values()[new Random().nextInt(Name.values().length)]);
+	this.setGeschlecht(Geschlecht.values()[new Random().nextInt(Geschlecht.values().length)]);
+	this.setSpezielleGabe(SpezielleGabe.values()[new Random().nextInt(SpezielleGabe.values().length)]);
+	this.setWaffe(Waffe.values()[new Random().nextInt(Waffe.values().length)]);
+	this.setSpielerPosition(getSpielerPosition());
+	this.setSpielerID(index);
 
-		System.out.println(
-				index + ". Charakter " + this.getName() + " erzeugt auf Planquadrat " + this.getSpielerPosition());
-		index++;
-	}
-	
+	System.out.println(
+		index + ". Charakter " + this.getName() + " erzeugt auf Planquadrat " + this.getSpielerPosition());
+	index++;
+    }
 
-	enum Name {
-		Ougudougu, Ktulhu, Kaan, Isana, Ozzy, Jennifer, Krypia, Obama, Tek, Hyprio, Berti
-	}
+    public void erzeugeCharakter()
+    {
+	this.setName(Name.values()[new Random().nextInt(Name.values().length)]);
+	this.setGeschlecht(Geschlecht.values()[new Random().nextInt(Geschlecht.values().length)]);
+	this.setSpezielleGabe(SpezielleGabe.values()[new Random().nextInt(SpezielleGabe.values().length)]);
+	this.setWaffe(Waffe.values()[new Random().nextInt(Waffe.values().length)]);
+	this.setSpielerPosition(getSpielerPosition());
+	this.setSpielerID(index);
 
-	enum Geschlecht {
-		männlich, weiblich, hybrid, neutral
-	}
+    }
 
-	enum SpezielleGabe {
-		Beschwörung, Zerstörung, Illusion, Heilung, Schleichen, Polymorphie
-	}
+    enum Name
+    {
+	Ougudougu, Ktulhu, Kaan, Isana, Ozzy, Jennifer, Krypia, Obama, Tek, Hyprio, Berti
+    }
 
-	enum Waffe {
-		Schwert, Armbrust, Hammer, Axt, Morgenstern, Dolch, Speer, Langbogen
-	}
+    enum Geschlecht
+    {
+	männlich, weiblich, hybrid, neutral
+    }
 
-	public int getSpielerPosition() {
-		return spielerPosition;
-	}
+    enum SpezielleGabe
+    {
+	Beschwörung, Zerstörung, Illusion, Heilung, Schleichen, Polymorphie
+    }
 
-	public void setSpielerPosition(int spielerPosition) {
-		this.spielerPosition = spielerPosition;
-	}
+    enum Waffe
+    {
+	Schwert, Armbrust, Hammer, Axt, Morgenstern, Dolch, Speer, Langbogen
+    }
 
-	public Name getName() {
-		return name;
-	}
+    public int getSpielerPosition()
+    {
+	return spielerPosition;
+    }
 
-	public void setName(Name name) {
-		this.name = name;
-	}
+    public void setSpielerPosition(int spielerPosition)
+    {
+	this.spielerPosition = spielerPosition;
+    }
 
-	public Geschlecht getGeschlecht() {
-		return geschlecht;
-	}
+    public Name getName()
+    {
+	return name;
+    }
 
-	public void setGeschlecht(Geschlecht geschlecht) {
-		this.geschlecht = geschlecht;
-	}
+    public void setName(Name name)
+    {
+	this.name = name;
+    }
 
-	public SpezielleGabe getSpezielleGabe() {
-		return spezielleGabe;
-	}
+    public Geschlecht getGeschlecht()
+    {
+	return geschlecht;
+    }
 
-	public void setSpezielleGabe(SpezielleGabe spezielleGabe) {
-		this.spezielleGabe = spezielleGabe;
-	}
+    public void setGeschlecht(Geschlecht geschlecht)
+    {
+	this.geschlecht = geschlecht;
+    }
 
-	public Waffe getWaffe() {
-		return waffe;
-	}
+    public SpezielleGabe getSpezielleGabe()
+    {
+	return spezielleGabe;
+    }
 
-	public void setWaffe(Waffe waffe) {
-		this.waffe = waffe;
-	}
+    public void setSpezielleGabe(SpezielleGabe spezielleGabe)
+    {
+	this.spezielleGabe = spezielleGabe;
+    }
 
-	public int getSpielerID() {
-		return spielerID;
-	}
+    public Waffe getWaffe()
+    {
+	return waffe;
+    }
 
-	public void setSpielerID(int spielerID) {
-		this.spielerID = spielerID;
-	}
+    public void setWaffe(Waffe waffe)
+    {
+	this.waffe = waffe;
+    }
 
-	
-	
+    public int getSpielerID()
+    {
+	return spielerID;
+    }
+
+    public void setSpielerID(int spielerID)
+    {
+	this.spielerID = spielerID;
+    }
 
 }
