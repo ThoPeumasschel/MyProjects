@@ -49,7 +49,7 @@ public class Aufzaehlung
 		return new Reihenfolge();
 	}
 
-	// Innere Klasse als Iterator:
+	// Innere Klasse als ITERATOR:
 	private class Reihenfolge implements IFolge
 	{
 
@@ -57,7 +57,7 @@ public class Aufzaehlung
 		private int aktPos;
 
 		@Override
-		public boolean elementVorhanden()
+		public boolean elementVorhanden() // hasNext()
 		{
 			boolean vorhanden = false;
 			if (aktPos < elemente.length)
@@ -69,7 +69,7 @@ public class Aufzaehlung
 		}
 
 		@Override
-		public Object nextElement()
+		public Object nextElement() // next()
 		{
 
 			return elemente[aktPos++].getZahl();

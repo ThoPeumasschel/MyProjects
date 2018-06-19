@@ -2,7 +2,10 @@ package folge;
 
 public interface IFolge
 {
-	boolean elementVorhanden();
+	boolean elementVorhanden(); // hasNext()
 
-	Object nextElement();
+	Object nextElement(); // next()
+
+	// zusätzliche Dienste
+
 }
