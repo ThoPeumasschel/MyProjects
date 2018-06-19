@@ -2,81 +2,79 @@ package folge;
 
 import java.util.Random;
 
-//Die Klasse Aufzählung erzeugt n positive Zufallszahlen vom Typ int(im Wertebereich von 1 bis 
-//Obergrenze, welche jeweils in einem Objekt vom Typ Zahl gekapselt werden) 
-//und es lassen sich alle erzeugten Zahlen(Hauptprogramm) 
-//und auch eine Zahl an einer beliebigen Stelle ausgeben(Array).
-//
-//Das Zahlen-Array soll dabei Zahlen-Objekte enthalten! Das Zahlen-Array ist nach aussen nicht 
-//direkt erreichbar, auch nicht durch getter-Methoden!
-//
-//Die innere Klasse dient dazu, die Zufallszahlen aus der Klasse Aufzählung als Objekt des Typs 
-//Reihenfolge(Folge) zurückzugeben. Die Erzeugten Zahlen auf dem Array sollen also nur über 
-//dieses Objekt bzw. dessen Methoden erreichbar sein!
-
 public class Aufzaehlung
 {
-	private int zufallszahl;
-	private Random rand = new Random();
+	private Zahl[] elemente;
+
 	private int obergrenze;
 
-	public Aufzaehlung(int obergrenze)
+	public Aufzaehlung(int maxAnzahlZahlen, int obergrenze)
 	{
-		super();
+		elemente = new Zahl[maxAnzahlZahlen];
 		this.obergrenze = obergrenze;
 	}
 
-	public Zahl erzeugeZahl()
+	public void initElemente()
 	{
-		Zahl zahl = new Zahl();
-		zufallszahl = rand.nextInt(obergrenze) + 1;
-		zahl.setGeheimeZahl(zufallszahl);
 
-		return zahl;
+		Random zuffi = new Random();
+		for (int i = 0; i < elemente.length; i++)
+		{
+			elemente[i] = new Zahl(zuffi.nextInt(obergrenze) + 1);
+		}
 	}
 
-	class Reihenfolge implements IFolge
+	// Innere Klasse
+	private class Zahl
 	{
-		Reihenfolge r = new Reihenfolge();
-		Aufzaehlung aufz = new Aufzaehlung(100);
-		Reihenfolge[] folge = new Reihenfolge[10];
 
-		Reihenfolge erzeugen()
+		private int zahl;
+
+		public Zahl(int zahl)
 		{
-			for (int i = 0; i < folge.length; i++)
-				{
-					this.folge[i] = r.zufallszahl;
-				}
-
-			return null;
-
+			super();
+			this.zahl = zahl;
 		}
 
-		Reihenfolge zurueckgeben()
+		public int getZahl()
 		{
-
-			return null;
+			return zahl;
 		}
+
+	}
+
+	public IFolge iterator()
+	{
+
+		return new Reihenfolge();
+	}
+
+	// Innere Klasse als Iterator:
+	private class Reihenfolge implements IFolge
+	{
+
+		// merker für die aktuelle iterations-Position in der Elementsammlung
+		private int aktPos;
 
 		@Override
 		public boolean elementVorhanden()
 		{
-			// TODO Auto-generated method stub
-			return false;
+			boolean vorhanden = false;
+			if (aktPos < elemente.length)
+			{
+				vorhanden = elemente[aktPos] != null;
+			}
+
+			return vorhanden;
 		}
 
 		@Override
 		public Object nextElement()
 		{
-			// TODO Auto-generated method stub
-			return null;
+
+			return elemente[aktPos++].getZahl();
 		}
 
-	}
-
-	public String toString()
-	{
-		return "Aufzählung enthält Zufallszahl: " + zufallszahl + " und Obergrenze " + obergrenze;
 	}
 
 }
