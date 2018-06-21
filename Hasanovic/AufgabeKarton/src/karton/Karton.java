@@ -1,20 +1,62 @@
 package karton;
 
-public abstract class Karton
+public abstract class Karton implements IKarton
 {
 
-	abstract void putElement(Object o);
+	private int index;
+	private String name;
+	private Karton parent; // in welchem Karton stecke ich gerade drin?
+	private int anzElemente;
 
-	abstract int getElement(int index);
+	abstract public int count();
 
-	abstract void getElements();
+	abstract public boolean isEmpty();
 
-	abstract void deleteElement(int index);
+	public int getIndex()
+	{
+		return index;
+	}
 
-	abstract void deleteElements();
+	public void setIndex(int index)
+	{
+		this.index = index;
+	}
 
-	abstract boolean isempty();
+	public String getName()
+	{
+		return name;
+	}
 
-	abstract Object getElement(Object o);
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	public Karton getParent()
+	{
+		return parent;
+	}
+
+	public void setParent(Karton parent)
+	{
+		this.parent = parent;
+	}
+
+	public int getAnzElemente()
+	{
+		return anzElemente;
+	}
+
+	public void setAnzElemente(int anzElemente)
+	{
+		this.anzElemente = anzElemente;
+	}
+
+	public String toString()
+	{
+
+		return "Diese Box heiﬂt: " + getName() + " und kann " + getAnzElemente() + " Elemente halten, davon sind "
+				+ count() + " Pl‰tze belegt.";
+	}
 
 }
