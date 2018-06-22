@@ -4,18 +4,16 @@ public class Kurs
 {
 	private String start, ende, raum, thema, dozentName;
 
-	private Dozent
-	private
-	
-	
-	
+	private Dozent dozent;
+	private Seminarteilnehmer student;
 
 	public Kurs()
 	{
 		super();
 	}
 
-	public Kurs(String start, String ende, String raum, String thema, String dozent)
+	public Kurs(String start, String ende, String raum, String thema,
+			String dozent)
 	{
 		this.start = start;
 		this.ende = ende;
@@ -77,7 +75,8 @@ public class Kurs
 	public String toString()
 	{
 
-		return "Start: " + start + " Ende: " + ende + " Raum: " + raum + " Thema: " + thema + " Dozent: " + dozent;
+		return "Start: " + start + " Ende: " + ende + " Raum: " + raum
+				+ " Thema: " + thema + " Dozent: " + dozent;
 
 	}
 
