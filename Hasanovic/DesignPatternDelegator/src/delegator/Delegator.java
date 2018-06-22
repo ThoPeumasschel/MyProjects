@@ -1,39 +1,33 @@
 package delegator;
+
 //bietet dienste über vererbungsstrukturen hinweg an
-public class Delegator 
+public class Delegator
 {
 
-	//referenz auf seine dienste-aufrufer:
+	// referenz auf seine dienste-aufrufer:
 	private IDelegator client;
-	
-	
+
 	public Delegator(IDelegator client)
 	{
-		this.client=client;
-	}
-	
-	
-	public Delegator() {
-		super();
+		this.client = client;
 	}
 
+	public Delegator()
+	{
 
-	//dienste:
+	}
+
+	// dienste:
 	public int berechneWirkungsgrad()
 	{
-		//delegator holt sich über die schnittstelle die kw-anzahl aus den cleinten, welche den wirkungsgrad haben wollen:
-		int kw=client.getKw();
-		
-		//....wirkungsgrad berechnen....
-		
-		
+		// delegator holt sich über die schnittstelle die kw-anzahl aus den cleinten,
+		// welche den wirkungsgrad haben wollen:
+		int kw = client.getKw();
+
+		// ....wirkungsgrad berechnen....
+
 		return 0;
-		
-		
+
 	}
-	
-	
-	
-	
-	
+
 }

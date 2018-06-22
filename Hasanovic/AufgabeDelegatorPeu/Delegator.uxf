@@ -4,46 +4,45 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>210</y>
-      <w>200</w>
-      <h>150</h>
+      <x>450</x>
+      <y>450</y>
+      <w>410</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Seminarteilnehmer
 --
-- name : String
-- kurse : String[]
-- ...
+- schule : Schulungsunternehmen 
 --
-
++ Seminarteilnehmer()
+{schule = new Schulungsunternehmen(this);}
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>480</y>
-      <w>200</w>
+      <x>240</x>
+      <y>30</y>
+      <w>390</w>
       <h>150</h>
     </coordinates>
     <panel_attributes>Schulungsunternehmen
 --
-- kurse
-- teilnehmer
-- dozenten
+- kurse : Kurs
+- teilnehmer : ISchulungsunternehmen
+- dozenten :ISchulungsunternehmen
 --
-
-</panel_attributes>
++ getPersonenInfo()
++ Schulungsunternehmen(ISchulungsunternehmen client)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>390</y>
-      <w>200</w>
-      <h>150</h>
+      <x>750</x>
+      <y>30</y>
+      <w>250</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Kurs
 --
@@ -53,54 +52,114 @@
 - thema : String
 - dozent : String
 --
-
++ getter/setter()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
-      <y>50</y>
+      <x>770</x>
+      <y>320</y>
       <w>200</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;interface&gt;&gt;
-/IDelegator/
-</panel_attributes>
+ISchulungsunternehmen
+--
++ getName() : String
++ getKurs() : String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>260</y>
-      <w>200</w>
-      <h>150</h>
+      <x>30</x>
+      <y>450</y>
+      <w>360</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>Dozent
 --
-- name : String
-- unterrichtsfach : String
+- schule : Schulungsunternehmen 
 --
-
-</panel_attributes>
++ Dozent() 
+{schule = new Schulungsunternehmen(this);}</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>90</y>
+      <w>150</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>170</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>590</x>
+      <y>330</y>
+      <w>200</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>80</y>
-      <w>200</w>
-      <h>100</h>
+      <x>240</x>
+      <y>220</y>
+      <w>360</w>
+      <h>170</h>
     </coordinates>
-    <panel_attributes>Delegator
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+/Person/
 --
-
+- schulungsunternehmen : Schulungsunternehmen
+- name : String
+- kurse : Kurs
+- adresse :String
+- privatTelefon : String
 --
-
-</panel_attributes>
++ getter/setter()</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>380</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>380</y>
+      <w>30</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
   </element>
 </diagram>

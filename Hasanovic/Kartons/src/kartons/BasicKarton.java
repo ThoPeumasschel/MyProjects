@@ -1,24 +1,29 @@
 package kartons;
 
-public abstract class BasicKarton implements IComposite {
+public abstract class BasicKarton implements IComposite
+{
 
 	private String aufschrift;
 	private IContainerKarton parent;
 
-	public BasicKarton(String aufschrift) {
+	public BasicKarton(String aufschrift)
+	{
 		this.aufschrift = aufschrift;
 	}
 
-	public IContainerKarton getParent() {
+	public IContainerKarton getParent()
+	{
 
 		return parent;
 	}
 
-	public void setParent(IContainerKarton b) {
+	public void setParent(IContainerKarton b)
+	{
 		parent = b;
 	}
 
-	public String getAufschrift() {
+	public String getAufschrift()
+	{
 		return aufschrift;
 	}
 
@@ -26,20 +31,25 @@ public abstract class BasicKarton implements IComposite {
 
 	public abstract void deleteInhalt();
 
-	public void verschiebeNach(IContainerKarton ziel) {
+	public void verschiebeNach(IContainerKarton ziel)
+	{
 
-		IContainerKarton alt = this.getParent();
+		IContainerKarton alt = this.getParent(); // gz.verschiebeNach(ziel)
 		ziel.addInhalt(this);
 		alt.deleteForcedInhaltAt(this.getIndex());
 
 	}
 
-	private int getIndex() {
+	private int getIndex()
+	{
 		BasicKarton[] elternInhalte = this.getParent().getInhalt();
 		int pos = 0;
-		for (int i = 0; i < elternInhalte.length; i++) {
-			if (elternInhalte[i] != null) {
-				if (elternInhalte[i].equals(this)) {
+		for (int i = 0; i < elternInhalte.length; i++)
+		{
+			if (elternInhalte[i] != null)
+			{
+				if (elternInhalte[i].equals(this))
+				{
 					pos = i;
 				}
 

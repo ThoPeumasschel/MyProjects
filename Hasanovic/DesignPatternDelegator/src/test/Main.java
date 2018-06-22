@@ -1,11 +1,11 @@
 package test;
-import delegator.*;
+
 /*
  * 	Das Entwurfsmuster Delegator:
  * 
  * 		-> Problem:
  * 
- * 			- Man für möchte Klassen unterschiedlicher Vererbungsstruktur trotzdem gemeinsame Diente anbieten
+ * 			- Man für möchte Klassen unterschiedlicher Vererbungsstrukturen trotzdem gemeinsame Diente anbieten
  * 
  * 
  * 		-> Lösung:
@@ -14,24 +14,24 @@ import delegator.*;
  * 
  * 			-> Die Clients halten nun eine Referenz(Attribut) auf diesen Delegator
  * 
- * 			-> WENN der Delegator selbst in den Clienst Methoden benötigt, dann werden diese über eine Schnittstelle bereitgestellt(welche
+ * 			-> WENN der Delegator selbst in den Clients Methoden benötigt, dann werden diese über eine Schnittstelle bereitgestellt(welche
  * 			   von den Clients implementiert wird)
  * 
  * 
  */
+import delegator.Jeep;
+import delegator.Stanze;
 
+public class Main
+{
 
-
-public class Main {
-
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		Jeep j=new Jeep();
-		Stanze z=new Stanze();
-		
+		Jeep j = new Jeep();
+		Stanze z = new Stanze();
+
 		z.getWirkungsgrad();
 		j.checkMotor();
-		
 
 	}
 
