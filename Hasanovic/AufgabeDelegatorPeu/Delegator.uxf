@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>210</y>
+      <w>200</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Seminarteilnehmer
+--
+- name : String
+- kurse : String[]
+- ...
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>480</y>
+      <w>200</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Schulungsunternehmen
+--
+- kurse
+- teilnehmer
+- dozenten
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>390</y>
+      <w>200</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Kurs
+--
+- start : String
+- ende : String
+- raum : String
+- thema : String
+- dozent : String
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>50</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+/IDelegator/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>260</y>
+      <w>200</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Dozent
+--
+- name : String
+- unterrichtsfach : String
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>100</x>
+      <y>80</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Delegator
+--
+
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
