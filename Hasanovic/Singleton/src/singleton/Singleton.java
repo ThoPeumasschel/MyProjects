@@ -18,45 +18,25 @@ package singleton;
  * 
  * 			3. Eine statische, öffentliche Methode bietet den einzigen Zugriff auf die dann instanziierte Instanz
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
  */
 
-
-
-
-
-
-
-public class Singleton 
+public class Singleton
 {
-	
+
 	private static Singleton instanz;
-	
-	
-	//privater kontruktor
+
+	// privater kontruktor
 	private Singleton()
 	{
-		
+
 	}
-	
+
 	public static Singleton getSingleton()
 	{
-		if(instanz==null)
-		{
-			instanz=new Singleton();
-		}
+		if (instanz == null)
+			{
+				instanz = new Singleton();
+			}
 		return instanz;
 	}
 }

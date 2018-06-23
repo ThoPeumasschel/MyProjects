@@ -16,7 +16,6 @@ package immutable;
  * 
  * 			1. Keine Setter! (Nur Getter)
  * 
- * 
  * 			1a. Alle Attribute sind private!
  * 
  * 			2. Alle relevanten Attribute werden am Anfang per Konstruktor initialisiert
@@ -29,55 +28,40 @@ package immutable;
  * 
  * 			5. In letzter Konsequenz ist eine immutable-Klasse immer auch final
  * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
  */
 
-
-
-public final class Immutable 
+public final class Immutable
 {
-	//attribute
+	// attribute
 	private int zahl;
 	private char[] array;
 	private String text;
-	
-	//konstruktoren 
+
+	// konstruktoren
 	public Immutable(int zahl, char[] arr, String text)
 	{
-		this.zahl=zahl;
-		
-		
-		//immer, wenn komplexe objekte(keine primitiven) zugewiesen werden sollen, muss der inhalt kopiert und unter einer neuen
-		//speicheradresse neu zugewiesen werden(in diesem beispiel hier per clone() )
-		this.array=arr.clone();
-		this.text=text;
+		this.zahl = zahl;
+
+		// immer, wenn komplexe objekte(keine primitiven) zugewiesen werden sollen, muss
+		// der inhalt kopiert und unter einer neuen
+		// speicheradresse neu zugewiesen werden(in diesem beispiel hier per clone() )
+		this.array = arr.clone();
+		this.text = text;
 	}
-	
-	
-	
-	public int getZahl() {
+
+	public int getZahl()
+	{
 		return zahl;
 	}
-	public char[] getArray() 
+
+	public char[] getArray()
 	{
 		return array.clone();
 	}
-	
-	public String getText() {
+
+	public String getText()
+	{
 		return text;
 	}
-	
-	
-	
-	
-	
-	
+
 }
