@@ -1,0 +1,82 @@
+public interface IDelegator {	int getStuff();	}
+
+public class Delegator {
+	// referenz auf seine dienste-aufrufer:
+	private IDelegator client;
+
+	public Delegator(IDelegator client){
+		this.client = client;
+	}
+
+	public Delegator() {}
+
+	// dienste:
+	public int berechneStuff() {
+		// delegator holt sich über die schnittstelle die Daten aus den cleinten,
+		// welche das Resultat haben wollen:
+		int stuff = client.getStuff();
+		// ...operationen ausführen...
+		return 0;
+	}}
+
+public abstract class A_Parent implements IDelegator {
+	private String typ;
+	private int stuff;
+
+	public String getTyp() {
+		return typ;
+	}
+
+	public void setTyp(String typ) {
+		this.typ = typ;
+	}
+
+	public int getStuff()	{
+		return kw;
+	}
+
+	public void setStuff(int stuff{
+		this.stuff = stuff;
+	}}
+
+public class A_Child extends A_Parent {
+	//hält eine referenz auf den delegator
+	private Delegator delegator;
+
+	public Jeep()	{
+		delegator=new Delegator(this);
+	}
+		
+	public void checkMotor() {
+		//...
+		int stuff=delegator.berechneStuff();	
+	}}
+
+public abstract class B_Parent {
+	private String bezeichnung;
+	private int stuff;
+		
+	public String getBezeichnung() {
+		return bezeichnung;
+	}
+	public void setBezeichnung(String bezeichnung) {
+		this.bezeichnung = bezeichnung;
+	}
+	
+	public int getStuff() {
+		return stuff;
+	}
+	public void setStuff(int stuff) {
+		this.stuff = stuff;
+	}}
+
+public class B_Child extends B_Parent implements IDelegator {
+	private Delegator delegator;
+
+	public Stanze() {	
+		this.delegator = new Delegator(this);
+	}
+		
+	public int getWirkungsgrad()	{
+		return delegator.berechneWirkungsgrad();
+	}}

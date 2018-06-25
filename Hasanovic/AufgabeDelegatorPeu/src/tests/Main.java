@@ -16,11 +16,7 @@ public class Main
 
 		Seminarteilnehmer student1 = new Seminarteilnehmer("Christian", "Köln", "666444", kurs1);
 
-		System.out.println(student1.getName() + "s Kurs:\n" + student1.getKurs());
-
-		System.out.println(student1.getKurs().getDozent());
-
-		lehrer1.getPrivatTelefon()
+		student1.get
 		
 		
 		

@@ -5,15 +5,14 @@ public class Kurs
 	private String start, ende, raum, thema, dozentName;
 
 	private Dozent dozent;
-	private Seminarteilnehmer student;
+	private Seminarteilnehmer[] studenten;
 
 	public Kurs()
 	{
 		super();
 	}
 
-	public Kurs(String start, String ende, String raum, String thema,
-			String dozent)
+	public Kurs(String start, String ende, String raum, String thema, String dozent)
 	{
 		this.start = start;
 		this.ende = ende;
@@ -62,12 +61,37 @@ public class Kurs
 		this.thema = thema;
 	}
 
-	public String getDozent()
+	public Dozent getDozent()
 	{
 		return dozent;
 	}
 
 	public void setDozent(String dozent)
+	{
+		this.dozentName = dozent;
+	}
+
+	public String getDozentName()
+	{
+		return dozentName;
+	}
+
+	public void setDozentName(String dozentName)
+	{
+		this.dozentName = dozentName;
+	}
+
+	public Seminarteilnehmer[] getStudenten()
+	{
+		return studenten;
+	}
+
+	public void setStudenten(Seminarteilnehmer[] studenten)
+	{
+		this.studenten = studenten;
+	}
+
+	public void setDozent(Dozent dozent)
 	{
 		this.dozent = dozent;
 	}
@@ -75,8 +99,7 @@ public class Kurs
 	public String toString()
 	{
 
-		return "Start: " + start + " Ende: " + ende + " Raum: " + raum
-				+ " Thema: " + thema + " Dozent: " + dozent;
+		return "Start: " + start + " Ende: " + ende + " Raum: " + raum + " Thema: " + thema + " Dozent: " + dozent;
 
 	}
 

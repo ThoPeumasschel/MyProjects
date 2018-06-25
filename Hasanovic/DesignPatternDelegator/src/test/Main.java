@@ -1,11 +1,12 @@
 package test;
 
+import delegator.*;
 /*
  * 	Das Entwurfsmuster Delegator:
  * 
  * 		-> Problem:
  * 
- * 			- Man für möchte Klassen unterschiedlicher Vererbungsstrukturen trotzdem gemeinsame Diente anbieten
+ * 			- Man möchte für Klassen unterschiedlicher Vererbungsstrukturen trotzdem gemeinsame Diente anbieten
  * 
  * 
  * 		-> Lösung:
@@ -19,8 +20,6 @@ package test;
  * 
  * 
  */
-import delegator.Jeep;
-import delegator.Stanze;
 
 public class Main
 {
@@ -32,6 +31,9 @@ public class Main
 
 		z.getWirkungsgrad();
 		j.checkMotor();
+		
+		Delegator d = new Delegator();
+		d.
 
 	}
 

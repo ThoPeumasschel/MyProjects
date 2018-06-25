@@ -1,2 +1,0 @@
-Kurzbefehl fur commit:
-	commit -a -m "Und hier Botschaft eintragen"
