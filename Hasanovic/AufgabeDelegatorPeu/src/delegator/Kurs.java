@@ -12,8 +12,7 @@ public class Kurs
 		super();
 	}
 
-	public Kurs(String start, String ende, String raum, String thema,
-			String dozent)
+	public Kurs(String start, String ende, String raum, String thema, String dozent)
 	{
 		this.start = start;
 		this.ende = ende;
@@ -64,19 +63,18 @@ public class Kurs
 
 	public String getDozent()
 	{
-		return dozent;
+		return dozentName;
 	}
 
 	public void setDozent(String dozent)
 	{
-		this.dozent = dozent;
+		this.dozentName = dozent;
 	}
 
 	public String toString()
 	{
 
-		return "Start: " + start + " Ende: " + ende + " Raum: " + raum
-				+ " Thema: " + thema + " Dozent: " + dozent;
+		return "Start: " + start + " Ende: " + ende + " Raum: " + raum + " Thema: " + thema + " Dozent: " + dozent;
 
 	}
 

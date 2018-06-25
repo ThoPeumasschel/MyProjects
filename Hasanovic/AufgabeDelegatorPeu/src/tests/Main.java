@@ -2,7 +2,6 @@ package tests;
 
 import delegator.Dozent;
 import delegator.Kurs;
-import delegator.Schulungsunternehmen;
 import delegator.Seminarteilnehmer;
 
 public class Main
@@ -20,11 +19,7 @@ public class Main
 
 		System.out.println(student1.getKurs().getDozent());
 
-		lehrer1.getPrivatTelefon()
-		
-		
-		
-		
+		lehrer1.getPrivatTelefon();
 
 	}
 
