@@ -1,6 +1,8 @@
 package test;
 
-import delegator.*;
+import delegator.Delegator;
+import delegator.Jeep;
+import delegator.Stanze;
 /*
  * 	Das Entwurfsmuster Delegator:
  * 
@@ -31,9 +33,8 @@ public class Main
 
 		z.getWirkungsgrad();
 		j.checkMotor();
-		
+
 		Delegator d = new Delegator();
-		d.
 
 	}
 

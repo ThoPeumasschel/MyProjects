@@ -1,38 +1,30 @@
 package kartons;
 
-public class FliesskommaKarton extends BasicKarton
-{
+public class FliesskommaKarton extends BasicKarton {
 
-	private double inhalt;
+	double inhalt;
 
-	public FliesskommaKarton(String aufschrift, double inhalt)
-	{
+	public FliesskommaKarton(String aufschrift, double inhalt) {
 		super(aufschrift);
 		this.inhalt = inhalt;
 	}
 
 	@Override
-	public boolean isEmpty()
-	{
-
+	public boolean isEmpty() {
+		
 		return inhalt == 0;
 	}
 
 	@Override
-	public void deleteInhalt()
-	{
-		if (this.isEmpty())
-		{
+	public void deleteInhalt() {
+		if(this.isEmpty()){
 			new IllegalStateException(this.getAufschrift() + " ist bereits leer");
-		} else
-		{
+		}else{
 			inhalt = 0;
 			System.out.println(getAufschrift() + ": Inhalt gelöscht!");
 		}
 	}
-
-	public double getInhalt()
-	{
+	public double getInhalt(){
 		return inhalt;
 	}
 }
