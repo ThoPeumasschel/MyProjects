@@ -34,9 +34,10 @@ public class Singleton
 	public static Singleton getSingleton()
 	{
 		if (instanz == null)
-			{
-				instanz = new Singleton();
-			}
+		{
+			instanz = new Singleton();
+		}
 		return instanz;
 	}
+
 }

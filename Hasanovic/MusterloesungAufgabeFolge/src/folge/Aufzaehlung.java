@@ -20,9 +20,9 @@ public class Aufzaehlung
 	{
 		Random zuffi = new Random();
 		for (int i = 0; i < elemente.length; i++)
-			{
-				elemente[i] = new Zahl(zuffi.nextInt(obergrenze) + 1);
-			}
+		{
+			elemente[i] = new Zahl(zuffi.nextInt(obergrenze) + 1);
+		}
 	}
 
 	// INNERE KLASSEN
@@ -58,9 +58,9 @@ public class Aufzaehlung
 		{
 			boolean vorhanden = false;
 			if (aktPos < elemente.length)
-				{
-					vorhanden = elemente[aktPos] != null;
-				}
+			{
+				vorhanden = elemente[aktPos] != null;
+			}
 			return vorhanden;
 		}
 
