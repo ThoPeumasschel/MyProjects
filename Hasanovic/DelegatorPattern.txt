@@ -73,7 +73,7 @@ public abstract class B_Parent {
 public class B_Child extends B_Parent implements IDelegator {
 	private Delegator delegator;
 
-	public Stanze() {	
+	public B_Child() {	
 		this.delegator = new Delegator(this);
 	}
 		
