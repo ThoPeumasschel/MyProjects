@@ -1,5 +1,6 @@
 package test;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.TreeSet;
@@ -22,13 +23,12 @@ public class Main
 		System.out.println(z4);
 
 		// Unteraufgabe 3.
-
 		VW vw1 = new VW("Passat", 2012);
 		VW vw2 = new VW("Lupo", 2017);
 		VW vw3 = new VW("Touran", 2014);
+		System.out.println(vw1);
 
 		// Unteraufgabe 4.
-
 		LinkedList vwList = new LinkedList();
 		vwList.add(vw1);
 		vwList.add(vw2);
@@ -43,7 +43,6 @@ public class Main
 		vwTreeSet.add(vw3);
 
 		// Unteraufgabe 5.
-
 		System.out.println("--------------------------");
 		for (Object v : vwList)
 			System.out.println(v);
@@ -56,7 +55,6 @@ public class Main
 		System.out.println("--------------------------");
 
 		// Unteraufgabe 6.
-
 		BMW bmw1 = new BMW("1er", 2011);
 		BMW bmw2 = new BMW("2er", 2009);
 
@@ -84,10 +82,46 @@ public class Main
 		System.out.println("--------------------------");
 
 		// Unteraufgabe 7.
-
-		bmwHashSet.contains(bmw1);
+		System.out.println(bmwHashSet.contains(bmw1));
+		// Methode liefert true
 
 		// Unteraufgabe 8.
+		bmw1.setBaujahr(3333);
+		System.out.println(bmwHashSet.contains(bmw1));
+		// Methode liefert jetzt false
+		// im HashSet wird eine Kopie von bmw1 gehalten, die durch setBaujahr verändert
+		// wird.
+		// damit wird auch der Hashwert verändert.
+
+		// Unteraufgabe 9.
+		vwList.add(new VW("Polo", 2200));
+
+		// Unteraufgabe 10.
+		System.out.println("Aufgabe 10");
+		System.out.println(Collections.binarySearch(vwList, vw1));
+		System.out.println(Collections.binarySearch(vwList, vw2));
+		System.out.println(Collections.binarySearch(vwList, vw3));
+		System.out.println(Collections.binarySearch(vwList, new VW("Polo", 2200)));
+
+		// Unteraufgabe 11.
+		System.out.println("Aufgabe 11");
+		System.out.println(Collections.binarySearch(vwList, new VW("Passat", 2012)));
+
+		// Unteraufgabe 12.
+		System.out.println("Aufgabe 12");
+		// System.out.println(Collections.binarySearch(vwList, null));
+
+		// Unteraufgabe 13.
+		TreeSet autoTree = new TreeSet();
+		autoTree.add(vw1);
+		autoTree.add(vw2);
+		autoTree.add(vw3);
+		autoTree.add(bmw1);
+		autoTree.add(bmw2);
+
+		// Unteraufgabe 14.
+
+		// Unteraufgabe 15.
 
 	}
 

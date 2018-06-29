@@ -40,11 +40,8 @@ public abstract class Auto implements Comparable
 	@Override
 	public int hashCode()
 	{
-		final int prime = 43;
-		int result = 1;
-		result = prime * result + baujahr;
-		result = prime * result + ((modell == null) ? 0 : modell.hashCode());
-		return result;
+
+		return modell.hashCode() + baujahr;
 	}
 
 	@Override
@@ -71,7 +68,7 @@ public abstract class Auto implements Comparable
 	@Override
 	public int compareTo(Object o)
 	{
-		if (modell.compareTo(((Auto) o).getModell()) == 0)
+		if (this.modell.compareTo(((Auto) o).getModell()) == 0)
 
 			if (baujahr < ((Auto) o).getBaujahr())
 			{
@@ -85,7 +82,7 @@ public abstract class Auto implements Comparable
 			}
 		else
 		{
-			return modell.compareTo(((Auto) o).getModell());
+			return this.modell.compareTo(((Auto) o).getModell());
 		}
 	}
 }
