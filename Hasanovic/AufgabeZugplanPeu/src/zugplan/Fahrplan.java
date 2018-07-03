@@ -1,31 +1,28 @@
 package zugplan;
 
-import java.util.TreeSet;
+import java.util.HashMap;
+import java.util.Iterator;
 
 public class Fahrplan
 {
-	private TreeSet<Zuglinie> linien;
-
-	public Fahrplan(TreeSet<Zuglinie> zl)
-	{
-
-	}
+	private HashMap<Zuglinie, Zug> linien;
 
 	public Fahrplan()
 	{
+		linien = new HashMap<Zuglinie, Zug>();
 	}
 
-	public boolean addZuglinie(Zuglinie zl)
+	public void addZuglinie(Zuglinie zl, Zug zug)
 	{
 
-		return linien.add(zl);
+		linien.put(zl, zug);
 
 	}
 
-	public boolean removeZuglinie(Zuglinie zl)
+	public void removeZuglinie(Zuglinie zl)
 	{
 
-		return linien.remove(zl);
+		linien.remove(zl);
 
 	}
 
@@ -34,8 +31,11 @@ public class Fahrplan
 
 	}
 
-	public void printFahrplan()
+	public void printFahrplan(Zuglinie zl)
 	{
+		Iterator<Haltepunkt> it = zl.getHaltepunkte().iterator();
+		while (it.hasNext())
+			System.out.println(it.next());
 
 	}
 

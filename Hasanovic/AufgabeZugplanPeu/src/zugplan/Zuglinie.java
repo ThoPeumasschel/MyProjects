@@ -98,4 +98,34 @@ public class Zuglinie
 		return "Zuglinie [haltepunkte=" + haltepunkte + ", bezeichner=" + bezeichner + ", zuege=" + zuege + "]";
 	}
 
+	public TreeSet<Haltepunkt> getHaltepunkte()
+	{
+		return haltepunkte;
+	}
+
+	public void setHaltepunkte(TreeSet<Haltepunkt> haltepunkte)
+	{
+		this.haltepunkte = haltepunkte;
+	}
+
+	public String getBezeichner()
+	{
+		return bezeichner;
+	}
+
+	public void setBezeichner(String bezeichner)
+	{
+		this.bezeichner = bezeichner;
+	}
+
+	public HashSet<Zug> getZuege()
+	{
+		return zuege;
+	}
+
+	public void setZuege(HashSet<Zug> zuege)
+	{
+		this.zuege = zuege;
+	}
+
 }
