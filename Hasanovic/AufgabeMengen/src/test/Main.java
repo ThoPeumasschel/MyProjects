@@ -33,6 +33,7 @@ public class Main
 		// h) Differenzbildung
 
 		// i) Iterator
+		me.iterator();
 
 		// j) Comparable
 		// z. B. class Element implements Comparable<Element> {}

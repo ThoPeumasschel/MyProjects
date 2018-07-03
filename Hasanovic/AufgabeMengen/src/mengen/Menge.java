@@ -30,23 +30,33 @@ public class Menge<T> implements Iterable<T>
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Iterable#iterator()
-	 */
 	@Override
 	public Iterator<T> iterator()
 	{
+		return new Iterator<T>()
+		{
+			private int pos;
 
-		return null;
+			@Override
+			public boolean hasNext()
+			{
+				return pos < menge.size();
+			}
+
+			@Override
+			public T next()
+			{
+				return menge.;
+			}
+
+			@Override
+			public void remove()
+			{
+				throw new IllegalArgumentException("Löschen beim Iterieren von MyList verboten!");
+			}
+		};
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode()
 	{
