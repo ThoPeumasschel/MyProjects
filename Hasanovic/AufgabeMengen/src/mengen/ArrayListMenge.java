@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ArrayListMenge<E>
 {
-	ArrayList<Menge<E>> alMenge = new ArrayList<Menge<E>>();
+	ArrayList<Menge<E>> alMenge;
 
 	@Override
 	public int hashCode()

@@ -1,10 +1,9 @@
 package mengen;
 
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class Menge<T> implements Iterable<T>
+public class Menge<T> implements Iterable<Comparable<T>>
 {
 
 	private HashSet<Comparable<T>> menge;
@@ -19,43 +18,112 @@ public class Menge<T> implements Iterable<T>
 		return menge.add(t);
 	}
 
-	public boolean removeElement(T t)
+	public <E extends Comparable<T>> boolean removeElement(T t)
 	{
 		return menge.remove(t);
 	}
 
-	public void joinSets(Collection<? extends Comparable<T>> t)
+	public <E extends Comparable<T>> boolean containsElement(T elem)
 	{
-		menge.addAll(t);
+		return menge.contains(elem);
 
+	}
+
+	// Schnittmenge
+	public Menge<T> schnittElemente(Menge<T> m)
+	{
+		// temporäre Schnittmenge
+		Comparable<T> ctemp;
+		Menge<T> tempM = new Menge<T>();
+		Iterator<Comparable<T>> it = menge.iterator();
+		while (it.hasNext())
+		{
+			ctemp = it.next();
+			if (menge.contains(ctemp))
+			{
+				tempM.addElement(ctemp);
+			}
+
+		}
+
+		return tempM;
+	}
+
+	// Vereinigung
+
+	public Menge<T> joinSets(Menge<T> m)
+
+	{
+		Menge<T> mTemp = new Menge<T>();
+		Iterator<Comparable<T>> it = m.iterator();
+		while (it.hasNext())
+		{
+			mTemp.addElement(it.next());
+		}
+		it = menge.iterator();
+		while (it.hasNext())
+		{
+			mTemp.addElement(it.next());
+		}
+
+		return mTemp;
+
+	}
+
+	// Differenzbildung
+	public Menge<T> diffElemente(Menge<T> m)
+	{
+		// temporäre Schnittmenge
+		Comparable<T> ctemp;
+		Menge<T> tempM = new Menge<T>();
+		Iterator<Comparable<T>> it = menge.iterator();
+		while (it.hasNext())
+		{
+			ctemp = it.next();
+			if (!menge.contains(ctemp))
+			{
+				tempM.addElement(ctemp);
+			}
+
+		}
+
+		return tempM;
 	}
 
 	@Override
-	public Iterator<T> iterator()
+	public Iterator<Comparable<T>> iterator()
 	{
-		return new Iterator<T>()
-		{
-			private int pos;
 
-			@Override
-			public boolean hasNext()
-			{
-				return pos < menge.size();
-			}
-
-			@Override
-			public T next()
-			{
-				return menge.;
-			}
-
-			@Override
-			public void remove()
-			{
-				throw new IllegalArgumentException("Löschen beim Iterieren von MyList verboten!");
-			}
-		};
+		return menge.iterator();
 	}
+
+	// @Override
+	// public Iterator<T> iterator()
+	// {
+	// return new Iterator<T>()
+	// {
+	// private int pos;
+	//
+	// @Override
+	// public boolean hasNext()
+	// {
+	// return pos < menge.size();
+	// }
+	//
+	// @Override
+	// public T next()
+	// {
+	// return null;
+	// }
+	//
+	// @Override
+	// public void remove()
+	// {
+	// throw new IllegalArgumentException("Löschen beim Iterieren von MyList
+	// verboten!");
+	// }
+	// };
+	// }
 
 	@Override
 	public int hashCode()
@@ -66,11 +134,6 @@ public class Menge<T> implements Iterable<T>
 		return result;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj)
 	{
@@ -80,7 +143,7 @@ public class Menge<T> implements Iterable<T>
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Menge other = (Menge) obj;
+		Menge<T> other = (Menge) obj;
 		if (menge == null)
 		{
 			if (other.menge != null)
@@ -96,14 +159,14 @@ public class Menge<T> implements Iterable<T>
 		return "Menge [menge=" + menge + "]";
 	}
 
-	public HashSet<Comparable<T>> getMenge()
-	{
-		return menge;
-	}
-
-	public void setMenge(HashSet<Comparable<T>> menge)
-	{
-		this.menge = menge;
-	}
+	// public HashSet<Comparable<T>> getMenge()
+	// {
+	// return menge;
+	// }
+	//
+	// public void setMenge(HashSet<Comparable<T>> menge)
+	// {
+	// this.menge = menge;
+	// }
 
 }

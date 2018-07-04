@@ -17,15 +17,15 @@ public class Main
 		System.out.println(me);
 		// b) Gleichheit
 		Menge<String> ms = new Menge<String>();
-		System.out.println("Gleiche Mengen? " + me.getMenge().equals(ms.getMenge()));
+		System.out.println("Gleiche Mengen? " + me.equals(ms));
 		Menge<Element> me2 = new Menge<Element>();
-		System.out.println("Gleiche Mengen? " + me.getMenge().equals(me2.getMenge()));
+		System.out.println("Gleiche Mengen? " + me.equals(me2));
 		// c) Hinzufügen
 		System.out.println(me.addElement(element));
 		// d) Entfernen
 		System.out.println(me.removeElement(element));
 		// e) ist vorhanden?
-		System.out.println(me.getMenge().contains(element));
+		System.out.println(me.containsElement(element));
 		// f) Schnittmenge
 
 		// g) Vereinigungsmenge
