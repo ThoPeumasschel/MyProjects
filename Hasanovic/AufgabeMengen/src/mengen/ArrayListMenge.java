@@ -34,14 +34,4 @@ public class ArrayListMenge<E>
 		return true;
 	}
 
-	public ArrayList<Menge<E>> getAlMenge()
-	{
-		return alMenge;
-	}
-
-	public void setAlMenge(ArrayList<Menge<E>> alMenge)
-	{
-		this.alMenge = alMenge;
-	}
-
 }

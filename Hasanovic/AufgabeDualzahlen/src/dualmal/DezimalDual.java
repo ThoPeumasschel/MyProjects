@@ -76,9 +76,4 @@ public class DezimalDual
 		return i;
 	}
 
-	// public static String DualNachDezimalToString(int s)
-	// {
-	// return Integer.toString((s), 2);
-	// }
-
 }

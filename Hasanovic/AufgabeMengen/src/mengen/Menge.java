@@ -97,34 +97,6 @@ public class Menge<T> implements Iterable<Comparable<T>>
 		return menge.iterator();
 	}
 
-	// @Override
-	// public Iterator<T> iterator()
-	// {
-	// return new Iterator<T>()
-	// {
-	// private int pos;
-	//
-	// @Override
-	// public boolean hasNext()
-	// {
-	// return pos < menge.size();
-	// }
-	//
-	// @Override
-	// public T next()
-	// {
-	// return null;
-	// }
-	//
-	// @Override
-	// public void remove()
-	// {
-	// throw new IllegalArgumentException("Löschen beim Iterieren von MyList
-	// verboten!");
-	// }
-	// };
-	// }
-
 	@Override
 	public int hashCode()
 	{
@@ -158,15 +130,5 @@ public class Menge<T> implements Iterable<Comparable<T>>
 	{
 		return "Menge [menge=" + menge + "]";
 	}
-
-	// public HashSet<Comparable<T>> getMenge()
-	// {
-	// return menge;
-	// }
-	//
-	// public void setMenge(HashSet<Comparable<T>> menge)
-	// {
-	// this.menge = menge;
-	// }
 
 }
