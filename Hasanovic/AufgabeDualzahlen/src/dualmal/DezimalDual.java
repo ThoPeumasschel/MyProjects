@@ -3,7 +3,7 @@ package dualmal;
 public class DezimalDual
 
 {
-
+	public String hallo = "Hallo";
 	// Anfang Singleton
 	private static DezimalDual instanz;
 
@@ -30,8 +30,11 @@ public class DezimalDual
 			erg = Integer.toBinaryString(i);
 		} catch (NumberFormatException e)
 		{
-			System.out.println("Bitte nur Dualzahlen Eingeben! \"" + i + "\" ist keine Dualzahl.");
+			System.out.println("Bitte nur Dualzahlen Eingeben! \"" + i
+					+ "\" ist keine Dualzahl.");
 		}
+
+		// int f = Integer.parseInt(erg);
 		return erg;
 	}
 
@@ -43,7 +46,8 @@ public class DezimalDual
 			erg = Integer.toBinaryString(Integer.parseInt(s));
 		} catch (NumberFormatException e)
 		{
-			System.out.println("Bitte nur Zahlen Eingeben! \"" + s + "\" ist keine Zahl.");
+			System.out.println(
+					"Bitte nur Zahlen Eingeben! \"" + s + "\" ist keine Zahl.");
 
 		}
 		return erg;
@@ -57,7 +61,8 @@ public class DezimalDual
 			i = Integer.parseInt(s, 2);
 		} catch (NumberFormatException e)
 		{
-			System.out.println("Bitte nur Dualzahlen Eingeben! \"" + s + "\" ist keine Dualzahl.");
+			System.out.println("Bitte nur Dualzahlen Eingeben! \"" + s
+					+ "\" ist keine Dualzahl.");
 		}
 		return i;
 	}
@@ -71,9 +76,16 @@ public class DezimalDual
 			i = Integer.parseInt(Integer.toString(s), 2);
 		} catch (NumberFormatException e)
 		{
-			System.out.println("Bitte nur Dualzahlen Eingeben! \"" + s + "\" ist keine Dualzahl.");
+			System.out.println("Bitte nur Dualzahlen Eingeben! \"" + s
+					+ "\" ist keine Dualzahl.");
 		}
 		return i;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "DezimalDual [hallo=" + hallo + "]";
 	}
 
 }

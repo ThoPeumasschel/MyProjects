@@ -24,6 +24,14 @@ public class Main
 		DezimalDual.DualNachDezimal(test);
 		DezimalDual.DezimalNachDual(test);
 
+		DezimalDual dd = DezimalDual.getDezimalDual();
+		dd.hashCode();
+		DezimalDual dd2 = DezimalDual.getDezimalDual();
+		dd2.toString();
+		System.out.println(dd.equals(dd2));
+		System.out.println(dd);
+		dd2.hallo = "Ade!";
+		System.out.println(dd);
 	}
 
 }
