@@ -1,7 +1,8 @@
 package mengen;
 
 import java.util.ArrayList;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class ArrayListMenge<E>
 {
@@ -11,7 +12,7 @@ public class ArrayListMenge<E>
 	@Override
 	public int hashCode()
 	{
-		asd.s
+
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((alMenge == null) ? 0 : alMenge.hashCode());

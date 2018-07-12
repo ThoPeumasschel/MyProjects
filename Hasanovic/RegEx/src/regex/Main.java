@@ -1,10 +1,14 @@
 package regex;
-import java.util.regex.*;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /*
  * 	Regular Expressions(Regex), Reguläre Ausdrücke
  * 
  * 
- * 		-> Semantische Muster, welche Regeln für das Filtern von Zeichenketten, das Suchen in Zeichenketten und so weiter beschreiben
+ * 		-> Semantische Muster, welche Regeln für das Filtern von Zeichenketten, 
+ * 		   das Suchen in Zeichenketten und so weiter beschreiben
  * 
  * 	   
  * 		Wichtige Symbole:
@@ -45,7 +49,7 @@ import java.util.regex.*;
  * 
  * 			Zeichenkette: "ratatatata"	Regex: "tat"
  * 
- * 					-> Zwei Treffer! Ein einmalig gefundener Treffer wird nicht mehr für die weiter Suche weiterverwendet!!!!
+ * 				-> Zwei Treffer! Ein einmalig gefundener Treffer wird nicht mehr für die weiter Suche weiterverwendet!!!!
  * 
  * 
  * 		Was drückt folgender RegEx aus?
@@ -64,39 +68,40 @@ import java.util.regex.*;
  * 
  * 
  */
-public class Main {
+public class Main
+{
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
-		//reguläre ausdrücke in objekten verwalten
-		Pattern muster=Pattern.compile("a*?bb"); //der übergebene ausdruck wird compiliert bereit gehalten
-		Matcher match=muster.matcher("aaaaabbbbabb");
-		//prüfen, ob es einen treffer gibt?
-		boolean treffer=match.matches();
-		if(treffer)
+
+		// reguläre ausdrücke in objekten verwalten
+		Pattern muster = Pattern.compile("a*?bb"); // der übergebene ausdruck
+													// wird compiliert bereit
+													// gehalten
+		Matcher match = muster.matcher("aaaaabbbbabb");
+		// prüfen, ob es einen treffer gibt?
+		boolean treffer = match.matches();
+		if (treffer)
 		{
-			//alle möglichen treffer abarbeiten
-			while(match.find())
+			// alle möglichen treffer abarbeiten
+			while (match.find())
 			{
-				System.out.println("Gefundene Zeichenkette: " + match.group() + " an Position: " + match.start());
+				System.out.println("Gefundene Zeichenkette: " + match.group()
+						+ " an Position: " + match.start());
 			}
 		}
-		
-		//*************************************************
-		java.util.Scanner scan=new java.util.Scanner(System.in);
-		String pattern="\\d\\d";
+
+		// *************************************************
+		java.util.Scanner scan = new java.util.Scanner(System.in);
+		String pattern = "\\d\\d";
 		String token;
 		do
 		{
-			token=scan.findInLine(pattern);
+			token = scan.findInLine(pattern);
 			System.out.println("Match: " + token);
-		}while(token!=null);
-		
-		
-		String userEingabe="Ich heisse bla blav l   'SELECT * FROM '---'";
-		
-		
-		
+		} while (token != null);
+
+		String userEingabe = "Ich heisse bla blav l   'SELECT * FROM '---'";
 
 	}
 
