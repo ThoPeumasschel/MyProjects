@@ -1,85 +1,104 @@
 package threads;
 /*
- * 	Multithreading -> KONKURRIERENDE ZUGRIFFE
- * 
- * 
- * 		-> Problem: Mehrere Thread greifen schreibend/lesend auf denselben Speicherbereich zu!
- * 
- * 
- * 		-> Konsequenz: Bei konkurrierenden Zugriffen muss immer der ensprechende Code threadsicher designt werden!!!
- * 
- * 
- * 		-> Threadsicher(threadsafe) -> Selbst bei konkurrierenden Zugriffen ist der Zustand der Information immer konsistent!
- * 
- * 
- * 		-> Dafür wird in aller Regel ein sogenannter "Monitor" über bestimmte Code-Bereiche gelegt
- * 
- * 			-> Ein Overhead, welcher Threads aussperren kann und auch Informationen darüber hält, welche Threads Interesse
- * 				am Zugriff haben
- * 
- * 			-> Wenn einer der konkurrierenden Threads den Zuschlag bekommt, setzt dieser auf die entsprechenden Speicherbereiche einen
- * 			   "Lock"
- * 
- * 					-> Der Thread "hält" diesen Lock, solange er ihn entweder:
- * 
- * 						1. selbst aufgibt(meistens temporär)
- * 
- * 						2. ihm dieser von Monitor entzogen wird
- * 
- * 			-> Ein Thread kann gleichzeitig auf mehrere Speicherbereiche Locks halten!
- * 
- * 			-> Ein Lock kann nicht zu mehreren Threads gehören!
- * 
- * 
- * 			-> Der Monitor muss für die Threads viele Dinge aktuell und transparent halten:
- * 				
- * 				-> Den Status eines Locks
- * 				-> Den Status eines Speicherbereiches
- * 				-> Den Status von bestimmten non-atomaren Operationen
- * 
- * 
- * 		-> Die Locks von Threads beziehen sich IMMER auf Objekte(niemals auf primitive Variablen selbst)
- * 
- * 		-> Mit Thread.sleep() wird NICHT das Auflösen eines Locks eingeleitet!!! -> Der Thread schläft, hält aber sine Sperre aufrecht!
- * 
- * 		-> Synchronized-Blöcke möglcihst auf kleine Codebereiche ausdehnen!!! -> nur auf die kritischen!
- * 
- * 		-> Wenn in einem synchronized-Bereich eine unbehandelte Exception auftritt, dann gibt der current Thread auch seinen Lock auf!!!
- * 
- * 		-> Threads können sich untereinander Nachrichten schicken:
- * 
- * 			-> Über diese drei Methoden der Klasse Object:
- * 
- *  			-> wait(), notify() und notifyAll()
- *  
- *  		-> Die Methode wait():
- *  
- *  			-> Current Thread wartet nun solange, bis ein notify()- bzw. notifyAll()-Signal eines anderen Threads ankommt
- *  
- *  
- *  		-> Die Methode notify():
- *  
- *  			-> GENAU EIN Thread im Threadpool(hier sitzen alle konkurrierenden Threads und warten auf den Zuschlag) wird benachrichtigt
- *  
- * 				-> notify()
- * 
- * 
- * 					-> nutzen, wenn man weiß, dass alle Threads die gesetzte Bedingung erfüllen(dann ist es egal, welcher von den wartenden als
- * 					   nächstes dran kommt)
- * 
- * 
- * 				-> notifyAll()
- * 
- * 					-> Alle Threads im Pool werden benachrichtigt!!! -> Alle konkurrieren nun darum, wer den Zuschlag erhält
- * 
- * 							-> Das kann allerdings nur ein Thread sein, der auch die Bedingung erfüllt!
- * 					
- * 					-> nutzen, wenn man weiß, dass nur einer der warteden Threads die gesetzte Bedingung erfüllt - dann werden diese
- * 					   solange konkurrieren, bis derjenige an die Reihe kommt, welcher die Bedingung erfüllt
+ * 	MULTITHREADING:	
  * 
  * 
  * 
+ * 		-> Was ist ein Prozess?
  * 
+ * 			-> Ein Programm liegt in aller Regel compiliert, vorkompiliert, als Zwischenkompilat in Form von Dateien vor
+ * 
+ * 			-> Ein Prozess ist ein Programm, welches zur Laufzeit unter der Kontrolle eines OS abgearbeitet wird
+ * 
+ * 			-> Die Laufzeitumgebung ist die Summer aller Umgebungsparameter, welche das Programm benötigt, um abgearbeitet werden
+ * 			   zu können (genug RAM, I/O-Ressourcen...die nötigen Rechte...)
+ * 
+ * 			-> Jedes OS hat eine Prozessteuerung -> Prozesse werden schlafen gelegt geweckt, beendet, erhalten Ressorcen und
+ * 			   CPU-Zeit usw....
+ * 
+ * 
+ * 			-> Prozesse teilen sich normalerweise keine gemeinsamen Ressourcen(Ausnahmen: IPC)
+ * 
+ * 			
+ * 		-> Was ist ein Thread?
+ * 
+ * 			-> Ein Code-Ablaufstrang innerhalb eines Prozesses
+ * 					-> In einem Prozess kann es mehrere parallele Codestränge geben
+ * 
+ * 
+ * 			-> Threads teilen sich alle dem zugehörigen Prozess zugewiesenen Ressourcen
+ * 
+ * 
+ * 			-> Jeder Thread läuft auf einem separaten, eigenen Stack
+ * 			
+ * 
+ * 			-> In Java:
+ * 
+ * 				-> JEDES Java-Programm läuft in mindestens einem Thread(dem Thread 'main')
+ * 
+ * 
+ * 			-> Threads realisieren nebenläufigen Code
+ * 
+ * 
+ * 			-> Starten eigener Threads in Java:
+ * 
+ * 				1. Über die Klasse Thread
+ * 				2. Über das Interface Runnable
+ * 
+ * 
+ * 		-> Wir können einen Thread über eine Instanz der Klasse Thread erzeugen, indem wir diesem Thread-Objekt ein Runnable übergeben
+ * 
+ * 		-> Wir können ein Runnable erzeugen(direkt über das Interface) und dieses mit einer lebendigen Thread-Instanz arbeiten lassen
+ * 
+ * 
+ * 		-> Wichtige Methoden:
+ * 
+ * 
+ * 			-> Die Methode start()
+ * 
+ * 				- Initialisiert implizit einen neuen Thread - dieser Thread wird der Ausführungskontrolle der JVM übergeben
+ * 
+ * 				- Ohne die start() aufzurufen, kann es keinen neuen Thread geben!
+ * 
+ * 
+ * 			-> Die Methode run()
+ * 
+ * 				- In dieser Methode steht derjenige Code, welcher parallel in einem separaten Stack(Thread) abgearbeitet werden soll!
+ * 
+ * 
+ * 			-> Wenn ein Entwickler in seinem Programm mehrere Threads initialisiert, dann hat der Entwickler KEINE Gewissheit darüber,
+ * 
+ * 					1. Wann welcher von diesen Threads starten wird(wann wird die run() abgerabeitet?)
+ * 					2. Wann welcher Thread mit der Abarbeitung der run() aufhört, weitermacht oder komplett zu Ende laufen wird!!
+ * 
+ * 
+ * 
+ * 			-> Zustände von Threads:
+ * 
+ * 				- "new" -> Hier liegt lediglich eine neue Instanz der Klasse Thread auf dem Heap
+ * 
+ * 				- "runnable" -> Wenn in diesem neuen Thread die start() aufgerufen wird -> THREAD LÄUFT NICHT UNBEDINGT SOFORT LOS!!!!
+ * 
+ * 				- "running" -> Der Code in der run() von diesem Thread wird aktuelle abgearbeitet
+ * 
+ * 				- "blocked"/"waiting"/"sleeping" -> Thread hört temporär mit der Abarbeitung der run() auf und wartet auf ein Signal, um
+ * 					genau dort weiter zu machen, wo er in der run() aufgehört hat!
+ * 
+ * 				- "dead"/"terminated" -> Thread lebt nicht mehr(normalerweise passiert das, wenn das Ende der run() erreicht wurde)
+ * 
+ * 
+ * 
+ * 			-> Wann wird ein Thread beendet?
+ * 
+ * 				1. Wenn die Laufzeit mit System.exit() beendet wird
+ * 
+ * 				2. Wenn die run() komplett abgearbeitet wurde
+ * 
+ * 				3. Wenn in der run() eine Exception geworfen und nicht behandelt wird(auch nicht vom Aufrufer)
+ * 
+ * 
+ * 
+ * 			-> Ein Java-Programm endet, wenn alle seine Threads abgearbeitet sind
  * 
  * 
  * 
@@ -88,76 +107,95 @@ package threads;
  */
 public class Main {
 
-	//volatile sorgt dafür, dass der wert der variablen für alle threads stets transparent ist
-	// 1. mechanismus: sobald ein thread schreibt, muss er sofort einen flush ausführen -> der minipulierte wert kommt sofort in den 
-	//    hauptspeicher
-	// 2. mechanismus: wenn es die wahl gibt, zwischen 2 threads - der eine will lesen, der andere schreiben - dann erfolgt auf eine
-	///   volatile variable immer erst der schreibende und danach der lesende zugriff!
-	
-	//---> ABER: das funktioniert nur dann, solange es nur EINEN schreibenden thread gibt und beliebig viele lesende!
-	// -> in der praxis: IMMER, wenn es mehrere schreibende threads gibt --> besser synchronized nutzen!
-	
-	private volatile int zahl;
-	private String text;
-	
 	public static void main(String[] args) 
 	{
-		/*Auto auto=new Auto();
+		//Thread a=new Thread(new MyThread("TestThread"));
+		//a.start(); //per aufruf dieser methode wird eine implizite erzeugung eines neuen thread angestossen
+		//a.start(); //REGEL: Einen bereits gestarteten Thread darf man nicht nochmal starten -> Laufzeitfehler!
+		//a.run(); //dieser aufruf sorgt NICHT dafür, dass diese run() auf einem separaten Thread abgearbeitet wird(normaler aufruf einer Methode)
+		/*int zahl=0;
+		while(zahl<6)
+		{
+			System.out.println("Wert von zahl in Thread main: " + zahl);
+			zahl++;
+		}*/
+		//hier werden 4 threads gestartet, jeder dieser threads erhält einen stack, und auf diesem stack jeweils eine kopie der methode run()
+		MyThread my1=new MyThread("MT1");
+		MyThread my2=new MyThread("MT2");
+		MyThread my3=new MyThread("MT3");
+		MyThread my4=new MyThread("MT4");
+		my1.start();my2.start();my3.start();my4.start();
 		
-		auto.fahre(); //hier wird de fahren-logik auf diesen thread einfach geladen
-		auto.fahrenAsync(); //-> auto fährt auf einem separaten thread
-		*/
+		//wenn man von klasse, welche Runnable implementieren Threads starten möchte, muss man IMMER über eine lebendige Instanz der Klasse
+		//Thread gehen(-> Nur die Klasse Thread hat die start/()-Methode, in dem Interface Runnable befindet sich nur die run())
+		MySpezialThread szThread=new MySpezialThread();
+		new Thread(szThread).start();
+		
+		Thread schnellThread=new Thread()
+		{
+			@Override
+			public void run()
+			{
+				//dieser code soll parallel ablaufen...
+				
+				
+				
+			}
+			
+			
+		};
+		schnellThread.start();
+		
+		//hier wird eine Instanz von Thread erzeugt und an den Konstruktor ein anonymer Implementierer(anonyme Klasse) von Runnable übergeben 
+		new Thread(new Runnable() {
+			@Override
+			public void run()
+			{
+				//paralleler code....
+			}
+		}).start();
+		
+		
+		//****************************************************************************
+		Thread.yield(); //Der aktuelle Thread(current thread) kann unter Umständen seine CPU-zeitscheibe temporär an eine anderen Thread
+					   //abgeben(womöglich an einen höher priorisierten) ---> ES GIBT KEINE GARANTIE!!!!
+		
+		
+		
+		
+		
+		try 
+		{
+			my1.join();
+		} 
+		catch (InterruptedException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //hier wartet der Thread "main" solange mit weiterer Abarbeitung, bis der Thread my1 seine run() beendet hat
+		
+		
+		//Ausflug: Dead Locks:
 		/*
-		new Thread(new Zaehler(), "Z1").start();
-		new Thread(new Zaehler(), "Z2").start();
-		new Thread(new Zaehler(), "Z3").start();
-		new Thread(new Zaehler(), "Z4").start();
-		new Thread(new Zaehler(), "Z5").start();
-		*/
-		//konkurrierende zugriffe
-		/*Zaehler z=new Zaehler();
-		new Thread(z, "Z1").start();
-		new Thread(z, "Z2").start();
-		new Thread(z, "Z3").start();
-		*/
+		 * 	1. Thread A wartet auf ein Ergebnis von Thread B, um dann weiter zu machen
+		 *  2. Thread B, wartet auf ein Ergebnis von Thread A, um weiter zu machen
+		 *  
+		 *  
+		 * 	-> Die beiden Threads A und B geraten nun in eine sogenannte Verklemmung(dead lock)
+		 * 
+		 * 			-> Beide Threads warten auf den jeweils anderen in gegenseitiger Abhängigkeit!
+		 */
 		
-		new Thread(new Mann("Olaf")).start();
-		new Thread(new Frau("Petra")).start();
 		
+		
+		
+		
+		
+		
+		
+		
+		
+			
 	}
 
-	
-	public void macheA()
-	{
-		synchronized(Main.class)
-		{
-			synchronized (text) 
-			{
-				
-			}
-		}
-	}
-	
-	public void macheB()
-	{
-		synchronized(text) 
-		{
-			synchronized(Main.class)
-			{
-				
-			}
-		}
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
