@@ -22,10 +22,6 @@ package composite;
  * 			   Klassen der Compositum-Struktur vorhanden sein sollen
  * 
  * 
- * 
- * 
- * 
- * 
  */
 public class Main
 {
@@ -40,14 +36,16 @@ public class Main
 		home.addKomponente(bewerbung);
 		root.addKomponente(home);
 
-		// mit der einheitlichen schnittstelle eine ebene des verzeichnisses root
+		// mit der einheitlichen schnittstelle eine ebene des verzeichnisses
+		// root
 		// durchlaufen:
 		IKomponente[] komponentenInRoot = root.getInhalt();
 		for (int i = 0; i < komponentenInRoot.length; i++)
 		{
 
 			if (komponentenInRoot[i] != null)
-				System.out.println(komponentenInRoot[i].getName() + " -> in " + komponentenInRoot[i].getParent());
+				System.out.println(komponentenInRoot[i].getName() + " -> in "
+						+ komponentenInRoot[i].getParent());
 		}
 
 	}
