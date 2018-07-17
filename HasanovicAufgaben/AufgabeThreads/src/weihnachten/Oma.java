@@ -1,13 +1,12 @@
 package weihnachten;
 
+import static java.lang.System.out;
 
 public class Oma implements Runnable
 {
 	private String name;
 	private java.util.Random rand;
 	private int gebacken;
-
-	
 
 	public Oma(String name)
 	{
@@ -29,11 +28,10 @@ public class Oma implements Runnable
 					{
 						gebacken = rand.nextInt(25) + 10;
 						KeksDose.addKekse(gebacken);
-						System.out.println("Oma " + name + " hat " + gebacken
-								+ " Plätzchen gebacken.");
-						System.out.println("In der Keksdose sind "
-								+ KeksDose.getKekse() + " Kekse.");
-						System.out.println();
+						out.println(
+								"Oma " + name + " hat " + gebacken + " Plätzchen gebacken.");
+						out.println("In der Keksdose sind " + KeksDose.getKekse() + " Kekse.");
+						out.println();
 						try
 						{
 							Thread.sleep(1000);

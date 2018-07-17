@@ -11,12 +11,14 @@ public class Mann implements Runnable
 		this.name=name;
 		zuffi=new Random();
 	}
-		
+	
+	
 	@Override
 	public void run() 
 	{
 		while(true)
-		{			
+		{
+			
 			synchronized(Haushaltskasse.class)
 			{
 				//mann verdient zufällige summe geld:

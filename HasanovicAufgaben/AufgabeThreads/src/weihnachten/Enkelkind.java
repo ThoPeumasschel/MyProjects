@@ -1,6 +1,8 @@
 package weihnachten;
 
-public class Enkelkind implements Runnable 
+import static java.lang.System.out;
+
+public class Enkelkind implements Runnable
 {
 	private String name;
 	private java.util.Random rand;
@@ -15,21 +17,17 @@ public class Enkelkind implements Runnable
 	@Override
 	public void run()
 	{
-		
-		
-		
+
 		while (true)
 		{
 			synchronized (KeksDose.class)
 			{
-				if (KeksDose.getKekse() > 20 && KeksDose.getGierschlund()!=name)
+				if (KeksDose.getKekse() > 20 && KeksDose.getGierschlund() != name)
 				{
 					gegessen = (rand.nextInt(16)) + 5;
-					System.out.println(
-							name + " hat " + gegessen + " Kekse gegessen.");
+					out.println(name + " hat " + gegessen + " Kekse gegessen.");
 					KeksDose.setKekse(KeksDose.getKekse() - gegessen);
-					System.out.println("In der Keksdose sind noch "
-							+ KeksDose.getKekse() + " Kekse.");
+					out.println("In der Keksdose sind noch " + KeksDose.getKekse() + " Kekse.");
 					try
 					{
 						Thread.sleep(1000);
@@ -39,10 +37,10 @@ public class Enkelkind implements Runnable
 					}
 					if (gegessen >= 18)
 					{
-						KeksDose.setGierschlund(name);;
-						System.out.println(
-								name + " war zu gierig und muss jetzt warten!");
-						System.out.println("-------------");
+						KeksDose.setGierschlund(name);
+						;
+						out.println(name + " war zu gierig und muss jetzt warten!");
+						out.println("-------------");
 						KeksDose.class.notifyAll();
 
 						try
@@ -65,10 +63,7 @@ public class Enkelkind implements Runnable
 						e.printStackTrace();
 					}
 				}
-
 			}
-			
 		}
-
 	}
 }

@@ -29,7 +29,5 @@ public class KeksDose
 	{
 		KeksDose.gierschlund = gierschlund;
 	}
-	
-	
 
 }
