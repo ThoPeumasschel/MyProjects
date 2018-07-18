@@ -16,6 +16,8 @@ public class Main
 		String a = "abc";
 		String b = "abcd";
 		System.out.println(a!=b);
+		
+		// Hahahahahahaha
 
 	}
 
