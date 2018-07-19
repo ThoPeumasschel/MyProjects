@@ -4,6 +4,10 @@ IMPORT_FILES_AND_FOLDERS_VIRTUAL_FOLDER_MODE=prompt
 PROBLEMS_FILTERS_MIGRATE=true
 SWITCH_PERSPECTIVE_ON_PROJECT_CREATION=always
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1528911027348
+=======
+platformState=1529043088931
+>>>>>>> 91085e580545a21aa260ffdd1a91b08cdc1600e5
 quickStart=false
 tipsAndTricks=true

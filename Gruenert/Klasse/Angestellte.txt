@@ -1,0 +1,18 @@
+
+[
+Angestellter:	aaa aaa
+Adresse:	aaa
+Telefon:	aaa
+Monatsgehalt:	aaa, 
+Angestellter:	bbb bbb
+Adresse:	bbb
+Telefon:	bbb
+Monatsgehalt:	bbb, 
+Angestellter:	zzz zzz
+Adresse:	zzz
+Telefon:	zzz
+Monatsgehalt:	zzz, 
+Angestellter:	fff fff
+Adresse:	fff
+Telefon:	fff
+Monatsgehalt:	fff]

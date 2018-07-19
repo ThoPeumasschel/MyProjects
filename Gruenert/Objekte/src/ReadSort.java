@@ -1,0 +1,83 @@
+/* Autor: Fabian Held  */
+
+
+
+
+import java.util.Random;
+
+public class ReadSort {
+
+	
+	static void bubbleSort (int[] field)
+	{
+		int temp = 0;
+		for(int i = field.length-1; i>=0; i--)
+		{
+			for(int j=0; j<=i-1; j++)
+			{
+				if (field[j] > field[j+1])
+				{
+					temp = field[j];
+					field[j] = field[j+1];
+					field[j+1] = temp;
+				}
+			}
+		}
+	}
+
+	static double average(int[] field)
+	{
+		double sum = 0;
+		double avrg = 0;
+		for (int i=0; i<field.length; i++)
+		{
+			sum += field[i];
+		}
+		avrg = sum/field.length;
+		return avrg;
+	}
+	
+	
+	public static void main(String[]args)
+	{	
+		double avrg;
+		int x;
+		Random r = new Random();
+
+		int [] data = new int [10];
+		
+		for(x=0; x< data.length;x++)
+		{
+			data[x] = (int) (r.nextDouble() * 50);
+				
+		}
+		System.out.print("Array enthält: [");
+		for(x=0; x<data.length;x++)
+		{
+			System.out.print(data[x] + ", ");
+			
+		}
+		System.out.println("]");
+		
+		bubbleSort(data);
+		
+		System.out.print("Array nach Sortierung: [");
+		for(x=0; x<data.length;x++)
+		{
+			System.out.print(data[x] + ", ");
+			
+		}
+		System.out.println("]");
+		
+		avrg = average(data);
+		
+		System.out.println("Der Durchnschnittswert der Daten ist: " + avrg);
+		System.out.println("Der kleinste Wert der Daten ist " + data[0] + " und der größte Wert ist " + data[9]);
+		
+		/*Random r = new Random();
+		int number = (int) (r.nextDouble() * 50);
+		System.out.println("Random value 3: " + number);*/
+		
+	}
+	
+}
