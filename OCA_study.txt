@@ -1,0 +1,8 @@
+
+
+
+- Verhalten von String s = "bla"; vs String s = new String("bla"); equals() und ==
+
+
+
+

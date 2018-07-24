@@ -73,7 +73,7 @@ public class Main
 
 	public static void main(String[] args)
 	{
-
+		
 		// reguläre ausdrücke in objekten verwalten
 		Pattern muster = Pattern.compile("a*?bb"); // der übergebene ausdruck
 													// wird compiliert bereit
