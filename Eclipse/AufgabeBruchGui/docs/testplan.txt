@@ -1,0 +1,69 @@
+Spezifikation laut Fachkonzept:
+
+Entwickeln Sie ein GUI-basiertes Programm, welches Bruchrechnungen mit den Grundoperationen
+Addition, Multiplikation, Subtraktion und Division durchführen kann.
+
+Der User gibt die Brüche ein(immer jeweils 2) und wählt die Rechenoperation. 
+
+Brüche können als gemischte Brüche eingegeben werden.
+
+Zähler und Nenner sind immer ganzzahlig.
+
+Einen berechneten Bruch kann sich der User auch als Dezimalzahl anzeigen lassen.
+
+Einigen Sie sich mit Ihrem Team auf ein UI-Design.
+Benutzen Sie beim Entwickeln git für die Versionskontrolle!
+Nutzen Sie JUnit, um die Kernfunktionen Ihres Programmes zu testen!
+Versionieren Sie auch die JUnit-Tests!
+
+
+GROSSES VORZEICHENPROBLEM!!!!!!
+Lösung:
+
+
+
+FRAGE: 
+Darf man den Operator bei bestehenden Werten ändern???
+
+
+Testfälle Allgemein:
+
+Zum Testen freigegeben
+Eingabe von "0" TP
+Negative Zahlen TP
+Einträge ändern und immer wieder berechnen lassen TP
+Große Zahlen, Grenzwerte FH
+
+
+Muss noch implementiert werden, danach Testing:
+Falsche Eingaben, wie Buchstaben, Sonderzeichen (SL)
+Fehlende Eingaben, Felder bleiben leer (FH)
+Ausgabe von negativen Zahlen, in Form bringen. (SL)
+
+
+Jeder im eigenen Branch! 
+Von dort aus merge master.
+
+Peuschel:
+(VorzeichenButton???)
+implementieren von JOptionPane...
+throw Exception, class...
+
+
+TestFallMultiplikation1 
+
+3 2/2 * 5 3/5 = ??
+
+
+TestFallMultiplikation2
+
+etc.
+
+TestFallDivision1
+
+
+TestFallAddition1
+
+
+
+TestFallSubtraktion1

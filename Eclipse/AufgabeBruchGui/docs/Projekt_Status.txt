@@ -1,0 +1,32 @@
+Hier finden sich ungelöste Aufgaben, ToDos, Probleme, etc.
+
+
+Klasse Nachher: 
+	- Kürzen funktioniert NICHT bei ErgebnisBruch. 
+	- Kann die Methode (auf-)geteilt werden? Wenn keine Ganzzahl da ist, funktioniert das Kürzen nicht!
+	- 
+	
+	
+	
+Dokumentation Klasse GUI!!
+
+
+Die Suche nach den Exceptions läuft...
+	- wie kann ich eine spezifische Exception werfen und fangen, 
+	in Bezug auf die möglichen Falscheingaben?
+	- oder if-Bedingung entwerfen mit RegEx -> Number or not
+
+
+Klassendiagramm erstellen?? Nicht nötig, oder???
+	
+	
+	
+	
+Fragen für Hasanovic:
+
+	- Alle Projektlösungen hochladen
+	- Andere Design_Lösungen zeigen
+	- Als Abschlus Portierbar machen. Als .jar-File?
+	
+	
+	

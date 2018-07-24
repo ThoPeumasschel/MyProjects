@@ -1,0 +1,36 @@
+
+Wunsch: "Ich möchte die Sportwetten, die ich mit meinen Kumpels so am laufen habe in einem Programm verwalten können"
+
+
+- Wir wetten ausschliesslich nur auf Sportevents im Fußball, Tennis, Handball und Basketball 
+- Für jede einzelne Wette bestimmen wir selbst eine Quote (jeweils auf Sieg oder Unentschieden 
+  falls in der Sportart vorhanden)
+- Aufgrund der Quote, des Wettipps aller Tippenden und des jeweiligen Geldeinsatzes jedes Tippenden 
+  soll dann der mögliche Gewinn bei richtigem Tipp angezeigt werden
+- Sogenannte "Kombiwetten" sollen nicht möglich sein
+- Beispiel(Fußball): FC Bayern München - Schalke 04 ---> Quoten: Sieg Heim ->1.65 | Unentschieden-> 3.60 |
+  Sieg Auswärtsmannschaft -> 4.75
+  Wenn jetzt der Spieler Peter Müller 10€ auf Unentschieden setzt, soll nach Eingabe dieser Wette das 
+  Programm den möglichen Gewinn, also 10*3.6=36€ anzeigen
+- Alle Wetten haben entweder den Status "offen", "storniert" "gewonnen" oder "verloren"
+- Nachdem ein Sportereignis stattgefunden hat, soll dafür im Programm das Ergebnis eingeben werden können 
+  (wer hat gewonnen bzw. unentschieden?) -> Für jeden Tipper ändert sich dementsprechend der Status seiner 
+  Wette und es wird evtl. Sein Gewinn angezeigt. 
+- Es sollen alle Wetten sortiert nach den Kriterien offen, storniert usw. ausgegeben werden können bezogen 
+  auf jeden Tipper und für alle Sportevents
+- Es soll möglich sein, für einen Tipper ALLE offenen, stornierten, gewonnenen oder verlorenen Wetten anzuzeigen
+- Es soll möglich sein, für ein Sportevent ALLE Wetten sortiert nach Tipper anzuzeigen
+- Sportevents können eingeplegt werden, bevor das Event stattfindet und bevor Quoten festgelegt wurden - 
+  die entsprechenden Quoten können also für ein Sportevent auch im Nachhinein eingepflegt werden.
+
+Das Programm soll für die User GUI-gesteuert sein und allen Anforderungen der Usability entsprechen!
+=> GridbagLayout
+Arbeiten Sie mit einem DBMS Ihrer Wahl und Speichern Sie die entsprechenden Daten persistent in einer 
+relationalen DB ab. => MySQL
+
+Setzen Sie das Problem mit MVC um! => Done
+Arbeiten Sie mit git!			   => Immer!
+Schreiben Sie Tests in JUnit für die kritischen Funktionen! => wird gemacht...
+
+
+Viel Spass!

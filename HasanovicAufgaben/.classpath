@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AufgabeBmiTests/src"/>
+	<classpathentry kind="src" path="AufgabeCharaktergenerator/src"/>
+	<classpathentry kind="src" path="AufgabeCharaktergenerator2/src"/>
+	<classpathentry kind="src" path="AufgabeCollectionsPeu/src"/>
+	<classpathentry kind="src" path="AufgabeDualzahlen/src"/>
+	<classpathentry kind="src" path="AufgabeFirma/src"/>
+	<classpathentry kind="src" path="AufgabeFolge/src"/>
+	<classpathentry kind="src" path="AufgabeFolgePeu/src"/>
+	<classpathentry kind="src" path="AufgabeKartonPeu/src"/>
+	<classpathentry kind="src" path="AufgabeMengen/src"/>
+	<classpathentry kind="src" path="AufgabePlanetenPeu/src"/>
+	<classpathentry kind="src" path="AufgabeThreads/src"/>
+	<classpathentry kind="src" path="AufgabeZugplanPeu/src"/>
+	<classpathentry kind="src" path="MuserloesungZugfahrPlan/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeCharaktere/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeCollections/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeFirma/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeFolge/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeKartons/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeNachrichten/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeSeminarverwaltungDelegator/src"/>
+	<classpathentry kind="src" path="MusterloesungAufgabeStudenten/src"/>
+	<classpathentry kind="src" path="Tests/src"/>
+	<classpathentry kind="output" path="AufgabeCharaktergenerator/bin"/>
+</classpath>

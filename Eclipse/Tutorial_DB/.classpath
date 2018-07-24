@@ -2,9 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Win7 Pro x64/Downloads/sqljdbc_6.0/deu/jre8/sqljdbc42.jar"/>
-	<classpathentry kind="lib" path="sqljdbc_4.2/enu/jre8/sqljdbc42.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/MICROSOFT JDBC DRIVER 4.2 for SQL Server/sqljdbc_4.2/enu/jre8/sqljdbc42.jar"/>
 	<classpathentry kind="lib" path="C:/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -89,3 +89,10 @@ Gewicht: 0.344Kg
 BMI = 7 bedeutet Starkes Untergewicht
 Zeit + Datum: 24.05.2018 10:14
      ---------------     
+BMI Ergebnis für null
+Geschlecht: null
+Größe: 0.0cm
+Gewicht: 0.0Kg
+BMI = 0 bedeutet null
+Zeit + Datum: 24.07.2018 16:41
+     ---------------     

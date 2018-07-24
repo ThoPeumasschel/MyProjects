@@ -5,6 +5,7 @@ public class Controler
 	//controller muss sowohl view als auch model kennen:
 	private View view;
 	private Model model;
+	// innere Klasse
 	private ControlerListener listener;
 	
 	public Controler()
