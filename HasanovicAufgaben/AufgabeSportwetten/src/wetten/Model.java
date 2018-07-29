@@ -1,10 +1,8 @@
 package wetten;
 
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
-import com.mysql.jdbc.Connection;
+
 import com.mysql.jdbc.PreparedStatement;
 
 public class Model
@@ -19,7 +17,7 @@ public class Model
 		controler=c;
 	}
 	
-	public void dbVerbindung(String dbName)
+	public void dbVerbindung()
 	{
 		//treiber laden
 		try 
@@ -34,7 +32,7 @@ public class Model
 		//mit dem server verbinden
 		try
 		{	//jdbc:mysql://localhost/db_imperium?useSSL=false&serverTimezone=UTC
-			con=DriverManager.getConnection("jdbc:mysql://localhost/db_imperium?useSSL=false&serverTimezone=UTC");
+			con=DriverManager.getConnection("jdbc:mysql://localhost/db_imperium?useSSL=false&serverTimezone=UTC", "root", "");
 			
 		}
 //		catch(SQLServerException e)
@@ -45,6 +43,12 @@ public class Model
 		{
 			controler.vermittleMeldungAnView("Verbindung mit DB-Server gescheitert: " + e.getMessage());
 		}
+		
+	}
+
+	public void dbVerbindung(String eingabe)
+	{
+		// TODO Auto-generated method stub
 		
 	}
 }

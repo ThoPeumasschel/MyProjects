@@ -1,23 +1,18 @@
 package versuche;
 
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-public class Probiere
+public class Probiere extends Prob
 {
-	static final long tooth = 343L;
-	static long doIt(long tooth) {
-		System.out.println(++tooth + " ");
-		return ++tooth;
+
+	void prob(long l)
+	{
+		System.out.println("lll");
 	}
 	public static void main(String[] args)
 	{
-		System.out.println(tooth + " ");
-		final long tooth = 340L;
-		new Probiere().doIt(tooth);
-		System.out.println(tooth);
+		Probiere p = new Probiere();
+		p.prob(420);
+		p.prob(2_150_999_912L);
+		
 	}
-	
-	
+
 }

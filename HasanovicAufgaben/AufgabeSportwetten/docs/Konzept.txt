@@ -1,0 +1,48 @@
+Elemente
+
+Sportevents:
+Fußball, Tennis, Handball, Basketball
+
+Wetten haben Quoten (Sieg, Unentschieden)
+
+Berechnung:
+möglicher Gewinn bei richtigem Tip = Quote, Wetttipps der Tippenden, Geldeinsatz
+
+Keine Kombiwetten
+
+==> Beispiel(Fußball): FC Bayern München - Schalke 04 ---> Quoten: Sieg Heim ->1.65 | 
+  Unentschieden-> 3.60 | Sieg Auswärtsmannschaft -> 4.75
+  Wenn jetzt der Spieler Peter Müller 10€ auf Unentschieden setzt, soll nach Eingabe 
+  dieser Wette das Programm den möglichen Gewinn, also 10*3.6=36€ anzeigen
+
+Wetten haben Status (offen, storniert, gewonnen, verloren)
+
+Nach Sportereignis: Eingabe Ergebnis (wer hat gewonnen, unentschieden)
+Ausgabe: Gewinn
+
+Wetten sollen sortiert nach den Kriterien offen, storniert usw. ausgegeben werden können
+bezogen auf jeden Tipper und für alle Sportevents
+==> Set
+
+für einen Tipper ALLE offenen, stornierten, gewonnenen oder verlorenen Wetten anzeigen
+
+für ein Sportevent ALLE Wetten sortiert nach Tipper anzeigen
+
+Sportevents können eingeplegt werden, bevor das Event stattfindet und bevor Quoten festgelegt wurden - 
+die entsprechenden Quoten können also für ein Sportevent auch im Nachhinein eingepflegt werden.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

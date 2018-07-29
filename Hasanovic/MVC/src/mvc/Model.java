@@ -1,9 +1,7 @@
 package mvc;
 import java.sql.*;
 
-import com.mysql.jdbc.*;
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+
 /*
  * 		Datenbankverbindungen in Java:
  * 
@@ -41,7 +39,7 @@ public class Model
 		//treiber laden
 		try 
 		{
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("org.hsqldb.jdbc.JDBCDriver");
 		} 
 		catch (ClassNotFoundException e) 
 		{
@@ -51,14 +49,14 @@ public class Model
 		//mit dem server verbinden
 		try
 		{	//jdbc:mysql://localhost/db_imperium?useSSL=false&serverTimezone=UTC
-			con=DriverManager.getConnection("jdbc:mysql://localhost/db_imperium?useSSL=false&serverTimezone=UTC");
-			ladeKunden();
+			con=DriverManager.getConnection("jdbc:hsqldb:hsql://localhost/meinedb", "SA", "");
+			//ladeKunden();
 		}
 //		catch(SQLServerException e)
 //		{
 //			controler.vermittleMeldungAnView("Fehler bei der Zusammenarbeit mit dem Server... " + e.getMessage());
 //		}
-		catch(SQLException e)
+		catch(Exception e)
 		{
 			controler.vermittleMeldungAnView("Verbindung mit DB-Server gescheitert: " + e.getMessage());
 		}

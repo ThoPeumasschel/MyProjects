@@ -18,6 +18,7 @@ Wunsch: "Ich möchte die Sportwetten, die ich mit meinen Kumpels so am laufen hab
   Wette und es wird evtl. Sein Gewinn angezeigt. 
 - Es sollen alle Wetten sortiert nach den Kriterien offen, storniert usw. ausgegeben werden können bezogen 
   auf jeden Tipper und für alle Sportevents
+  
 - Es soll möglich sein, für einen Tipper ALLE offenen, stornierten, gewonnenen oder verlorenen Wetten anzuzeigen
 - Es soll möglich sein, für ein Sportevent ALLE Wetten sortiert nach Tipper anzuzeigen
 - Sportevents können eingeplegt werden, bevor das Event stattfindet und bevor Quoten festgelegt wurden - 
@@ -28,8 +29,8 @@ Das Programm soll für die User GUI-gesteuert sein und allen Anforderungen der Us
 Arbeiten Sie mit einem DBMS Ihrer Wahl und Speichern Sie die entsprechenden Daten persistent in einer 
 relationalen DB ab. => MySQL
 
-Setzen Sie das Problem mit MVC um! => Done
-Arbeiten Sie mit git!			   => Immer!
+Setzen Sie das Problem mit MVC um! => Done!
+Arbeiten Sie mit git!			   => Sowieso immer!
 Schreiben Sie Tests in JUnit für die kritischen Funktionen! => wird gemacht...
 
 

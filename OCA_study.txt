@@ -2,6 +2,12 @@
 
 
 - Verhalten von String s = "bla"; vs String s = new String("bla"); equals() und ==
+	String, Stringbuilder => studiy class-declaration
+- Arrays allg., declerations, initializations, etc. valid/non-valid
+- Chapter 6 - Lambdas, java.util.function.Predicate
+
+
+
 
 
 
