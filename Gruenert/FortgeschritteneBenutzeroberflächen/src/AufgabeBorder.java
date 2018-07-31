@@ -13,6 +13,7 @@ public class AufgabeBorder extends Frame {
 		add("North", lab);
 		add("South", btnFs);
 		add("Center", tf);
+		Comparator<>
 
 	}
 
