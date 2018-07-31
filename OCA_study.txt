@@ -3,10 +3,16 @@
 
 - Verhalten von String s = "bla"; vs String s = new String("bla"); equals() und ==
 	String, Stringbuilder => studiy class-declaration
-- Arrays allg., declerations, initializations, etc. valid/non-valid
-- Chapter 6 - Lambdas, java.util.function.Predicate
 
+- Arrays allg., declerations, initializations, etc. valid/non-valid, zuweisungen => multidimensional
 
+- Chapter 6 - Lambdas, java.util.function.Predicate!!!!!!!
+
+- Override/Overload => access modifiers (default vs protected)
+
+- Chapter 5 try/catch/finally
+
+- look at hashcode/EQUALS/toString
 
 
 

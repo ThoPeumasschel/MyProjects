@@ -1,4 +1,4 @@
-package mitLambda;
+package lambda;
 
 import java.util.ArrayList;
 import java.util.function.Predicate;
@@ -17,12 +17,13 @@ class TestDogs
 		dogs.add(new Dog("clover", 35, 12));
 		dogs.add(new Dog("mia", 15, 4));
 		dogs.add(new Dog("zooey", 45, 8));
+		
 
 		System.out.println("all dogs " + dogs);
 		System.out.println("min age 7 " + minAge(dogs, 7).toString());
 		System.out.println("max weight " + maxWeight(dogs, 40).toString());
 		System.out.println();
-		System.out.println("age > 7 " + dogQuerry(dogs, d -> d.getAge() >= 7));
+		System.out.println("age > 7 " + dogQuerry(dogs, x -> x.getAge() >= 7));
 		System.out.println("w > 100 " + dogQuerry(dogs, d -> d.getWeight() >= 40));
 		System.out.println();
 
@@ -57,3 +58,5 @@ class TestDogs
 	}
 
 }
+
+
