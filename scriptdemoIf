@@ -1,0 +1,46 @@
+#!/bin/bash
+#Die vier Grundrechenarten 
+clear; echo -e "Bitte den ersten Buchstaben der Rechenoperation eingeben.\n"
+echo -e "	[a]ddieren
+	[s]ubtrahieren
+	[m]ultiplizieren
+	[d]ividieren "
+read operator
+clear; echo -e "\nGeben Sie jetzt den ersten Wert ein "	
+read a
+clear; echo -e "\nGeben Sie jetzt den zweiten Wert ein "
+read b 
+
+if [ $operator = a ]; then
+	let c=a+b
+	clear; echo $a + $b = $c
+
+elif [ $operator = s ]; then 
+	let c=a-b
+	clear; echo $a - $b = $c
+
+elif [ $operator = m ]; then
+	let c=a*b
+	clear; echo $a * $b = $c
+
+elif [ $operator = d ]; then
+	let c=a/b
+	clear; echo $a / $b = $c
+
+else clear; echo -e "\nSie haben einen ungültigen Operator eingegeben!"
+exit 1
+
+fi
+
+exit 0
+
+
+
+
+
+
+
+
+
+
+

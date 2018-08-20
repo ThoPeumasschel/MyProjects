@@ -1,0 +1,13 @@
+/*
+created by prashant shukla
+*/
+body {
+
+    position:fixed;
+    
+}
+a{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
