@@ -1,18 +1,30 @@
 package versuche;
 
+import java.util.*;
+
 public class Probiere extends Prob
 {
 
-	void prob(long l)
-	{
-		System.out.println("lll");
-	}
+	
 	public static void main(String[] args)
 	{
-		Probiere p = new Probiere();
-		p.prob(420);
-		p.prob(2_150_999_912L);
 		
+		int i = 0;
+		int j = 7;
+		System.out.println(7<7+1);
+		for(i = 0; i < j - 1 ; i = i + 2)
+		{
+			System.out.println(i);
+		}
+		
+		List<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(null);
+		
+		list.remove(null);
+		for (int x : list)
+			System.out.println(x);
 	}
 
 }
