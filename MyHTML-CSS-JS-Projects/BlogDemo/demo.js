@@ -1,0 +1,1 @@
+alert("Click OK an your pc will CRASH!!!");
