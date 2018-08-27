@@ -1,0 +1,23 @@
+#! /bin/bash
+
+echo -e "\nUPDATEING!\n"
+sudo apt update;
+echo -e "\nUPDATE erledigt!\n"
+
+echo -e "\nUPGRADING!\n"
+sudo apt upgrade;
+echo -e "\nUPGRADE erledigt!\n"
+
+echo -e "\nDISTing!\n"
+sudo apt dist-upgrade;
+echo -e "\nDIST-UPGRADE erledigt!\n"
+
+echo -e "\nAufräumen...\n"
+sudo apt autoremove
+echo -e "\nAUTOREMOVE erledigt!\n"
+
+
+
+
+
+
