@@ -1,0 +1,25 @@
+Java Bytecode anschauen mit javap
+
+Stream API ansehen => durch gute Literatur!! (
+
+DesignPattern Builder (Konzept der "Lazyness")
+
+Design Pattern Factory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
