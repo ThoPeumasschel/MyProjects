@@ -1,0 +1,14 @@
+  1 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev update_config=1
+  2 
+  3 network={
+  4         ssid="FRITZ!Box 7430 AJ"
+  5         scan_ssid=1
+  6         key_mgmt=WPA-PSK
+  7         psk="64026861154795627476"
+  8 }
+  9 network={
+ 10         ssid="FRITZ!Box 7430
+ 11         scan_ssid=1
+ 12         psk="64026861154795627476"
+ 13 }
+
