@@ -1,0 +1,11 @@
+
+
+- Wie war das mit dem GDB?
+- Watch the videos on ex18-ex24
+- Do the exercises
+- COMMENT the code!!!
+- change Variable names, maybe in german
+- man 3 assert, man 3 strerror 
+
+
+ 

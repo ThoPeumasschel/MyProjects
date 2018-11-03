@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1525011604 source:c:\users\thoma\home\cygwin_projects\bsp10037\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1524984920 source:c:\users\thoma\home\cygwin_projects\lcthw\ex16.c
+	<stdio.h>
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+
