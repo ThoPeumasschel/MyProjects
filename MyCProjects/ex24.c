@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
     printf("Last Name: %s", you.last_name);
     printf("Age: %d\n", you.age);
     printf("Eyes: %s\n", EYE_COLOR_NAMES[you.eyes]);
-    printf("Income: %f\n", you.income);
+    printf("Income: %f Euros\n", you.income);
 
     return 0;
 error:

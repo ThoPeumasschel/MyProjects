@@ -1,11 +1,15 @@
+My gloryfied ToDo-List
 
-
-- Wie war das mit dem GDB?
 - Watch the videos on ex18-ex24
 - Do the exercises
 - COMMENT the code!!!
 - change Variable names, maybe in german
 - man 3 assert, man 3 strerror 
-
+- read about macros in stdint.h
+- Weihnachtsbaum Programm in C nachbauen; keine Globals!
+- read about the macros in CPP, try to understand how macros work :-(
+- use valgrind and ddd (don't forget)
+- read the book for clarity, it's supposedly more verbose on stuff
+- 
 
  
