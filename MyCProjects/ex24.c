@@ -26,16 +26,23 @@ int main(int argc, char *argv[])
     int i = 0;
     char *in = NULL;
 
+	FILE *file;
+   
+	file = fopen("test.txt", "w");
+
     printf("What's your First Name? ");
     in = fgets(you.first_name, MAX_DATA - 1, stdin);
+	fprintf(file, "%s %s", "First Name: ", you.first_name);
     check(in != NULL, "Failed to read first name.");
 
     printf("What's your Last Name? ");
     in = fgets(you.last_name, MAX_DATA - 1, stdin);
+	fprintf(file, "%s %s", "Last Name: ", you.last_name);
     check(in != NULL, "Failed to read last name.");
 
     printf("How old are you? ");
     int rc = fscanf(stdin, "%d", &you.age);
+    fprintf(file, "%s %d\n", "Your age: ", you.age);
     check(rc > 0, "You have to enter a number.");
 
     printf("What color are your eyes:\n");
@@ -46,18 +53,19 @@ int main(int argc, char *argv[])
 
     int eyes = -1;
     rc = fscanf(stdin, "%d", &eyes);
+    fprintf(file, "%s %s\n", "Eyecolor: ", EYE_COLOR_NAMES[you.eyes]);
     check(rc > 0, "You have to enter a number.");
 
     you.eyes = eyes - 1;
     check(you.eyes <= OTHER_EYES
             && you.eyes >= 0, "Do it right, that's not an option.");
 
-    printf("How much do you make an hour? ");
+    printf("How much do you make per month? ");
     rc = fscanf(stdin, "%f", &you.income);
+	fprintf(file, "%s %f %s\n", "Monatsgehalt: ", you.income, " EUROS");
     check(rc > 0, "Enter a floating point number.");
 
     printf("----- RESULTS -----\n");
-
     printf("First Name: %s", you.first_name);
     printf("Last Name: %s", you.last_name);
     printf("Age: %d\n", you.age);
