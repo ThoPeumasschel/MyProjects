@@ -92,6 +92,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -lh'
 alias update='sudo apt update && sudo apt upgrade && sudo apt dist-upgrade && sudo apt autoremove'
+alias gitz='git add * && git commit -a -m "did some stuff in MyProjects" && git push'
 alias lsa='ls -alh'
 
 # Add an "alert" alias for long running commands.  Use like so:
