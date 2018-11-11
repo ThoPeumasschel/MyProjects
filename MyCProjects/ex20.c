@@ -1,3 +1,4 @@
+#define DNDEBUG
 #include "dbg.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,6 +22,8 @@ typedef int (*compare_cb) (int a, int b);
 // here comes the bubble sort:
 int *bubble_sort(int *numbers, int count, compare_cb cmp)
 {
+	debug("hello from bubble sort");
+
 	int temp = 0;
 	int i = 0;
 	int j = 0;
@@ -68,7 +71,7 @@ int strange_order(int a, int b)
 	}
 }
 
-// test the whole shit
+// test the whole stuff
 void test_sorting(int *numbers, int count, compare_cb cmp)
 {
 	int i = 0;
@@ -93,6 +96,18 @@ int main(int argc, char *argv[])
 	int count = argc -1;
 	int i = 0;
 	char **inputs = argv + 1;
+//	debug("Look at inputs as *inputs[]: %s\n", *inputs[]);
+	debug("**argv = %d", **argv);
+	debug("*argv = %s", *argv);
+	debug("argv = %p", argv);
+
+	for (int i = 0; i < argc; i++) {
+	printf("Inhalt von *argv am Index[%d]: %s\n", i, argv[i]);
+	}
+
+	printf("\nWas steckt in **argv? %d\n", **argv);
+
+
 
 	int *numbers = malloc(count * sizeof(int));
 	if (!numbers) die("Memory error!");
@@ -107,16 +122,9 @@ int main(int argc, char *argv[])
 
 	free(numbers);
 
-	printf("SORTED:");
-	dump(sorted_order);
-
-	destroy(sorted_order);
-
-	printf("SORTED:");
-	dump(sorted_order);
-
-
 	return 0;
+
+
 }
 
 				

@@ -1,0 +1,37 @@
+*---------------------------------------------------------*
+*						  Agenda
+*---------------------------------------------------------*
+
+ex22-Project:
+- make dir 'ex22-project'
+- copy three files, work on them, understand them
+- delete them, start from scratch
+
+
+Unit-Testing
+- ex30
+
+
+Skeleton-Project
+- ex28
+
+
+Automation
+- automate everything!
+- Testing and validation
+- Build process
+- Deployment of software
+- System administration
+- Error reporting
+
+
+(Defensive) Programming principles (ex27):
+- Never trust input
+- Prevent errors
+- Fail early and openly
+- Document assumptions
+- Prevention over Documentation
+- Automate everything
+- Symplif and clarify
+- Question authority
+
