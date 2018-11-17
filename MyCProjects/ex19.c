@@ -6,7 +6,6 @@
 void test_debug()
 {
 	debug("I have brown hair.");
-
 	debug("I am %d years old.", 38);
 }
 
@@ -96,7 +95,8 @@ error:
 int main(int argc, char *argv[])
 {
 	check(argc == 2, "Need an argument.");
-
+	debug("argument given: '%s'", argv[1]);
+	
 	test_debug();
 	test_log_err();
 	test_log_warn();
