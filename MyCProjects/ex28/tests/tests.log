@@ -1,3 +1,6 @@
 DEBUG tests/libex29_tests.c:20: ----- RUNNING: ./tests/libex29_tests
 DEBUG tests/libex29_tests.c:15: 
 ----- test_dummy
+DEBUG tests/libex29_tests.c:20: ----- RUNNING: ./tests/libex29_tests
+DEBUG tests/libex29_tests.c:15: 
+----- test_dummy

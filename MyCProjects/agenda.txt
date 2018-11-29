@@ -2,18 +2,28 @@
 *						  Agenda
 *---------------------------------------------------------*
 
+Interesting lessons: 
+ex17 simple database 
+ex22 Header files and linking 
+ex24 User input, writing to a file
+
+
 ex22-Project:
 - make dir 'ex22-project'
 - copy three files, work on them, understand them
 - delete them, start from scratch
 
-
-Unit-Testing
-- ex30
+ex26-Project logfind:
+- blah
 
 
 Skeleton-Project
 - ex28
+
+
+
+
+
 
 
 Automation

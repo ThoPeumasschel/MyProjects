@@ -1,0 +1,26 @@
+GDB Quick Reference
+
+
+One trick up front:
+gdb --batch --ex r --ex bt --ex q --args
+
+commands:
+run[args]							or just r
+break [file:]function 				or just b
+backtrace 							or just bt
+print expr: print the value of expr or just p
+continue 	(same as F8)			or just c
+next 		(same as F6)			or just n
+step 		(same as F5)			or just s
+finish	continue to end of function
+where
+frame 	shows current stack frame, 	or just f
+quit
+help
+clear (breakpoint)
+list next ten lines (l - prev ten) 	or just l
+up & down in call stack
+delete deletes all breakpoints 		or just d
+winheight	very useful				or just wh
+
+
