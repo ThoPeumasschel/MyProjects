@@ -38,8 +38,7 @@ int main(int argc, char *argv[])
 {
     Variant a_int = {.type = TYPE_INT, .data.as_integer = 100 };
     Variant a_float = {.type = TYPE_FLOAT, .data.as_float = 100.34 };
-    Variant a_string = {.type = TYPE_STRING,
-        .data.as_string = "YO DUDE!" };
+    Variant a_string = {.type = TYPE_STRING, .data.as_string = "YO DUDE!" };
 
     Variant_print(&a_int);
     Variant_print(&a_float);
