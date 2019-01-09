@@ -7,7 +7,7 @@ typedef int (*lib_function) (const char *data);
 int main(int argc, char *argv[])
 {
 	int rc = 0;
-	check(argc == 4, "USAGE: ex29 libex29.so function data");
+	check(argc == 4, "USAGE: <program_name> <dynamic_library.so> <function_name> <data>");
 	
 	char *lib_file = argv[1];
 	char *func_to_run = argv[2];
@@ -19,8 +19,6 @@ int main(int argc, char *argv[])
 
 	lib_function func = dlsym(lib, func_to_run);
 	check(func != NULL, "Did not find %s function in the library %s: %s", func_to_run, lib_file, dlerror());
-
-
 
 	rc = func(data);
 	check(rc == 0, "Function %s return %d for data: %s", func_to_run, rc, data);

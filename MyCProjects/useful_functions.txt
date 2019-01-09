@@ -1,0 +1,20 @@
+Reference: www.tutorialspoint.com/c_stadard_library/
+
+I/O Functions
+
+- fscanf: int fscanf(FILE *stream, const char *format, ...);
+- scanf: int scanf(const char *format, ...);
+- fgets: char *fgets(char *str, int n, FILE *stream);
+- fopen: FILE *fopen(const char *filename, const char mode *mode);
+- fclose: int fclose(FILE *stream);
+- fgetpos: int fgetpos(FILE *stream, fpos_t *pos);
+- fprintf: int fprintf(FILE *stream, const char *format, ...);
+- printf: int printf(const char *format, ...);
+- fwrite: size_t fwrite(const void *ptr, size_t size, size_t nmemb, FILE *stream);
+- fread: size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
+
+
+- strcasestr: char *strcasestr(const char *haystack, const char *needle);
+
+
+
