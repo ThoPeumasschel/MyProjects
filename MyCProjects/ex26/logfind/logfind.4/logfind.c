@@ -1,4 +1,4 @@
-#define NDEBUG
+//#define NDEBUG
 #include "dbg.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -21,7 +21,7 @@ int list_files(glob_t *pglob)
     check(file, "Failed to open .logfind. Make that first.");
 
     while(fgets(line, MAX_LINE-1, file) != NULL) {
-        line[strlen(line) - 1] = '\0'; // drop the \n ending
+        line[strlen(line) - 2] = '\0'; // drop the \n ending
         debug("Globbing %s", line);
 
         rc = glob(line, glob_flags, NULL, pglob);

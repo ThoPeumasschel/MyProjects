@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <glob.h>
+#include <assert.h>
 
 const size_t MAX_LINE = 1024;
 
@@ -21,7 +22,7 @@ int list_files(glob_t *pglob)
     check(file, "Failed to open .logfind. Make that first.");
 
     while(fgets(line, MAX_LINE-1, file) != NULL) {
-        line[strlen(line) - 1] = '\0'; // drop the \n ending
+        line[strlen(line) - 2] = '\0'; // drop the \n ending
         debug("Globbing %s", line);
 
         rc = glob(line, glob_flags, NULL, pglob);
@@ -106,7 +107,7 @@ int parse_args(int *use_or, int *argc, char **argv[])
         (*argv)++;
         check(*argc > 1, "You need words after -o.");
     } else {
-        use_or = 0;
+        *use_or = 0;		// BUG! sollte "*use_or = 0;" sein
     }
 
     return 0;

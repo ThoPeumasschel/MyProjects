@@ -25,7 +25,7 @@ int list_files(glob_t *pglob)
         size_t line_length = strnlen(line, MAX_LINE - 1);
         assert(line_length < MAX_LINE && "Got a line length too long.");
 
-        line[line_length] = '\0'; // drop the \n ending
+        line[line_length-1] = '\0'; // drop the \n ending
         debug("Globbing %s", line);
 
         rc = glob(line, glob_flags, NULL, pglob);
@@ -110,8 +110,10 @@ int parse_args(int *use_or, int *argc, char **argv[])
         (*argv)++;
         check(*argc > 1, "You need words after -o.");
     } else {
-        *use_or = 0;
+        use_or = 0;
     }
+
+	check(*use_or == 1 || *use_or == 0, "Invalid default use or.");
 
     return 0;
 error:
@@ -122,7 +124,7 @@ error:
 int main(int argc, char *argv[])
 {
     int i = 0;
-    int use_or = 1;
+    int use_or = 0;
     glob_t files_found;
 
     check(argc > 1, "USAGE: logfind [-o] words");

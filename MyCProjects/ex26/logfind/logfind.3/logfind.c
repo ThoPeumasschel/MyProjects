@@ -1,3 +1,4 @@
+#define NDEBUG
 #include "dbg.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,6 +24,8 @@ int list_files(glob_t *pglob)
     check(rc == 0, "Failed to glob.");
     rc = glob("*.c", glob_flags | GLOB_APPEND, NULL, pglob);
     check(rc == 0, "Failed to glob.");
+
+	debug("This message appears only when make is running");
 
     for(i = 0; i < pglob->gl_pathc; i++) {
         debug("Matched file: %s", pglob->gl_pathv[i]);
@@ -50,7 +53,7 @@ int scan_file(const char *filename, int search_len, char *search_for[])
         for(i = 0; i < search_len && found == NULL; i++) {
             found = strcasestr(line, search_for[i]);
             if(found) {
-                printf("%s\n", filename);
+                printf("found \"%s\" in %s\n", search_for[i],  filename);
             }
         }
     }
