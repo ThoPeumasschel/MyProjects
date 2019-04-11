@@ -1,0 +1,15 @@
+Entwickeln Sie ein GUI-basiertes Programm, welches Bruchrechnungen mit den Grundoperationen
+Addition, Multiplikation, Subtraktion und Division durchführen kann.
+
+Der User gibt die Brüche ein(immer jeweils 2) und wählt die Rechenoperation. 
+
+Brüche können als gemischte Brüche eingegeben werden.
+
+Zähler und Nenner sind immer ganzzahlig.
+
+Einen berechneten Bruch soll sich der User auch als Dezimalzahl anzeigen lassen können.
+
+Einigen Sie sich mit Ihrem Team auf ein UI-Design.
+Benutzen Sie beim Entwickeln git für die Versionskontrolle!
+Nutzen Sie JUnit, um die Kernfunktionen Ihres Programmes zu testen!
+Versionieren Sie auch die JUnit-Tests!

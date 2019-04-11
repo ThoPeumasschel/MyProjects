@@ -28,9 +28,9 @@ public class ProductBean {
 		this.name = name;
 	}
 	
-	public List<ProductBean> productListFromDb() {
-		return Database;
-		
-	}
+//	public List<ProductBean> productListFromDb() {
+//		return Database;
+//		
+//	}
 	
 }

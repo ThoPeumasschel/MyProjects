@@ -149,7 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="PlantPlaces" path="/PlantPlaces" reloadable="true" source="org.eclipse.jst.jee.server:PlantPlaces"/><Context docBase="GlobalGoods" path="/GlobalGoods" reloadable="true" source="org.eclipse.jst.jee.server:GlobalGoods"/><Context docBase="JSFJPACrud" path="/JSFJPACrud" reloadable="true" source="org.eclipse.jst.jee.server:JSFJPACrud"/><Context docBase="hello" path="/hello" reloadable="true" source="org.eclipse.jst.jee.server:hello"/></Host>
+      <Context docBase="PlantPlaces" path="/PlantPlaces" reloadable="true" source="org.eclipse.jst.jee.server:PlantPlaces"/><Context docBase="GlobalGoods" path="/GlobalGoods" reloadable="true" source="org.eclipse.jst.jee.server:GlobalGoods"/><Context docBase="JSFJPACrud" path="/JSFJPACrud" reloadable="true" source="org.eclipse.jst.jee.server:JSFJPACrud"/><Context docBase="hello" path="/hello" reloadable="true" source="org.eclipse.jst.jee.server:hello"/><Context docBase="helloworld-mbean-webapp" path="/helloworld-mbean-webapp" reloadable="true" source="org.eclipse.jst.jee.server:helloworld-mbean-webapp"/></Host>
     </Engine>
   </Service>
 </Server>
